@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body class="fix-footer-line">
+
+        <!-- Container -->
+        <main class="container">
+
+            <!-- Header -->
+            <header class="grid_3 d-visible" role="banner">
+                <div class="wrap-block">
+                    <h1 class="logo block">
+                        <a href="{$website:url}" title="{$page:h1}">
+                            {$plugin:widcard:BizOrgName:notag}
+                            <img src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}" width="100" height="50">
+                        </a>
+                    </h1>
+                    <span class="slogan">
+                        We search.<br />You travel.
+                    </span>
+                </div>
+            </header>
+                    <!-- Content box -->
+            <article id="content" class="grid_9 mt30px" role="main">
+                <!-- Main Menu -->
+                <div class="block box-white-bg opacity-bg">
+                    <div class="transferring-block">
+                        <p class="text-center"><strong>Mobissimo ha centinaia di partner da tutto il mondo! Questo garantisce il miglior acquisto disponibile sul mercato!</strong></p>
+                        {$mobissimotransfer}
+                        <p class="text-center">Vuoi ricevere la nostra newsletter con le migliori idee di viaggio? <br /><a class="inline-block" href="" title="">Clicca qui</a></p>
+                        <p class="text-center">Grazie della visita e arrivederci al prossimo viaggio!</p>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Include mobile elements template -->
+        {$template:_mobile elements}
+
+        <!-- Include scripts template -->
+        {$template:_scripts}
+
+        <script>
+        $(function () {
+
+        });
+    </script>
+
+    </body>
+</html>

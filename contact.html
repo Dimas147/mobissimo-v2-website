@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body class="{$page:h1}">
+
+<!-- Container -->
+<main id="page" class="container">
+
+    <!-- Header -->
+    <header class="grid_3 m-grid_2 m-prefix_1 m-suffix_1 d-visible" role="banner">
+        <div class="wrap-block">
+            <h1 class="logo">
+                <a href="{$website:url}" title="{$page:h1}">
+                    {$plugin:widcard:BizOrgName:notag}
+                    <img src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}" width="80" height="40">
+                </a>
+            </h1>
+            <span class="slogan">
+                We search.<br />You travel.
+            </span>
+        </div>
+    </header>
+
+    <div class="grid_9 main">
+        <p class="top-text">{$header:toptext:static}</p>
+        <!-- Main Menu -->
+        <nav id="main-menu" class="d-visible" role="navigation">{$menu:main:_main menu}</nav>
+
+        <div class="box-white-bg opacity-bg wrap text-center">
+            <h3>{$page:h1}</h3>
+            {$content:content}
+            <ul class="offer-list">
+                <li>
+                    <span>{$header:img1}</span>
+                    {$imageonly:img1:152}
+                </li>
+                <li>
+                    <span>{$header:img2}</span>
+                    {$imageonly:img2:152}
+                </li>
+                <li>
+                    <span>{$header:img3}</span>
+                    {$imageonly:img3:152}
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="hFooter"></div>
+
+</main>
+
+<!-- Footer -->
+<!-- Include Footer template -->
+{$template:_footer}
+
+<!-- Include mobile elements template -->
+{$template:_mobile elements}
+
+<!-- Include scripts template -->
+{$template:_scripts}
+</body>
+</html>

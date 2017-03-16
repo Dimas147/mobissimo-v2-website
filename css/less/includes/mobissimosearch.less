@@ -1,0 +1,366 @@
+
+#mobissimosearch{
+    clear : both;
+}
+
+.mobis-autocomplete{
+    ul{
+        position         : absolute;
+        width            : 100%;
+        z-index          : 100;
+        background-color : @content-bg;
+        border-width     : 0 !important;
+        padding          : 0 !important;
+        overflow         : hidden;
+        margin-top       : 0;
+        //.border-radius(6px);
+        li{
+            padding : @padding-small-horizontal;
+            cursor  : pointer;
+            &:hover{
+                background-color : lighten(@brand-primary, 50%);
+                color            : @gray-dark;
+            }
+        }
+    }
+}
+
+.box-compare{
+
+    fieldset{
+
+        .mobiss-type-box{
+            //width : 20%;
+            padding-right : 20px;
+            float         : left;
+        }
+        /*&:first-child{
+            border-bottom : 1px solid darken(@gray-lighter, 10%);
+        }*/
+    }
+
+    aside &{
+        fieldset{
+            .mobiss-type-box{
+                padding-right : 0;
+            }
+        }
+    }
+
+    #compare-to-select-box{
+        display : none;
+    }
+
+    [type="submit"]{
+        margin-top : 2.2em;
+
+        &.m-loading{
+            background-image    : url("../images/m-preloader-small.gif");
+            background-repeat   : no-repeat;
+            background-position : center center;
+            background-color    : @gray-lighter;
+            text-indent         : -9999px;
+        }
+    }
+
+    .mobissimo-search-box{
+
+        .errors{
+            margin           : 0 0 15px;
+            background-color : lighten(@gray-lighter, 5%);
+            position         : relative;
+            padding          : 5px 5px 5px 10px;
+            overflow         : hidden;
+            border           : 1px solid @brand-error;
+            .border-radius(8px);
+            &:before{
+                content        : "\e0ad";
+                font-family    : 'flexkit-icons';
+                vertical-align : middle;
+                position       : absolute;
+                top            : -11px;
+                right          : -16px;
+                font-size      : 6em;
+                color          : lighten(@brand-error, 10%);
+                opacity        : 0.3;
+                line-height    : 1em;
+            }
+            li{
+                padding    : 5px;
+                color      : @brand-error;
+                text-align : left;
+                font-size  : @font-size-base;
+                margin     : 0;
+                &:before{
+                    content : "• ";
+                }
+            }
+        }
+    }
+
+    .grid_3.suffix_5{
+        margin-right : 1%;
+    }
+
+    .novisible{
+        visibility : hidden;
+    }
+
+    &[name="multicity"]{
+        .suffix_5{
+            margin-right : 42.67%;
+            margin-top   : 30px;
+        }
+
+        .labeled{
+            margin-top : 23px;
+            text-align : center;
+            input{
+                width       : 95%;
+                margin-left : 5%;
+            }
+            label{
+                display : none;
+            }
+            i{
+                pointer-events : none;
+                color          : @gray-dark;
+            }
+        }
+
+        .from_box{
+            position : relative;
+            &:before{
+                position    : absolute;
+                font-family : 'flexkit-icons';
+                content     : "\e0d2";
+                font-size   : 2em;
+                color       : darken(#C84BD5, 15%);
+                right       : -21%;
+                top         : 22px;
+                .rotate(90deg);
+            }
+        }
+    }
+
+}
+
+.mobis-preloader{
+    background : url("http://www.mobissimo.com/toaster/media/theme/original/mobis-preloader.gif") no-repeat scroll 0 0 transparent;
+    display    : block;
+    height     : 58px;
+    left       : 50%;
+    margin     : -29px 0 0 -29px !important;
+    position   : absolute;
+    top        : 50%;
+    width      : 58px;
+    z-index    : 100;
+    overflow   : hidden;
+    .border-radius(60px);
+
+    &.hide{
+        display : none !important;
+    }
+
+    &:not(.hide) ~ fieldset > *{
+        opacity : 0.2;
+    }
+
+    &.rel{
+        position : relative;
+    }
+}
+
+.mobissimo-preloader{
+    //position   : absolute;
+    text-align : center;
+    width      : 100%;
+    z-index    : 100;
+    padding    : 2em 0;
+    //border     : 4px solid @primary-bg;
+    //padding    : 5%;
+    //.border-radius(@border-radius-base);
+    p{
+        margin : 0;
+        &.h3{
+            margin-bottom : 0.5em;
+            margin-top    : 0.5em;
+        }
+    }
+
+    &:before{
+        background : url("../images/m-preloader.gif") no-repeat scroll 0 0 transparent;
+        content    : "";
+        display    : block;
+        height     : 58px;
+        margin     : 0 auto;
+        width      : 58px;
+        overflow   : hidden;
+        .border-radius(60px);
+    }
+    &.hide{
+        display : none !important;
+    }
+
+    &:not(.hide) ~ * > *, &:not(.hide) ~ *{
+        opacity      : 0 !important;
+        border-color : transparent;
+    }
+
+    &.rel{
+        position : relative;
+    }
+
+    /*.pl_results-air &{
+        border  : 6px solid @brand-primary;
+        .border-radius(20px);
+        padding : 20px;
+        .h3{
+            color : @brand-primary;
+        }
+    }*/
+}
+
+.lines-box{
+    position : relative;
+    .remove{
+        color    : @gray-darker;
+        position : absolute;
+        right    : -24px;
+        top      : 29px;
+        opacity  : 0.5;
+        &:before{
+            font-size : @font-size-large;;
+        }
+        &:hover{
+            opacity : 1;
+        }
+    }
+    & + div > .add-line{
+        .border-radius(8px);
+    }
+}
+
+/**
+ * Search results table
+ *
+ */
+.results-table{
+    margin-bottom : 15px;
+    cursor        : pointer;
+    th{
+        white-space : nowrap;
+    }
+    td{
+        //padding   : @padding-base-vertical;
+        //font-size : @font-size-small;
+        &.price{
+            vertical-align : middle;
+            color          : @primary-bg;
+            text-align     : center;
+            font-size      : 1.12em;
+        }
+        &.stops{
+            text-align : center;
+        }
+
+        span{
+            display : block;
+        }
+    }
+    .code, .time{
+        .inline-block();
+        width: 48%;
+        font-weight : bold;
+    }
+}
+
+/**
+ * Search results filter
+ *
+ */
+.filter-box{
+    border        : 1px solid @gray-lighter;
+    overflow      : hidden;
+    margin-bottom : 15px;
+    clear         : both;
+    float         : left;
+    width         : 100%;
+    div > *:not(h4){
+        margin : @padding-base-vertical;
+    }
+    h4{
+        background : @gray-lighter;
+        padding    : @padding-small-horizontal;
+    }
+    #stops{
+        label{
+            float : left;
+            width : 20%;
+        }
+    }
+}
+
+/**
+ * flight-brief
+ *
+ */
+.flight-brief{
+    text-align     : center;
+    overflow       : hidden;
+    font-weight: bold;
+    h3{
+        display       : inline-block;
+        margin-bottom : 0;
+        margin-right  : 10px;
+    }
+    i{
+        .inline-block();
+        padding : 0.05em;
+        color   : @brand-primary;
+    }
+    span{
+        .inline-block();
+        margin    : 0 0.25em;
+        i{
+            margin-left   : 0.25em;
+            line-height   : 1;
+            border        : 2px solid @brand-primary;
+            border-radius : 3px;
+        }
+    }
+
+}
+
+.arrow-long{
+    position : relative;
+    span{
+        position   : absolute;
+        top        : 100%;
+        left       : 0;
+        right      : 0;
+        text-align : center;
+        font-size  : 0.5em;
+    }
+}
+.pl_results-air{
+    clear    : both;
+    position : relative;
+}
+
+body{
+    &.mobile, &.tablet{
+        .ui-datepicker{
+            display : none !important;
+        }
+    }
+}
+
+@media only screen and (max-width : @responsive-size-tablet){
+    [class*="pl_results-"]{
+        overflow : scroll;
+    }
+}
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body class="fix-footer-line" {$mobissimosetngapp}>
+
+        <!-- Container -->
+        <main class="container">
+        
+            <!-- Left box -->
+            <div class="grid_2 d-visible alpha omega" role="complementary">
+        
+                <!-- Include header template -->
+                {$template:_header}
+                
+                {device:desktop}
+                <section class="aside-box box-white-bg opacity-bg">
+                    <h3>{$header:left_1:static}</h3>
+                    {$mobissimorfilter:currency}
+                </section>
+                <section class="aside-box box-white-bg opacity-bg">
+                    {$content:left_2:static}
+                    {$content:left_2}
+                </section>
+                {/device}
+            </div>
+
+            <!-- Content box -->
+            <article class="grid_8 mt30px" role="main">
+                <!-- Main Menu -->
+                <nav id="main-menu" class="block mb15px" role="navigation">
+                  {device:mobile,tablet}
+                    <ul class="main_menu">
+                    {repeat:main_menu:key:3}
+                    <li class="category cat-key">
+                        <a class="work-link" href="{$header:menuItemLinkInner_key:static:readonly}" title="{$header:menuItemText_key:static:readonly}">{$header:menuItemText_key:static:readonly}
+                        </a>
+                        {adminonly}
+                            <span class="fl-left gl-change text-hide icon tooltip bottom" title="Edit link">
+                                {$header:menuItemLinkInner_key:static}
+                            </span>
+                            <span class="fl-left gl-change text-hide icon tooltip bottom" title="Edit text">
+                                {$header:menuItemText_key:static}
+                            </span>
+                        {/adminonly}
+                    </li>
+                    {/repeat}
+                    </ul>
+                    {/device}
+                    {device:desktop}
+                    <ul class="main_menu d-visible">
+                    {repeat:main_menu:key:5}
+                    <li class="category cat-key">
+                        <a class="work-link" href="{$header:menuItemLinkInner_key:static:readonly}" title="{$header:menuItemText_key:static:readonly}">{$header:menuItemText_key:static:readonly}
+                        <!--{$ header:menuItemText_key:static:readonly}-->
+                        </a>
+                        {adminonly}
+                            <span class="fl-left gl-change text-hide icon tooltip bottom" title="Edit link">
+                                {$header:menuItemLinkInner_key:static}
+                            </span>
+                            <span class="fl-left gl-change text-hide icon tooltip bottom" title="Edit text">
+                                {$header:menuItemText_key:static}
+                            </span>
+                        {/adminonly}
+                    </li>
+                    {/repeat}
+                    </ul>
+                    {/device}
+                </nav>
+                {repeat:Section box:key:1}
+                <section class="box-white-bg opacity-bg">
+                    {$content:content_key1}
+                    {$content:content_key2}
+                </section>
+                {/repeat}
+            </article>
+            
+            {device:desktop}
+            <!-- Right box -->
+            <aside class="grid_2 d-visible alpha omega mt30px" role="complementary">
+                <section class="aside-box text-center">
+                    <iframe src="http://oascentral.travelzoo.com/RealMedia/ads/adstream_sx.ads/Mobissimo_Brand/home160/@Right?O=&amp;D=&amp;G=" width="160px" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" align="top left"></iframe>
+                </section>
+            </aside>
+            {/device}
+        </main>
+
+        <!-- Footer -->
+        <!-- Include Footer template -->
+        {$template:_footer}
+
+        <!-- Include mobile elements template -->
+        <!--{ $template:_mobile elements}-->
+
+        <!-- Include scripts template -->
+        {$template:_scripts}
+        <script>
+        $(function () {
+            //rename title
+            $('option[value="economy"]').text('ECO');
+            // $('[for="NumTix"]').text('Biglietti');
+            // $('[for="Class"').text('Classe');
+            // $('[name="hotel"] .return-box .title').text('Data di partenza');
+            // $('[name="air"] .depart-box .title').text('Andata');
+            // $('.recommendation-box .title').text('Dai un’occhiata qui!');
+        });
+        </script>
+    </body>
+</html>

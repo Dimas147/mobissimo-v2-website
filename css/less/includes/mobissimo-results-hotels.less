@@ -1,0 +1,52 @@
+.results-table{
+    .img-box{
+        float        : left;
+        margin-right : 2%;
+        height       : 45px;
+        overflow     : hidden;
+        img{
+            max-width  : 45px;
+            min-height : 45px;
+        }
+    }
+    .name-box{
+    }
+
+    .rating{
+        .stars-box{
+            font-size  : 0;
+            text-align : center;
+            &:before{
+                font-size   : @font-size-base;
+                font-family : 'flexkit-icons';
+                color       : lighten(@brand-warning, 10%);
+            }
+        }
+
+        .stars_1{
+            &:before{
+                content : "\e08b";
+            }
+        }
+        .stars_2{
+            &:before{
+                content : "\e08b \e08b";
+            }
+        }
+        .stars_3{
+            &:before{
+                content : "\e08b \e08b \e08b";
+            }
+        }
+        .stars_4{
+            &:before{
+                content : "\e08b \e08b \e08b \e08b";
+            }
+        }
+        .stars_5{
+            &:before{
+                content : "\e08b \e08b \e08b \e08b \e08b";
+            }
+        }
+    }
+}

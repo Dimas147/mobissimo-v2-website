@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+
+        <!-- Container -->
+        <div id="page" class="container page404">
+
+            <!-- Include header template -->
+            {$template:_header}
+
+            <h1 class="error uppercase text-center fs64" role="heading">{$page:h1}</h1>
+
+            <!-- Content box -->
+            <section class="text-center mb30px" role="main">
+                <div style="line-height: 1; font-size: 17em;">404</div>
+                <div class="larger">
+                    {$content:404:static}<br>
+                    <a class="btn outline large" href="{$website:url}" title="{$header:button:readonly}">{$header:button:static}</a>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <!-- Include Footer template -->
+            {$template:_footer}
+        </div>
+
+        <!-- Include mobile elements template -->
+        {$template:_mobile elements}
+
+        <!-- Include scripts template -->
+        {$template:_scripts}
+    </body>
+</html>

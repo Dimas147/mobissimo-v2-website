@@ -1,0 +1,31 @@
+<!-- Top bar for mobile, with button show/hide menu -->
+<div class="mobile-bar top clearfix">
+    <span class="btn icon-menu" data-refer="main"></span>
+    <span class="title">{$page:h1}</span>
+    <!--<span class=" btn icon-search"></span>
+    <span class="dropdown-btn btn icon-more-vert" data-refer="drop"></span>-->
+    <div class="tabs">
+        <ul class="items-wrap">
+        <li><a href="#">First Item</a></li>
+        <li><a href="#" class="current">Second Item</a></li>
+        <li><a href="#">Third Item</a></li>
+        <li><a href="#">Fourth Item</a></li>
+        <li><a href="#">Fifth Item</a></li>
+        </ul>
+    </div>
+</div>
+
+<aside class="m-menu left" data-el="main">
+    <div class="menu-top-header">
+        <div class="logo h1">
+            <a href="{$website:url}" title="{$page:h1}">
+                {$plugin:widcard:BizOrgName:notag}
+                <img src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}" width="100" height="50">
+            </a>
+        </div>
+    </div>
+    {$menu:main:_main menu}
+</aside>
+
+<!-- mobile loader -->
+<span class="mobile-loader"></span>

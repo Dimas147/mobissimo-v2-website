@@ -1,0 +1,44 @@
+.go-to-city{
+    .inline-block-wrap();
+    li{
+        //border         : 1px solid @gray-lighter;
+        margin-bottom  : 2%;
+        padding-bottom : @padding-small-horizontal;
+        overflow       : hidden;
+        display        : block;
+        //.grid-elements(1, 0, true);
+        .box-sizing();
+
+        .page-teaser-image{
+            display       : block;
+            height        : 130px;
+            margin-bottom : 0.5em;
+            overflow      : hidden;
+        }
+
+        img{
+            margin-bottom : @padding-small-horizontal;
+            width         : 100%;
+        }
+
+        .title{
+            color     : @gray-dark;
+            float     : left;
+            font-size : 1.1em; //@font-size-large;
+            width     : 55%;
+            .text-overflow;
+        }
+
+        .price{
+            margin-right : @padding-small-horizontal;
+            float        : right;
+            font-weight  : bold;
+            min-width    : 30%;
+        }
+
+        span{
+            display : none;
+        }
+    }
+
+}

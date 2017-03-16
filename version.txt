@@ -1,0 +1,77 @@
+1.6.0B
+ - Change structure of JS files. Organize code
+
+1.5.17
+ - Update helper function, add new methods
+ - Re-organize scripts
+
+1.5.16
+ - Add helper function
+ - Fix bug with mailto and tel
+ - Fix bug with data-refer
+
+1.5.15[1]
+ - Add grid elements mixin with flexbox
+
+1.5.15
+ - Update menu styles for desktop and mobile
+
+1.5.14
+ - Turn off scroll effect of mobile top bar by default
+ - Fix alert messages styles
+ - Replace icon search, and rename it
+
+1.5.13
+ - Clear js file
+ - Fix tap action on links under the overlay
+
+1.5.12
+ - Update/restyle mobile menu: main and dropdown
+
+1.5.11
+ - Add hide-effect for mobile bar
+ - Update styles for dropdown menu
+
+1.5.10
+ - Optimize dropdown menus
+ - Removing all references to jquery
+
+1.5.9
+ - Add styles for mobile tabs
+ - Update scroll-bar mixin
+ - Add flex-flexible mixin(flex in css)
+ - Add script to load Roboto font on mobile devices
+
+1.5.8
+ - Re-style mobile side bar
+
+1.5.7H
+ - Fix mobile bar on desktop
+ - Fix logos wrap
+
+1.5.7
+ - Fix z-index of side bar and loader
+ - Change colors for active item of side bar
+
+1.5.6
+ - Update mobile top nav and styles
+ - Clear side menu
+
+1.5.5
+ - Update mobile top nav and styles
+
+1.5.4
+ - Change default primary color
+ - Add meta tag for chrome nav's color
+
+1.5.3
+ - Change pack of icons
+ - Remove styles for generator-links
+ - Update icons for mobile
+
+1.5.2
+ - Fix dropdown menu on mobile
+ - Turn off bottom bar
+ - Change "Menu" to icon
+
+1.5.1

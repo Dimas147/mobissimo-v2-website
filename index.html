@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body class="index">
+
+        <!-- Container -->
+        <main id="page" class="container">
+
+            <!-- Header -->
+            <div class="wrap-block grid_3 m-grid_2 m-prefix_1 m-suffix_1 d-visible">
+                <!--<header class="" role="banner">
+                    <h1 class="logo">
+                        <a href="{$website:url}" title="{$page:h1}">
+                            {$plugin:widcard:BizOrgName:notag}
+                            <img src="{$ plugin:widcard:bizLogo:url}" alt="{$ plugin:widcard:BizOrgName:notag}" width="80" height="40">
+                        </a>
+                    </h1>
+                    <span class="slogan">
+                        We search.<br />You travel.
+                    </span>
+                </header>-->
+                <header class="" role="banner">
+                    <h1 class="logo">
+                        <a href="{$website:url}" title="{$page:h1}">
+                            <img src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}" width="220" />
+                        </a>
+                    </h1>
+                </header>
+
+                <div class="some-text">
+                    {$content:text:static}
+                </div>
+            </div>
+
+            <div class="grid_9 main">
+                <p class="top-text">{$header:toptext:static}</p>
+                <!-- Main Menu -->
+                <nav id="main-menu" class="d-visible" role="navigation">{$menu:main:_main menu}</nav>
+                <div class="content box-white-bg opacity-bg">
+                    {$content:mobissimoform}
+                </div>
+                <div class="box-white-bg opacity-bg wrap thin">
+                    <div class="social-block grid_6">{$template:_social links}</div>
+                    <div class="grid_6">{$content:form:static}</div>
+                </div>
+                <!-- Content box -->
+                <ul class="offer-list box-white-bg opacity-bg mb20px">
+                    <li>
+                        <span>{$header:img1}</span>
+                        <a href="http://blog.mobissimo.it/">{$imageonly:img1:152}</a>
+                        <p>{$content:img11}</p>
+                    </li>
+                    <li>
+                        <span>{$header:img2}</span>
+                        <a href="http://blog.mobissimo.it/">{$imageonly:img2:152}</a>
+                        <p>{$content:img21}</p>
+                    </li>
+                    <li>
+                        <span>{$header:img3}</span>
+                        <a href="http://blog.mobissimo.it/">{$imageonly:img3:152}</a>
+                        <p>{$content:img31}</p>
+                    </li>
+                </ul>
+                <section class="box-white-bg opacity-bg wrap">
+                    <div class="grid_8 border-r">
+                        <span class="box-title">{$header:img4}</span>
+                        {$imageonly:img4:435}
+                        <div class="box-text icon-share">{$content:img41}</div>
+                    </div>
+                    <div class="grid_4 text-center pt6em">
+                        {$imageonly:logo:80:static}
+                        <p class="box-text2">{$header:content5}</p>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <!-- Include Footer template -->
+                {$template:_footer}
+            </div>
+        </main>
+
+        <!-- Include mobile elements template -->
+        {$template:_mobile elements}
+
+        <!-- Include scripts template -->
+        {$template:_scripts}
+    </body>
+</html>

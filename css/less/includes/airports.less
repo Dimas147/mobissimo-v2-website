@@ -1,0 +1,37 @@
+.dataTable{
+    font-size : @font-size-small;
+    th, td{
+        padding        : @padding-large-vertical @padding-mini-horizontal;
+        border-color   : @gray-light;
+        text-align     : left;
+        vertical-align : middle;
+    }
+    th{
+        cursor : pointer;
+    }
+
+    .sorting_1{
+        font-weight : bold;
+    }
+
+    .dataTables_info, .dataTables_paginate{
+        font-weight : bold;
+        text-align  : right;
+    }
+
+    a{
+        &.btn_ping{
+            .button();
+        }
+    }
+}
+
+#check-fares{
+    table{
+        .btn.price{
+            font-weight : bold;
+            min-width   : 95px;
+            font-family : Arial, Tahoma, Helvetica, sans-serif;
+        }
+    }
+}

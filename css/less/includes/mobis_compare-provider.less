@@ -1,0 +1,35 @@
+.m_compare-provider{
+    overflow       : hidden;
+    clear          : both;
+    margin         : 0 0 0.8em;
+    padding-bottom : 0.8em;
+    //border-bottom  : 3px solid @gray-lighter;
+    a{
+        float            : left;
+        display          : block;
+        .grid-elements(5, @grid-margin-width, true);
+        background-color : @gray-lighter;
+        border           : 1px solid darken(@gray-lighter, 5%);
+        .border-radius(@border-radius-base);
+        padding          : 10px 15px;
+        text-align       : center;
+        margin-bottom    : 2px;
+        &:after{
+            /*content     : "\e0b6";
+            float       : right;
+            font-size   : @font-size-base;
+            font-family : 'flexkit-icons';
+            opacity     : 0;
+            .transition(all, 0.5s ease);*/
+        }
+        &:hover{
+            background-color : darken(@gray-lighter, 10%);
+            &:after{
+                // display : block;
+            }
+        }
+        img{
+            max-height : 21px;
+        }
+    }
+}

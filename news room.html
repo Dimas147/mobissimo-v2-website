@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+
+        <!-- Container -->
+        <div id="page" class="container">
+
+            <!-- Include header template -->
+            {$template:_header}
+
+            <h1 class="grid_12" role="heading">{$page:h1}</h1>
+
+            <!-- Content box -->
+            <section class="grid_9" role="main">
+                <!-- news list -->
+            {newslist:NEWS-LIST_NAME}
+                <article class="news-item">
+                    {$news:actions}
+                    <time class="news-item-date small block mb10px" datetime="{$news:date:Y-m-d}">
+                        <i class="icon-calendar2 icon16"></i>
+                        {$news:date: M d, Y}
+                    </time>
+                    <a class="news-item-image text-center grid_3 alpha" href="{$news:url}">
+                        <img src="{$news:preview}" alt="{$news:title:inline}"/>
+                    </a>
+                    <a class="news-item-title large grid_9 omega mb10px" href="{$news:url}">{$news:title}</a>
+                    <p class="news-item-description grid_9 omega mb10px">{$news:teaser}</p>
+                    <p class="news-item-tags small cl-both text-right">{$news:tags}</p>
+                </article>
+            {/newslist}
+            </section>
+
+            <!-- Right box -->
+            <aside class="grid_3" role="complementary">
+                {repeat:Aside right box:key:1}
+                <section class="aside-box">
+                    <h3>{$header:right_key}</h3>
+                    {$content:right_key}
+                </section>
+                {/repeat}
+            </aside>
+
+            <!-- Footer -->
+            <!-- Include Footer template -->
+            {$template:_footer}
+        </div>
+
+        <!-- Include mobile elements template -->
+        {$template:_mobile elements}
+
+        <!-- Include scripts template -->
+        {$template:_scripts}
+    </body>
+</html>

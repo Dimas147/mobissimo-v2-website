@@ -1,0 +1,298 @@
+.seo-text-box-space{
+    height : 0;
+    & + [id*="pl_mobissimosearch_form_"]{
+        //margin-top    : -478px;
+        margin-bottom : 500px;
+        max-height    : 280px;
+    }
+}
+
+.box-compare{
+    clear    : both;
+    position : relative;
+}
+
+.mobissimo-search-box{
+    // reset
+    border-width  : 0;
+    padding       : 0;
+    //
+    width         : 75%;
+    float         : left;
+    padding-right : 1%;
+    border-right  : 1px dashed #ffffff;
+
+    @media only screen and (max-width : @responsive-size-mobile){
+        width   : 100%;
+        float   : none;
+        padding : 0;
+        border  : none;
+    }
+
+    > div{
+        margin-bottom : 1.25em;
+    }
+    .title{
+
+        display        : none;
+        text-transform : uppercase;
+        font-weight    : bold;
+        margin         : 0.5em 0 0;
+        aside &{
+            display : block;
+        }
+
+    }
+
+    input, select{
+        //border-color : @gray-dark;
+        //.border-radius(@border-radius-small);
+
+        &.error_validating{
+            background-color : lighten(@brand-error, 20%);
+        }
+    }
+    i{
+        padding : 0.05em;
+        color   : @brand-primary;
+        border  : 2px solid @brand-primary;
+        .border-radius(3px;)
+    }
+    // fix margins
+    .grid_3.suffix_5{
+        margin-right : 1% !important;
+    }
+}
+
+.m_submit-box{
+    // reset
+    border-width : 0;
+    padding      : 0;
+    //
+    position     : absolute;
+    top          : 0;
+    right        : 0;
+    width        : 23%;
+
+    @media only screen and (max-width : @responsive-size-mobile){
+        position : relative;
+        width    : 100%;
+    }
+
+    [type="submit"]{
+        font-weight    : bold;
+        text-transform : uppercase;
+        margin-top     : 0;
+        width          : 100%;
+        height         : 150px;
+        //.box-shadow(0 0 0 2px #EF91E5);
+        .border-radius(3em);
+        @media only screen and (max-width : @responsive-size-mobile){
+            height : 3rem;
+        }
+    }
+}
+
+.compare-providers{
+    display       : none;
+    z-index       : 0;
+    padding       : @padding-larger-vertical 0;
+    border-width  : 0;
+    //
+    width         : 75%;
+    float         : left;
+    padding-right : 2%;
+    border-right  : 1px dashed #ffffff;
+
+    @media only screen and (max-width : @responsive-size-mobile){
+        width   : 100%;
+        float   : none;
+        padding : 0;
+        border  : none;
+    }
+
+    .title{
+        font-family : @font-family-text;
+        font-size   : @font-size-large;
+        font-weight : bold;
+        margin      : 0 0 0.2em;
+    }
+    p{
+        margin : 0 0 0.8em;
+    }
+    .compare-to-select-box{
+        margin-bottom : 0;
+    }
+
+    .compare{
+        .grid-elements(3, @grid-margin-width, true, 3, 1);
+        float         : left;
+        margin-bottom : 0.4em;
+        span{
+            margin-right : 5px;
+        }
+    }
+
+    .mobile &{
+        background-color : @body-bg;
+    }
+
+    .mobile & .compare{
+        position      : relative;
+        z-index       : 3;
+        padding       : @padding-base-vertical;
+        margin-bottom : 0.3em;
+        cursor        : pointer;
+        .checkbox_radio{
+            background-color : @gray-lighter;
+            border           : 1px solid darken(@gray-lighter, 5%);
+            margin           : 0;
+            .border-radius(@border-radius-base);
+            display          : block;
+            position         : absolute;
+            top              : 0;
+            left             : 0;
+            right            : 0;
+            bottom           : 0;
+            z-index          : -1;
+            width            : auto;
+            height           : auto;
+            &:before{
+                content : "";
+                display : none;
+            }
+        }
+        input:checked ~ .checkbox_radio{
+            background-color : darken(@gray-lighter, 7%);
+            border           : 1px solid darken(@gray-lighter, 5%);
+        }
+
+        input, span{
+            display : none;
+        }
+    }
+}
+
+/*
+ * if form on left or right sidebar
+ *
+ *
+ */
+.m_submit-box{
+    aside &{
+        padding  : 0;
+        margin   : 0;
+        position : relative;
+        width    : 100%;
+
+        [class*="grid_"]{
+            margin-top : 0.45em;
+        }
+        [type="submit"]{
+            //margin-top : 0.45em;
+            //float      : right;
+            //width      : 48%;
+            height      : auto;
+            line-height : 3em;
+            font-size   : @font-size-small;
+        }
+    }
+    aside.grid_2 &{
+        [type="submit"]{
+            width : 100%;
+        }
+    }
+}
+
+.mobissimo-search-box{
+    aside &{
+        padding : 0;
+        margin  : 0;
+
+        float   : none;
+        border  : none;
+        width   : 100%;
+
+        [class*="grid_"]{
+            margin-top : 0.45em;
+        }
+
+        .title{
+            font-size     : @font-size-mini;
+            margin-bottom : 0;
+            margin-top    : 0;
+        }
+
+        .labeled.icon{
+            input{
+                padding-right : inherit;
+            }
+            i{
+                display : none;
+            }
+        }
+    }
+    aside [name="air"] &{
+        .grid_3, .grid_6{
+            width : 98%;
+        }
+        .grid_4{
+            width : 48%;
+        }
+        .grid_2{
+            width : 48%;
+        }
+        .grid_5{
+            margin-left : 1%;
+            width       : 98%;
+        }
+    }
+    aside [name="hotel"] &{
+        .grid_6{
+            width : 98%;
+        }
+        .grid_3{
+            width : 98%;
+        }
+        .grid_5{
+            width       : 98%;
+            margin-left : 1%;
+        }
+        [class*="grid_"]{
+            margin-top : 0.45em !important;
+        }
+    }
+    aside [name="car"] &{
+        .atairport-box{
+            margin-top : 0.45em !important;
+        }
+        .grid_7, .grid_6, .grid_5, .grid_4, .grid_2{
+            width : 98%;
+        }
+        .grid_5{
+            .grid_6{
+                width : 56.333%;
+                & + .grid_6{
+                    width : 40.667%;
+                }
+            }
+        }
+    }
+}
+
+.compare-providers{
+    aside &{
+        display : none !important;
+    }
+}
+
+[src="http://www.mobissimo.it/plugins/mobissimosearch/web/images/default-hotel.jpg"]{
+    display : none;
+}
+
+#pl_mobissimosearch_form{
+    &_car, &_hotel{
+        min-height : 155px;
+    }
+
+}

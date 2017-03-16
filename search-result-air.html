@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body class="fix-footer-line" {$mobissimosetngapp}>
+
+<!-- Container -->
+<main class="container">
+    <!-- Include header template -->
+    <div class="grid_3">
+        {$template:_header}
+        <!-- Left box -->
+        <aside class="" role="complementary">
+            <section class="aside-box box-white-bg opacity-bg">
+                <h3>{$header:left_1:static}</h3>
+                {$mobissimorfilter:currency}
+            </section>
+            <section class="aside-box box-white-bg opacity-bg">
+                {$mobissimoform:air:roundtrip:roundtrip,oneway}
+            </section>
+        </aside>
+    </div>
+    <nav id="main-menu" class="d-visible grid_9 mt15px" role="navigation">{$menu:main:_main menu}</nav>
+    <article class="grid_9" role="main">
+
+        <div class="flight-brief block mt15px mb15px box-white-bg opacity-bg">
+            <div class="grid_6 alpha">
+                {$mobissimosearchinfo:air:origin_name} ({$mobissimosearchinfo:air:origin})
+                <i class="icon-arr-both"></i>
+                {$mobissimosearchinfo:air:destination_name} ({$mobissimosearchinfo:air:destination})
+            </div>
+            <span class="grid_3">
+                {$mobissimosearchinfo:air:depart_date:d-m-y}
+                <i class="icon-arr-right"></i>
+            </span>
+            <span class="grid_3">
+                {$mobissimosearchinfo:air:return_date:d-m-y}
+                <i class="icon-arr-left"></i>
+            </span>
+            <!--<div class="grid_2">
+                Passeggeri
+                <i class="icon-arr-right"></i>
+            </div>
+            <a class="grid_2 btn btn-grey omega">
+                Modifica
+            </a>-->
+            <hr class="grid_10 prefix_1 suffix_1">
+            <div class="grid_4"></div>
+            <div class="grid_8"></div>
+        </div>
+
+        <div class="block  box-white-bg opacity-bg">
+            <h3 class="mb10px mt0px">{$header:center_1:static}</h3>
+            {$mobissimocprovider:air}
+        </div>
+
+        <div class="block  box-white-bg opacity-bg result-air">
+            {$mobissimoresults:air}
+        </div>
+    </article>
+
+    <!-- Right box -->
+    <aside class="grid_2 right-aside" role="complementary">
+        <section class="aside-box">
+            <iframe src="http://oascentral.travelzoo.com/RealMedia/ads/adstream_sx.ads/Mobissimo_Brand/home160/@Right?O=&amp;D=&amp;G=" width="160px" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" align="top left"></iframe>
+        </section>
+    </aside>
+    <!--<div class="hFooter"></div>-->
+
+</main>
+
+<!-- Footer -->
+<!-- Include Footer template -->
+<!--{$ template:_footer}-->
+
+<!-- Include mobile elements template -->
+{$template:_mobile elements}
+
+<!-- Include scripts template -->
+{$template:_scripts}
+</body>
+</html>
