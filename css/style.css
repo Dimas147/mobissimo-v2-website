@@ -52,6 +52,7 @@ header .logo {
 header .logo a {
   display: inline-block;
   vertical-align: middle;
+  margin-top: -250px;
   font-family: inherit;
   font-weight: 400;
   text-decoration: none;
@@ -69,7 +70,7 @@ header .slogan {
 .top-text {
   text-align: right;
   font-size: 2.5em;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .main {
   margin-top: 5em;
@@ -294,11 +295,13 @@ header .slogan {
   display: block;
 }
 .offer-list li a > img {
+  max-width: 152px;
   width: 100%;
   margin-bottom: 1em;
   border-radius: 3em;
 }
 .offer-list span {
+  height: 50px;
   display: block;
   margin-bottom: 0.5em;
   font-size: 1.25em;
@@ -364,7 +367,7 @@ header .slogan {
   width: 220px;
   text-align: center;
   font-size: 1.5em;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .right-aside {
   position: absolute;
@@ -382,8 +385,9 @@ aside .aside-box {
   margin-top: -67px;
 }
 footer {
+  margin-bottom: 1.2em;
   padding: 0.5em;
-  border: 2px solid #ffffff;
+  border: 2px solid #FFFFFF;
   border-radius: 0.5em;
   color: #575656;
   background: rgba(167, 165, 165, 0.8);
@@ -396,11 +400,11 @@ footer .flag {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009246+0,009246+33,ffffff+33,ffffff+63,ffffff+63,ce2c37+63,ce2c37+100 */
   background: #009246;
   /* Old browsers */
-  background: -moz-linear-gradient(left, #009246 0%, #009246 33%, #ffffff 33%, #ffffff 63%, #ffffff 63%, #ce2c37 63%, #ce2c37 100%);
+  background: -moz-linear-gradient(left, #009246 0%, #009246 33%, #FFFFFF 33%, #FFFFFF 63%, #FFFFFF 63%, #CE2C37 63%, #CE2C37 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #009246 0%, #009246 33%, #ffffff 33%, #ffffff 63%, #ffffff 63%, #ce2c37 63%, #ce2c37 100%);
+  background: -webkit-linear-gradient(left, #009246 0%, #009246 33%, #FFFFFF 33%, #FFFFFF 63%, #FFFFFF 63%, #CE2C37 63%, #CE2C37 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #009246 0%, #009246 33%, #ffffff 33%, #ffffff 63%, #ffffff 63%, #ce2c37 63%, #ce2c37 100%);
+  background: linear-gradient(to right, #009246 0%, #009246 33%, #FFFFFF 33%, #FFFFFF 63%, #FFFFFF 63%, #CE2C37 63%, #CE2C37 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009246', endColorstr='#ce2c37', GradientType=1);
   /* IE6-9 */
@@ -460,7 +464,7 @@ footer .flag-list .com {
   background-position: 0 -126px;
 }
 #go-top {
-  color: #ffffff;
+  color: #FFFFFF;
   border-color: rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -470,6 +474,12 @@ footer .flag-list .com {
   color: #FFF;
   border-color: #f16f29;
   background-color: #f16f29;
+}
+.image-bordered {
+  margin-bottom: 10px;
+  display: block;
+  overflow: hidden;
+  border-radius: 40px;
 }
 form::after {
   content: "";
@@ -1790,7 +1800,8 @@ aside .mobissimo-search-box .title {
   margin-top: 0;
   width: 100%;
   height: 150px;
-  border-radius: 3em;
+  border-radius: 3rem;
+  font-size: 2.85em;
 }
 @media only screen and (max-width: 480px) {
   .m_submit-box [type="submit"] {

@@ -10,8 +10,8 @@
     <main id="page" class="container">
 
         <!-- Header -->
-        <header class="grid_3 m-grid_2 m-prefix_1 m-suffix_1 d-visible" role="banner">
-            <h1 class="logo">
+        <header class="grid_3 omega m-grid_2 m-prefix_1 m-suffix_1 d-visible" role="banner">
+            <h1 class="logo" data-spy="affix" data-offset-top="125" data-offset-bottom="200">
                 <a href="{$website:url}" title="{$page:h1}">
                     <img src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}" width="220" />
                 </a>
@@ -26,29 +26,32 @@
                 {$content:mobissimoform}
             </div>
             <div class="box-white-bg opacity-bg wrap">
-                <div class="social-block grid_6">{$template:_social links}</div>
-                <div class="grid_6">{$content:form:static}</div>
+                <div class="social-block grid_5">{$template:_social links}</div>
+                <div class="grid_7">{$content:form:static}</div>
             </div>
             <!-- Content box -->
             <ul class="offer-list box-white-bg opacity-bg mb20px">
                 <li>
                     <span>{$header:img1}</span>
                     {$imageonly:img1:152}
+                    <div>{$content:img1-1}</div>
                 </li>
                 <li>
                     <span>{$header:img2}</span>
                     {$imageonly:img2:152}
+                    <div>{$content:img2-1}</div>
                 </li>
                 <li>
                     <span>{$header:img3}</span>
                     {$imageonly:img3:152}
+                    <div>{$content:img2-1}</div>
                 </li>
             </ul>
             <section class="box-white-bg opacity-bg wrap">
                 <div class="grid_8">
                     <span class="box-title">{$header:img4}</span>
-                    <a href="http://blog.mobissimo.it/">{$imageonly:img4:435}</a>
-                    <p class="box-text icon-share">{$header:img41}</p>
+                    <a class="image-bordered" href="http://blog.mobissimo.it/">{$imageonly:img4:435}</a>
+                    <p class="box-text">{$header:img41}</p>
                 </div>
                 <div class="grid_4 text-center pt6em">
                     {$imageonly:logo:80:static}
