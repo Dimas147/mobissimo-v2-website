@@ -30,7 +30,7 @@ header {
   margin-bottom: 1em;
   overflow: hidden;
   text-align: center;
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   border-radius: 0 0 10px 10px;
 }
 @media only screen and (max-width: 800px) {
@@ -92,6 +92,11 @@ header .slogan {
 }
 .box-white-bg.thin {
   padding: 1em;
+}
+.box-white-bg::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .ng-table-pager .btn-group {
   display: none;
@@ -255,9 +260,7 @@ header .slogan {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
 }
 .offer-list {
-  padding: 21px 14px;
   font-size: 0;
-  border-radius: 28px;
   list-style: none;
 }
 .offer-list >* {
@@ -306,6 +309,7 @@ header .slogan {
   display: block;
   margin-bottom: 0.5em;
   font-size: 1.25em;
+  line-height: 1.2;
   font-weight: 700;
 }
 .offer-list p {
@@ -360,6 +364,13 @@ header .slogan {
 }
 .social-block .btn::before {
   font-size: 29px;
+}
+.social-block .btn:active,
+.social-block .btn:focus {
+  box-shadow: none;
+}
+.social-block .btn:first-child {
+  margin-left: -10px;
 }
 @media only screen and (max-width: 480px) {
   .social-block {
@@ -674,7 +685,6 @@ form#newsletter [type="submit"] {
   top: 0;
   right: 0;
   height: 2.7em;
-  display: none;
 }
 @media only screen and (max-width: 480px) {
   form#newsletter [type="submit"] {
@@ -1753,7 +1763,7 @@ table {
 }
 table.best-fares .price {
   font-weight: bold;
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 0.5em;
@@ -1815,8 +1825,8 @@ aside .mobissimo-search-box .title {
   padding: 0;
   position: absolute;
   top: 0;
-  right: 0;
-  width: 18%;
+  right: 1%;
+  width: 17.5%;
 }
 @media only screen and (max-width: 480px) {
   .m_submit-box {
@@ -1832,7 +1842,7 @@ aside .mobissimo-search-box .title {
   height: 156px;
   padding: 0;
   border-radius: 28px;
-  font-size: 2.85em;
+  font-size: 32px;
 }
 @media only screen and (max-width: 480px) {
   .m_submit-box [type="submit"] {
@@ -1844,9 +1854,9 @@ aside .mobissimo-search-box .title {
   z-index: 0;
   padding: 12px 0;
   border-width: 0;
-  width: 75%;
+  width: 80%;
   float: left;
-  padding-right: 2%;
+  padding-right: 1%;
   border-right: 1px dashed #ffffff;
 }
 @media only screen and (max-width: 480px) {
@@ -1865,6 +1875,11 @@ aside .mobissimo-search-box .title {
 }
 .compare-providers p {
   margin: 0 0 0.8em;
+}
+.compare-providers p.grid_12 {
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 .compare-providers .compare-to-select-box {
   margin-bottom: 0;
@@ -1937,6 +1952,9 @@ aside .mobissimo-search-box .title {
 .mobile .compare-providers .compare input,
 .mobile .compare-providers .compare span {
   display: none;
+}
+.compare-providers label.title {
+  margin-bottom: 12px;
 }
 /*
  * if form on left or right sidebar
@@ -2168,7 +2186,7 @@ aside .compare-providers {
 .results-table .recommendation-body .title {
   font-size: 1.5em;
   font-weight: bold;
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   margin: 0 0.4em 0.4em;
 }
 .recommendation-box {

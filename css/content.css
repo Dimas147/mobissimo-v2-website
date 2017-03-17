@@ -2523,7 +2523,7 @@ a.inherit-color:hover {
   font-family: 'Lato', Arial, sans-serif;
 }
 .ff-header {
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
 }
 .h-auto {
   height: auto !important;
@@ -2923,7 +2923,7 @@ h6,
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   color: #222222;
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
 }
 h1:first-child:not(.logo),
 h2:first-child:not(.logo),
