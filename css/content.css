@@ -835,7 +835,7 @@ ul.list-select > li.active::after {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 960px;
+  width: 990px;
   max-width: 95%;
 }
 .container::after {
@@ -2446,7 +2446,7 @@ ul.list-select > li.active::after {
   color: inherit;
 }
 a.inherit-color:hover {
-  color: #07A0C3;
+  color: #07a0c3;
 }
 .text-overflow {
   white-space: nowrap;
@@ -2652,67 +2652,67 @@ a:hover.facebook {
   color: #2d4373;
 }
 .btn.gplus {
-  color: #fff;
+  color: #ffffff;
   border-color: #dd4b39;
   background-color: #dd4b39;
 }
 .btn.gplus:hover,
 .btn.gplus:active,
 .btn.gplus.active {
-  color: #fff;
+  color: #ffffff;
   border-color: #c23321;
   background-color: #c23321;
 }
 .btn.twitter {
-  color: #fff;
+  color: #ffffff;
   border-color: #55acee;
   background-color: #55acee;
 }
 .btn.twitter:hover,
 .btn.twitter:active,
 .btn.twitter.active {
-  color: #fff;
+  color: #ffffff;
   border-color: #2795e9;
   background-color: #2795e9;
 }
 .btn.youtube {
-  color: #fff;
+  color: #ffffff;
   border-color: #e52d27;
   background-color: #e52d27;
 }
 .btn.youtube:hover,
 .btn.youtube:active,
 .btn.youtube.active {
-  color: #fff;
+  color: #ffffff;
   border-color: #c21d17;
   background-color: #c21d17;
 }
 .btn.linkedin {
-  color: #fff;
+  color: #ffffff;
   border-color: #0976b4;
   background-color: #0976b4;
 }
 .btn.linkedin:hover,
 .btn.linkedin:active,
 .btn.linkedin.active {
-  color: #fff;
+  color: #ffffff;
   border-color: #075683;
   background-color: #075683;
 }
 .btn.facebook {
-  color: #fff;
+  color: #ffffff;
   border-color: #3b5998;
   background-color: #3b5998;
 }
 .btn.facebook:hover,
 .btn.facebook:active,
 .btn.facebook.active {
-  color: #fff;
+  color: #ffffff;
   border-color: #2d4373;
   background-color: #2d4373;
 }
 .btn.social {
-  color: #fff;
+  color: #ffffff;
   border-color: transparent;
   background-color: transparent;
 }
@@ -2731,7 +2731,7 @@ a:hover.facebook {
 .btn.social.invert:hover,
 .btn.social.invert:active,
 .btn.social.invert.active {
-  color: #fff;
+  color: #ffffff;
   border-color: rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
 }
@@ -2857,7 +2857,7 @@ a.seotoaster-color:hover {
 }
 .primary-bg {
   background-color: #f16f29;
-  color: #FFF;
+  color: #ffffff;
 }
 .success-bg {
   background-color: #4fc752;
@@ -2900,7 +2900,7 @@ code {
   color: #f25f5c;
 }
 a {
-  color: #07A0C3;
+  color: #07a0c3;
 }
 a:hover {
   color: #034f61;
@@ -3425,7 +3425,7 @@ button,
   font-family: 'Lato', Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
+  color: #ffffff;
   border-color: #e43007;
   background-color: #f16f29;
   border-radius: 0.75em;
@@ -3452,7 +3452,7 @@ button.active,
 [type="submit"].active,
 [type="button"].active,
 [type="reset"].active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #b22605;
   background-color: #d9550e;
 }
@@ -3503,54 +3503,54 @@ button.disabled,
 }
 .btn.inverse:hover,
 .btn.inverse:active {
-  color: #FFF;
+  color: #ffffff;
   background-color: #d9550e;
 }
 .btn.warning {
-  color: #FFF;
+  color: #ffffff;
   border-color: #ff921f;
   background-color: #ffc159;
 }
 .btn.warning:hover,
 .btn.warning:active,
 .btn.warning.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #eb7900;
   background-color: #ffae26;
 }
 .btn.error {
-  color: #FFF;
+  color: #ffffff;
   border-color: #e62321;
   background-color: #f25f5c;
 }
 .btn.error:hover,
 .btn.error:active,
 .btn.error.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #be1816;
   background-color: #ee312d;
 }
 .btn.success {
-  color: #FFF;
+  color: #ffffff;
   border-color: #189b1a;
   background-color: #4fc752;
 }
 .btn.success:hover,
 .btn.success:active,
 .btn.success.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #126f13;
   background-color: #37ac3a;
 }
 .btn.info {
-  color: #FFF;
+  color: #ffffff;
   border-color: #0679dc;
   background-color: #28b0ed;
 }
 .btn.info:hover,
 .btn.info:active,
 .btn.info.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #055eab;
   background-color: #1195d1;
 }
@@ -3628,7 +3628,7 @@ hr {
   border-top: 1px solid #bbbbbb;
   line-height: 0;
   margin: 1em 0;
-  background: #FFF;
+  background: #ffffff;
   color: #bbbbbb;
 }
 hr.large {

@@ -1,35 +1,40 @@
-@media only screen and (min-width : @responsive-size-tablet){
-    #main-menu{
+@media only screen and (min-width: @responsive-size-tablet) {
+    #main-menu {
         margin-bottom: 1.5em;
     }
-    .main_menu when (@menu-main){
-        position      : relative;
-        z-index       : 11;
+
+    .main_menu when (@menu-main) {
+        position: relative;
+        z-index: 11;
         .inline-block-wrap(@font-size : 20px;);
-        & when not(@nav-bg = transparent){
-            background : @nav-bg;
+        & when not(@nav-bg = transparent) {
+            background: @nav-bg;
         }
-        & when not(@nav-color = @link-color){
-            color : @nav-color;
+        & when not(@nav-color = @link-color) {
+            color: @nav-color;
         }
 
-        & > li{
+        & > li {
             //float    : left;
-            position : relative;
+            position: relative;
             .grid-elements(5; @grid-margin-width; true);
             .border-radius(10px);
             .rgba(#ffffff, 65%);
 
-            &:hover{
-                & when not(@nav-bg = @nav-bg-li-hover){
-                    background : @nav-bg-li-hover;
+            & > a {
+                font-size: 1.15em;
+            }
+
+            &:hover {
+                & when not(@nav-bg = @nav-bg-li-hover) {
+                    background: @nav-bg-li-hover;
                 }
-                & when not(@nav-color = @nav-color-li-hover){
-                    color : @nav-color-li-hover;
+                & when not(@nav-color = @nav-color-li-hover) {
+                    color: @nav-color-li-hover;
                 }
 
-                ul{
-                    display : block;
+                ul {
+                    display: block;
                 }
             }
             // TODO Why we had this property for the tag 'a'?
@@ -38,75 +43,67 @@
             //}
         }
 
-        a{
-            display         : block;
-            padding         : @padding-base-vertical @padding-base-horizontal;
-            text-align      : center;
-            text-decoration : none;
+        a {
+            display: block;
+            padding: 5px @padding-base-horizontal;
+            text-align: center;
+            text-decoration: none;
             .border-radius(10px);
-            & when not(@nav-color = @link-color){
-                color : inherit;
+            & when not(@nav-color = @link-color) {
+                color: inherit;
             }
 
-            &.current{
-                & when (@nav-bg-li-hover = @nav-bg-li-current){
-                    //&:extend(.main_menu > li:hover);
-                }
-
-                & when not(@nav-bg-li-hover = @nav-bg-li-current){
-                    background : @nav-bg-li-current;
-                }
-                & when not(@nav-color-li-hover = @nav-color-li-current){
-                    color : @nav-color-li-current;
-                }
+            &.current {
+                background: @brand-primary;
+                color: @primary-color;
             }
         }
 
-        ul{
-            position   : absolute;
-            left       : 0;
-            top        : 100%;
-            z-index    : 0;
-            display    : none;
-            width      : 300px;
-            background : @nav-drop-down-list-bg;
-            & when not(@nav-drop-down-list-color = @nav-color){
-                color : @nav-drop-down-list-color;
+        ul {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            z-index: 0;
+            display: none;
+            width: 300px;
+            background: @nav-drop-down-list-bg;
+            & when not(@nav-drop-down-list-color = @nav-color) {
+                color: @nav-drop-down-list-color;
             }
             .box-shadow(0 3px 5px @gray-dark);
 
-            & when (@mobile-menu){
-                &.open:extend(.mobile-menu ul.open){
+            & when (@mobile-menu) {
+                &.open:extend(.mobile-menu ul.open) {
                 }
             }
 
-            li{
-                float : none;
+            li {
+                float: none;
 
-                &:hover{
+                &:hover {
                     & when not(@nav-drop-down-list-bg-hover = @nav-bg-li-hover)
                    and not(@nav-drop-down-list-bg-hover = @nav-drop-down-list-bg) {
-                        background : @nav-drop-down-list-bg-hover;
+                        background: @nav-drop-down-list-bg-hover;
                     }
                     & when not(@nav-drop-down-list-color-hover = @nav-drop-down-list-color)
                    and not(@nav-drop-down-list-color-hover = @nav-color-li-hover) {
-                        color : @nav-drop-down-list-color-hover;
+                        color: @nav-drop-down-list-color-hover;
                     }
                 }
 
-                a{
-                    &.current{
-                        & when (@nav-drop-down-list-color-hover = @nav-drop-down-list-color-current){
+                a {
+                    &.current {
+                        & when (@nav-drop-down-list-color-hover = @nav-drop-down-list-color-current) {
                             &:extend(.main_menu ul li:hover);
                         }
 
                         & when not(@nav-drop-down-list-bg-current = @nav-drop-down-list-bg)
                        and not(@nav-drop-down-list-bg-current = @nav-drop-down-list-bg-hover) {
-                            background : @nav-drop-down-list-bg-current;
+                            background: @nav-drop-down-list-bg-current;
                         }
                         & when not(@nav-drop-down-list-color-current = @nav-drop-down-list-color)
                        and not(@nav-drop-down-list-color-current = @nav-drop-down-list-color-hover) {
-                            color : @nav-drop-down-list-color-current;
+                            color: @nav-drop-down-list-color-current;
                         }
                     }
                 }

@@ -127,7 +127,7 @@
 .smoke-base .dialog-inner {
   overflow: auto;
   margin-top: 15%;
-  max-width: 720px;
+  max-width: 742.5px;
   max-height: 70%;
   font-size: 1.25em;
   padding: 1em 2em;
@@ -142,27 +142,27 @@
 }
 .smoke-base .dialog-buttons button {
   font-size: 12px;
-  color: #FFF;
+  color: #ffffff;
   border-color: #189b1a;
   background-color: #4fc752;
 }
 .smoke-base .dialog-buttons button:hover,
 .smoke-base .dialog-buttons button:active,
 .smoke-base .dialog-buttons button.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #126f13;
   background-color: #37ac3a;
 }
 .smoke-base .dialog-buttons button.cancel {
   margin-right: .5em;
-  color: #FFF;
+  color: #ffffff;
   border-color: #e62321;
   background-color: #f25f5c;
 }
 .smoke-base .dialog-buttons button.cancel:hover,
 .smoke-base .dialog-buttons button.cancel:active,
 .smoke-base .dialog-buttons button.cancel.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #be1816;
   background-color: #ee312d;
 }

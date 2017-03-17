@@ -48,11 +48,13 @@ header {
 }
 header .logo {
   margin-top: 0;
+  text-align: left;
 }
 header .logo a {
   display: inline-block;
   vertical-align: middle;
-  margin-top: -250px;
+  margin-top: -120px;
+  max-width: 166px;
   font-family: inherit;
   font-weight: 400;
   text-decoration: none;
@@ -83,7 +85,7 @@ header .slogan {
 .box-white-bg {
   border-radius: 2em;
   padding: 1.5em 1em;
-  margin-bottom: 1em;
+  margin-bottom: 1.8em;
 }
 .box-white-bg.opacity-bg {
   background: rgba(255, 255, 255, 0.65);
@@ -264,9 +266,9 @@ header .slogan {
   vertical-align: middle;
 }
 .offer-list li {
-  margin-left: 4%;
+  margin-left: 10%;
   margin-right: 0;
-  width: 30.66666667%;
+  width: 26.66666667%;
   text-align: center;
 }
 .offer-list li:nth-of-type(3n + 1) {
@@ -274,10 +276,10 @@ header .slogan {
 }
 @media only screen and (max-width: 800px) and (min-width: 481px) {
   .offer-list li {
-    width: 30.66666667%;
+    width: 26.66666667%;
   }
   .offer-list li:nth-of-type(n) {
-    margin-left: 4%;
+    margin-left: 10%;
   }
   .offer-list li:nth-of-type(3n + 1) {
     margin-left: 0;
@@ -295,7 +297,6 @@ header .slogan {
   display: block;
 }
 .offer-list li a > img {
-  max-width: 152px;
   width: 100%;
   margin-bottom: 1em;
   border-radius: 3em;
@@ -354,7 +355,11 @@ header .slogan {
   padding-top: 6em;
 }
 .social-block {
-  font-size: 1.4em;
+  font-size: 2em;
+  margin-top: -2px;
+}
+.social-block .btn::before {
+  font-size: 29px;
 }
 @media only screen and (max-width: 480px) {
   .social-block {
@@ -364,7 +369,7 @@ header .slogan {
 .some-text {
   position: fixed;
   bottom: 0;
-  width: 220px;
+  width: 166px;
   text-align: center;
   font-size: 1.5em;
   color: #FFFFFF;
@@ -400,11 +405,11 @@ footer .flag {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009246+0,009246+33,ffffff+33,ffffff+63,ffffff+63,ce2c37+63,ce2c37+100 */
   background: #009246;
   /* Old browsers */
-  background: -moz-linear-gradient(left, #009246 0%, #009246 33%, #FFFFFF 33%, #FFFFFF 63%, #FFFFFF 63%, #CE2C37 63%, #CE2C37 100%);
+  background: -moz-linear-gradient(left, #009246 0%, #009246 33%, #ffffff 33%, #ffffff 63%, #ffffff 63%, #ce2c37 63%, #ce2c37 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #009246 0%, #009246 33%, #FFFFFF 33%, #FFFFFF 63%, #FFFFFF 63%, #CE2C37 63%, #CE2C37 100%);
+  background: -webkit-linear-gradient(left, #009246 0%, #009246 33%, #ffffff 33%, #ffffff 63%, #ffffff 63%, #ce2c37 63%, #ce2c37 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #009246 0%, #009246 33%, #FFFFFF 33%, #FFFFFF 63%, #FFFFFF 63%, #CE2C37 63%, #CE2C37 100%);
+  background: linear-gradient(to right, #009246 0%, #009246 33%, #ffffff 33%, #ffffff 63%, #ffffff 63%, #ce2c37 63%, #ce2c37 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009246', endColorstr='#ce2c37', GradientType=1);
   /* IE6-9 */
@@ -464,14 +469,14 @@ footer .flag-list .com {
   background-position: 0 -126px;
 }
 #go-top {
-  color: #FFFFFF;
+  color: #ffffff;
   border-color: rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.5);
 }
 #go-top:hover,
 #go-top:active,
 #go-top.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #f16f29;
   background-color: #f16f29;
 }
@@ -480,6 +485,31 @@ footer .flag-list .com {
   display: block;
   overflow: hidden;
   border-radius: 40px;
+}
+.auto-form #pl_mobissimosearch_form_car {
+  min-height: 0;
+}
+.auto-form .mobissimo-search-box .location-box + .grid_4 {
+  width: 48%;
+}
+.auto-form .mobissimo-search-box .atairport-box {
+  width: 98%;
+}
+.auto-form .mobissimo-search-box .atairport-box + .grid_6 {
+  margin-bottom: 0;
+}
+.auto-form .mobissimo-search-box .atairport-box + .grid_6 + .grid_6 {
+  margin-bottom: 0;
+}
+.auto-form .m_submit-box [type="submit"],
+.aero-form .m_submit-box [type="submit"],
+.hotel-form .m_submit-box [type="submit"] {
+  height: 156px;
+}
+.auto-form .mobissimo-search-box,
+.aero-form .mobissimo-search-box,
+.hotel-form .mobissimo-search-box {
+  min-height: 156px;
 }
 form::after {
   content: "";
@@ -511,7 +541,7 @@ form .captcha .captcha_image a {
   font-family: 'Lato', Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
+  color: #ffffff;
   border-color: #e43007;
   background-color: #f16f29;
   border-radius: 0.75em;
@@ -535,7 +565,7 @@ form .captcha .recaptcha_links a:active,
 form .captcha .captcha_image a:active,
 form .captcha .recaptcha_links a.active,
 form .captcha .captcha_image a.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #b22605;
   background-color: #d9550e;
 }
@@ -643,7 +673,7 @@ form#newsletter [type="submit"] {
   position: absolute;
   top: 0;
   right: 0;
-  height: 3em;
+  height: 2.7em;
   display: none;
 }
 @media only screen and (max-width: 480px) {
@@ -698,7 +728,7 @@ textarea,
 input {
   font-family: 'Lato', Arial, sans-serif;
   border: 1px solid transparent;
-  background-color: #fff;
+  background-color: #ffffff;
   color: #575656;
   border-radius: 1em;
   transition: border 0.3s;
@@ -792,8 +822,8 @@ input.noedit:focus {
 input,
 select {
   padding: 0 .5em;
-  height: 3em;
-  line-height: 2em;
+  height: 2.7em;
+  line-height: 1.7em;
 }
 select {
   /*for WebKit*/
@@ -804,7 +834,7 @@ select {
   text-overflow: '';
   /* for IE */
   -ms-appearance: none;
-  appearance: none!important;
+  appearance: none !important;
 }
 select#pickupHour,
 select#dropoffHour {
@@ -922,7 +952,7 @@ textarea.resize {
   transition: all 0.3s;
   background: rgba(0, 0, 0, 0.1);
   position: absolute;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   z-index: 1;
   left: 0;
   top: 0;
@@ -1082,7 +1112,7 @@ textarea.resize {
   margin: 0;
   line-height: 1.5;
   padding: 4px;
-  color: #FFF;
+  color: #ffffff;
   text-align: center;
   font-size: 0.85em;
   white-space: nowrap;
@@ -1137,7 +1167,7 @@ textarea.resize {
   vertical-align: middle;
   cursor: pointer;
   margin: 0 3px;
-  color: #FFF;
+  color: #ffffff;
   background: #FFF;
   border-radius: 14px;
   width: 10px;
@@ -1153,12 +1183,12 @@ textarea.resize {
 }
 .cycle-slideshow .cycle-pager > *.cycle-pager-active {
   cursor: default;
-  color: #FFF;
+  color: #ffffff;
   background: #f16f29;
 }
 .cycle-slideshow [class*="cycle-"].action-button {
   background: #f16f29;
-  color: #FFF;
+  color: #ffffff;
   position: absolute;
   top: 50%;
   z-index: 20;
@@ -1177,7 +1207,7 @@ textarea.resize {
 }
 .cycle-slideshow [class*="cycle-"].action-button:hover {
   background: #d9550e;
-  color: #FFF;
+  color: #ffffff;
 }
 .cycle-slideshow [class*="cycle-"].action-button::before {
   font-family: flexkit-icons;
@@ -1207,7 +1237,7 @@ textarea.resize {
   position: absolute;
   width: 100%;
   z-index: 100;
-  background-color: #FFF;
+  background-color: #ffffff;
   border-width: 0 !important;
   padding: 0 !important;
   overflow: hidden;
@@ -1539,7 +1569,7 @@ body.tablet .ui-datepicker {
   font-family: 'Lato', Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
+  color: #ffffff;
   border-color: #e43007;
   background-color: #f16f29;
   border-radius: 0.75em;
@@ -1554,7 +1584,7 @@ body.tablet .ui-datepicker {
 .dataTable a.btn_ping:hover,
 .dataTable a.btn_ping:active,
 .dataTable a.btn_ping.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #b22605;
   background-color: #d9550e;
 }
@@ -1742,7 +1772,7 @@ table.best-fares .price {
 .mobissimo-search-box {
   border-width: 0;
   padding: 0;
-  width: 75%;
+  width: 80%;
   float: left;
   padding-right: 1%;
   border-right: 1px dashed #ffffff;
@@ -1756,7 +1786,7 @@ table.best-fares .price {
   }
 }
 .mobissimo-search-box > div {
-  margin-bottom: 1.25em;
+  margin-bottom: 1.8em;
 }
 .mobissimo-search-box .title {
   display: none;
@@ -1786,7 +1816,7 @@ aside .mobissimo-search-box .title {
   position: absolute;
   top: 0;
   right: 0;
-  width: 23%;
+  width: 18%;
 }
 @media only screen and (max-width: 480px) {
   .m_submit-box {
@@ -1796,11 +1826,12 @@ aside .mobissimo-search-box .title {
 }
 .m_submit-box [type="submit"] {
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: lowercase;
   margin-top: 0;
   width: 100%;
-  height: 150px;
-  border-radius: 3rem;
+  height: 156px;
+  padding: 0;
+  border-radius: 28px;
   font-size: 2.85em;
 }
 @media only screen and (max-width: 480px) {
@@ -1980,6 +2011,10 @@ aside [name="hotel"] .mobissimo-search-box [class*="grid_"] {
 aside [name="car"] .mobissimo-search-box .atairport-box {
   margin-top: 0.45em !important;
 }
+aside [name="car"] .mobissimo-search-box .atairport-box label {
+  line-height: 1;
+  word-break: break-all;
+}
 aside [name="car"] .mobissimo-search-box .grid_7,
 aside [name="car"] .mobissimo-search-box .grid_6,
 aside [name="car"] .mobissimo-search-box .grid_5,
@@ -2019,7 +2054,7 @@ aside .compare-providers {
   font-family: 'Lato', Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFF;
+  color: #ffffff;
   border-color: #e43007;
   background-color: #f16f29;
   -webkit-user-select: none;
@@ -2037,7 +2072,7 @@ aside .compare-providers {
 .results-table .price span:hover,
 .results-table .price span:active,
 .results-table .price span.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #b22605;
   background-color: #d9550e;
 }
@@ -2216,7 +2251,7 @@ aside .compare-providers {
   display: none;
   background: rgba(85, 85, 85, 0.9);
   transition: all, 0.5s, ease;
-  color: #FFF;
+  color: #ffffff;
   padding: 8px;
 }
 .mobissimo-recomm li:hover .recommendation-detail-text {
@@ -2330,7 +2365,7 @@ aside .compare-providers {
 }
 .api-form .box-compare fieldset {
   border-radius: 0 0 0 0;
-  box-shadow: 0 0 0 #000;
+  box-shadow: 0 0 0 #000000;
   padding: 0;
 }
 .api-form .box-compare .compare-providers {
@@ -2466,7 +2501,7 @@ html.tablet .mobile-loader::before {
   content: "";
   display: block;
   border: 5px solid transparent;
-  border-top-color: #FFF;
+  border-top-color: #ffffff;
   position: absolute;
   left: 0;
   right: 0;

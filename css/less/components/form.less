@@ -8,11 +8,11 @@
 
 //	Custom style
 //==================================================
-& when (@form){
-    form{
+& when (@form) {
+    form {
         .clearfix-mixin();
 
-        p{
+        p {
             .clearfix-mixin();
         }
 
@@ -20,150 +20,155 @@
         @import "form/form-recaptcha";
 
         // -- Buttons
-        [type="submit"]{
-            float : right;
+        [type="submit"] {
+            float: right;
 
-            &:hover{
+            &:hover {
             }
         }
-        &#newsletter{
-            [type="submit"]{
-                position : absolute;
-                top      : 0;
-                right    : 0;
-                height   : 3em;
-                display  : none;
-                @media only screen and (max-width : @responsive-size-mobile){
-                    position   : relative;
-                    margin-top : 0.5rem;
+        &#newsletter {
+            [type="submit"] {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 2.7em;
+                display: none;
+                @media only screen and (max-width: @responsive-size-mobile) {
+                    position: relative;
+                    margin-top: 0.5rem;
                 }
             }
-            .email{
-                &:focus{
-                    & ~ [type="submit"]{
-                        display : block;
+            .email {
+                &:focus {
+                    & ~ [type="submit"] {
+                        display: block;
                     }
                 }
             }
         }
-    }
+        #newsletter {
+            input[type="text"] {
 
-    fieldset{
-
-        legend{
-            font-size : @font-size-large;
-        }
-
-        &.unstyled{
-            padding : 0;
-            border  : 0;
-
-            legend{
-                padding       : 0;
-                margin-bottom : .45em;
-                font-weight   : @heading-weight;
             }
         }
     }
 
-    label, .label{
-        display       : block;
-        margin-bottom : 0.25em;
+    fieldset {
 
-        &[for]{
-            cursor : pointer;
+        legend {
+            font-size: @font-size-large;
         }
 
-        &[class*="grid_"]{
-            margin-bottom : 0;
-        }
+        &.unstyled {
+            padding: 0;
+            border: 0;
 
-        .label-inline &{
-            margin-bottom : 0;
-            line-height   : unit(@button-line-height * 2, em);
-        }
-
-        &.required::after{
-            color   : @brand-error;
-            content : ' *';
+            legend {
+                padding: 0;
+                margin-bottom: .45em;
+                font-weight: @heading-weight;
+            }
         }
     }
 
-    .notvalid{
-        color : @brand-error; // !important;
+    label, .label {
+        display: block;
+        margin-bottom: 0.25em;
+
+        &[for] {
+            cursor: pointer;
+        }
+
+        &[class*="grid_"] {
+            margin-bottom: 0;
+        }
+
+        .label-inline & {
+            margin-bottom: 0;
+            line-height: unit(@button-line-height * 2, em);
+        }
+
+        &.required::after {
+            color: @brand-error;
+            content: ' *';
+        }
     }
 
-    select, textarea, input{
-        font-family      : @font-family-text;
-        border           : @input-border-width solid @input-border-color;
-        background-color : @input-bg;
-        color            : @input-color;
+    .notvalid {
+        color: @brand-error; // !important;
+    }
+
+    select, textarea, input {
+        font-family: @font-family-text;
+        border: @input-border-width solid @input-border-color;
+        background-color: @input-bg;
+        color: @input-color;
         .border-radius(@input-border-radius);
         //.box-shadow(1px 1px 3px @gray-light inset, @input-inner-shadow);
-        & when (@button-transition){
+        & when (@button-transition) {
             .transition(border 0.3s);
         }
 
-        &:focus{
-            & when not(@input-bg-focus = @input-bg){
-                background : @input-bg-focus;
+        &:focus {
+            & when not(@input-bg-focus = @input-bg) {
+                background: @input-bg-focus;
             }
-            & when not(@input-border-color-focus = @input-border-color){
-                border-color : @input-border-color-focus;
+            & when not(@input-border-color-focus = @input-border-color) {
+                border-color: @input-border-color-focus;
             }
             //.box-shadow(0 0 @input-shadow-size @input-border-color-focus; @input-shadow-focus);
         }
 
-        &.success, &.warning, &.error, &.info{
-            & when (@form-colors){
-                color : @input-color;
+        &.success, &.warning, &.error, &.info {
+            & when (@form-colors) {
+                color: @input-color;
             }
         }
         &.success when (@form-color-success) and (@form-colors) {
-            border-color : @brand-success;
-            &:focus{
+            border-color: @brand-success;
+            &:focus {
                 .box-shadow(0 0 @input-shadow-size @brand-success inset; @input-shadow-focus);
             }
         }
         &.warning when (@form-color-warning) and (@form-colors) {
-            border-color : @brand-warning;
-            &:focus{
+            border-color: @brand-warning;
+            &:focus {
                 .box-shadow(0 0 @input-shadow-size @brand-warning inset; @input-shadow-focus);
             }
         }
-        &.error, &.notvalid{
+        &.error, &.notvalid {
             & when (@form-color-error) and (@form-colors) {
-                border-color : @brand-error;
-                &:focus{
+                border-color: @brand-error;
+                &:focus {
                     .box-shadow(0 0 @input-shadow-size @brand-error inset; @input-shadow-focus);
                 }
             }
         }
         &.info when (@form-color-info) and (@form-colors) {
-            border-color : @brand-info;
-            &:focus{
+            border-color: @brand-info;
+            &:focus {
                 .box-shadow(0 0 @input-shadow-size @brand-info inset; @input-shadow-focus);
             }
         }
 
-        &[disabled], [disabled] &, &[disabled]:focus, &.noedit, &.noedit:focus{
-            border-color : @input-border-color-disabled; //!important;
-            background   : @input-bg-disabled; //!important;
-            color        : darken(@input-bg-disabled, 30%); //!important;
+        &[disabled], [disabled] &, &[disabled]:focus, &.noedit, &.noedit:focus {
+            border-color: @input-border-color-disabled; //!important;
+            background: @input-bg-disabled; //!important;
+            color: darken(@input-bg-disabled, 30%); //!important;
             & when (@ie) and (@ie8) {
-                cursor : default; // !important;
+                cursor: default; // !important;
             }
-            cursor       : not-allowed; // !important;
+            cursor: not-allowed; // !important;
             .box-shadow(none); // !important;
         }
     }
 
-    input, select{
-        padding     : 0 .5em;
-        height      : unit(@input-line-height * 2, em);
-        line-height : unit(@input-line-height * 2, em) - 1;
+    input, select {
+        padding: 0 .5em;
+        height: unit(@input-line-height * 1.8, em);
+        line-height: unit(@input-line-height * 1.8, em) - 1;
     }
-    select{
+    select {
         /*for WebKit*/
         -webkit-appearance: none;
         /* for FF */
@@ -172,41 +177,41 @@
         text-overflow: '';
         /* for IE */
         -ms-appearance: none;
-        appearance: none!important;
-        &#pickupHour, &#dropoffHour{
+        appearance: none !important;
+        &#pickupHour, &#dropoffHour {
             background-image: url('../images/arr-left-clock.jpg');
             background-position: 95% center;
             background-repeat: no-repeat;
         }
-        &[name="NumTix"], &[name="Class"], &[name="numGuests"], &[name="numRooms"]{
+        &[name="NumTix"], &[name="Class"], &[name="numGuests"], &[name="numRooms"] {
             background-image: url('../images/arrow.png');
             background-position: 95% center;
             background-repeat: no-repeat;
         }
 
     }
-    input.email{
-        padding-right : 3em;
+    input.email {
+        padding-right: 3em;
     }
 
-    select{
-        option{
+    select {
+        option {
             //        color : @text-color;
         }
     }
 
-    textarea{
-        padding    : .5em;
-        min-height : 5em;
+    textarea {
+        padding: .5em;
+        min-height: 5em;
 
-        &.resize{
+        &.resize {
             .resize(vertical);
         }
     }
 
-    .forgot-password, .retrieveFormBlock > form + a{
-        float      : left;
-        margin-top : -(@button-height-base - @padding-base-vertical);
+    .forgot-password, .retrieveFormBlock > form + a {
+        float: left;
+        margin-top: -(@button-height-base - @padding-base-vertical);
     }
 
     // Checkbox & Radio Styles

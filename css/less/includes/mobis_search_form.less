@@ -17,7 +17,7 @@
     border-width  : 0;
     padding       : 0;
     //
-    width         : 75%;
+    width         : 80%;
     float         : left;
     padding-right : 1%;
     border-right  : 1px dashed #ffffff;
@@ -30,7 +30,7 @@
     }
 
     > div{
-        margin-bottom : 1.25em;
+        margin-bottom : 1.8em;
     }
     .title{
 
@@ -72,7 +72,7 @@
     position     : absolute;
     top          : 0;
     right        : 0;
-    width        : 23%;
+    width        : 18%;
 
     @media only screen and (max-width : @responsive-size-mobile){
         position : relative;
@@ -81,12 +81,13 @@
 
     [type="submit"]{
         font-weight    : bold;
-        text-transform : uppercase;
+        text-transform : lowercase;
         margin-top     : 0;
         width          : 100%;
-        height         : 150px;
+        height         : 156px;
+        padding: 0;
         //.box-shadow(0 0 0 2px #EF91E5);
-        .border-radius(3rem);
+        .border-radius(28px);
         font-size: 2.85em;
         @media only screen and (max-width : @responsive-size-mobile){
             height : 3rem;
@@ -266,6 +267,10 @@
     aside [name="car"] &{
         .atairport-box{
             margin-top : 0.45em !important;
+            label{
+                line-height: 1;
+                word-break: break-all;
+            }
         }
         .grid_7, .grid_6, .grid_5, .grid_4, .grid_2{
             width : 98%;
@@ -295,5 +300,4 @@
     &_car, &_hotel{
         min-height : 155px;
     }
-
 }

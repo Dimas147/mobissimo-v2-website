@@ -42,20 +42,27 @@ extend ' .mobile-menu li' has no matches
   .main_menu > li:nth-of-type(5n + 1) {
     margin-left: 0;
   }
+  .main_menu > li > a {
+    font-size: 1.15em;
+  }
   .main_menu > li:hover {
     background: #f16f29;
-    color: #fff;
+    color: #ffffff;
   }
   .main_menu > li:hover ul {
     display: block;
   }
   .main_menu a {
     display: block;
-    padding: 8px 12px;
+    padding: 5px 12px;
     text-align: center;
     text-decoration: none;
     border-radius: 10px;
     color: inherit;
+  }
+  .main_menu a.current {
+    background: #f16f29;
+    color: #ffffff;
   }
   .main_menu ul {
     position: absolute;
@@ -64,7 +71,7 @@ extend ' .mobile-menu li' has no matches
     z-index: 0;
     display: none;
     width: 300px;
-    background: #FFF;
+    background: #ffffff;
     color: #888888;
     box-shadow: 0 3px 5px #555555;
   }
@@ -299,7 +306,7 @@ aside .relatedpages li p {
 .mobile-bar.top {
   top: 0;
   line-height: 56px;
-  color: #FFF;
+  color: #ffffff;
   background: #f16f29;
 }
 .mobile-bar.top .btn.icon {
@@ -346,7 +353,7 @@ aside .relatedpages li p {
 .sub-menu-btn {
   width: 48px;
   text-align: center;
-  color: #FFF;
+  color: #ffffff;
   font-size: 1.25em;
   position: absolute;
   right: 0;
@@ -542,7 +549,7 @@ aside .relatedpages li p {
 .dropdown-menu,
 .mobile-menu.dropdown,
 [data-dropdown-open] .dropdown-menu-mobile {
-  background: #fff !important;
+  background: #ffffff !important;
   color: #575656 !important;
   position: absolute;
   z-index: 92 !important;
