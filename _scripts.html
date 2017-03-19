@@ -3,3 +3,10 @@
 <script src="js/system/flexkit.min.js"></script>
 <script src="js/plugin/datepicker-it.js"></script>
 <script src="js/plugin/affix.js"></script>
+<script>
+    $(window).load(function() {
+        floatingBlockWidth = $(".floating-block").width();
+        console.log(floatingBlockWidth);
+        $('[data-spy="affix"]').css("width", floatingBlockWidth + 'px');
+    });
+</script>

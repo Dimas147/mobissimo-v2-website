@@ -7,24 +7,25 @@
 <body class="fix-footer-line" {$mobissimosetngapp}>
 
 <!-- Container -->
-<main class="container">
+<main class="container width-1200">
     <!-- Include header template -->
-    <div class="grid_3">
-        {$template:_header}
-        <!-- Left box -->
-        <aside class="" role="complementary">
-            <section class="aside-box box-white-bg opacity-bg">
-                <h3>{$header:left_1:static}</h3>
-                {$mobissimorfilter:currency}
-            </section>
-            <section class="aside-box box-white-bg opacity-bg">
-                {$mobissimoform:air:roundtrip:roundtrip,oneway}
-            </section>
-        </aside>
+    <div class="wrap-block grid_2 alpha omega m-grid_2 m-prefix_1 m-suffix_1 d-visible floating-block">
+        <div data-spy="affix" data-offset-top="125" data-offset-bottom="200">
+            {$template:_header}
+            <aside class="" role="complementary">
+                <section class="aside-box box-white-bg opacity-bg">
+                    <h3>{$header:left_1:static}</h3>
+                    {$mobissimorfilter:currency}
+                </section>
+                <section class="aside-box box-white-bg opacity-bg">
+                    {$mobissimoform:air:roundtrip:roundtrip,oneway}
+                </section>
+            </aside>
+        </div>
     </div>
-    <nav id="main-menu" class="d-visible grid_9 mt15px" role="navigation">{$menu:main:_main menu}</nav>
-    <article class="grid_9" role="main">
 
+    <article class="grid_8 alpha omega box-white-bg opacity-bg mt126" role="main">
+        <nav id="main-menu" class="d-visible" role="navigation">{$menu:main:_main menu}</nav>
         <div class="flight-brief block mt15px mb15px box-white-bg opacity-bg">
             <div class="grid_12 alpha omega">
                 {$mobissimoform:air:roundtrip:roundtrip,oneway}
@@ -67,9 +68,12 @@
     </article>
 
     <!-- Right box -->
-    <aside class="grid_2 right-aside" role="complementary">
+    <aside class="grid_2 alpha omega right-ad mt126" role="complementary">
         <section class="aside-box">
-            <iframe src="http://oascentral.travelzoo.com/RealMedia/ads/adstream_sx.ads/Mobissimo_Brand/home160/@Right?O=&amp;D=&amp;G=" width="160px" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" align="top left"></iframe>
+            <iframe
+                    src="http://oascentral.travelzoo.com/RealMedia/ads/adstream_sx.ads/Mobissimo_Brand/home160/@Right?O=&amp;D=&amp;G="
+                    width="160px" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                    align="top left"></iframe>
         </section>
     </aside>
     <!--<div class="hFooter"></div>-->

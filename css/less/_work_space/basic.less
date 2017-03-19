@@ -136,7 +136,8 @@ section {
 }
 
 .box-white-bg {
-    .border-radius(2em);
+    background-color: #ffffff;
+    .border-radius(20px);
     padding: 1.5em 1em;
     margin-bottom: 1.8em;
     &.opacity-bg {
@@ -177,10 +178,10 @@ section {
         margin: 0;
         float: right;
         .border-radius(@border-radius-base);
+        display: block;
 
         li {
-            display: block;
-            float: left;
+            .inline-block();
             margin: 0;
 
             &.disabled {
@@ -206,26 +207,34 @@ section {
         text-align: center;
         a {
             display: block;
-            > img {
+            & > img {
                 width: 100%;
                 margin-bottom: 1em;
                 .border-radius(3em);
             }
         }
-
+        & > img {
+            width: 100%;
+            margin-bottom: 1em;
+            .border-radius(3em);
+        }
     }
     span {
-        height: 50px;
         display: block;
         margin-bottom: 0.5em;
+        white-space: nowrap;
         font-size: 1.25em;
         line-height: 1.2;
-        font-weight: 700;
+        font-weight: normal;
+        .text-overflow();
     }
 
     p {
         text-align: left;
-        font-weight: bold;
+        font-weight: normal;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
     .icon-share {
         &:before {
@@ -248,12 +257,13 @@ section {
     display: block;
     margin-bottom: 0.5em;
     font-size: 1.25em;
-    font-weight: 700;
+    font-weight: normal;
 }
 
 .box-text {
     text-align: left;
-    font-weight: bold;
+    font-weight: normal;
+    margin-bottom: 0;
     &.icon-share {
         &:before {
             float: right;
@@ -261,11 +271,16 @@ section {
             margin-left: 0.5em;
         }
     }
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .box-text2 {
     position: relative;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
     margin-top: 0.5em;
     padding-top: 0.25em;
     font-size: 1.75em;
@@ -285,17 +300,21 @@ section {
 }
 
 .social-block {
-    font-size: 2em;
-    margin-top: -2px;
-    .btn{
-        &::before{
+    font-size: 1.15em;
+    .btn {
+        &::before {
             font-size: 29px;
         }
-        &:active, &:focus{
+        &:active, &:focus {
             .box-shadow(none);
         }
-        &:first-child{
-            margin-left: -10px;
+        &.facebook {
+            width: 27px;
+            margin-left: -6px;
+            margin-right: -3px;
+        }
+        &.blogger {
+            margin-left: -2px;
         }
     }
     @media only screen and (max-width: @responsive-size-mobile) {
@@ -427,11 +446,76 @@ footer {
         }
     }
 }
-.auto-form, .aero-form, .hotel-form{
-    .m_submit-box [type="submit"]{
+
+.auto-form, .aero-form, .hotel-form {
+    .m_submit-box [type="submit"] {
         height: 156px;
     }
-    .mobissimo-search-box{
+    .mobissimo-search-box {
         min-height: 156px;
     }
 }
+
+.affix {
+    position: fixed !important;
+}
+
+.affix-top {
+    position: absolute !important;
+    top: 0;
+}
+
+.affix-bottom {
+    position: absolute !important;
+}
+
+.floating-block {
+    position: relative;
+    height: 1px;
+    padding-right: 75px;
+}
+
+.right-ad {
+    padding-left: 75px;
+    overflow: hidden;
+}
+
+.container {
+    &.width-1200 {
+        width: 1200px;
+        & > .grid_2 {
+            width: 21%;
+        }
+        & > .grid_8 {
+            width: 58%;
+        }
+    }
+}
+
+.mt126 {
+    margin-top: 126px;
+}
+
+.contact-title {
+    font-size: 41px;
+    color: #8c4545;
+    margin-top: 10px;
+    & + h2 {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+}
+
+.contact-block {
+    margin-bottom: 50px;
+    font-size: 0.9em;
+    p {
+        margin-bottom: 0;
+    }
+    .address {
+        margin: 20px 0;
+        display: block;
+    }
+}
+

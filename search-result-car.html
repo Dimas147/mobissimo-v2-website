@@ -7,27 +7,30 @@
 <body class="fix-footer-line" {$mobissimosetngapp}>
 
 <!-- Container -->
-<main class="container">
+<main class="container width-1200">
 
-    <div class="grid_3">
-        {$template:_header}
-        <!-- Left box -->
-        <aside class="" role="complementary">
-            <section class="aside-box box-white-bg opacity-bg">
-                <h3>{$header:left_1:static}</h3>
-                {$mobissimorfilter:currency}
-            </section>
-            <section class="aside-box box-white-bg opacity-bg">
-                {$mobissimoform:car}
-            </section>
-        </aside>
+    <div class="wrap-block grid_2 alpha omega m-grid_2 m-prefix_1 m-suffix_1 d-visible floating-block">
+        <div data-spy="affix" data-offset-top="150" data-offset-bottom="200">
+            {$template:_header}
+            <!-- Left box -->
+            <aside class="" role="complementary">
+                <section class="aside-box box-white-bg opacity-bg">
+                    <h3>{$header:left_1:static}</h3>
+                    {$mobissimorfilter:currency}
+                </section>
+                <section class="aside-box box-white-bg opacity-bg">
+                    {$mobissimoform:car}
+                </section>
+            </aside>
+        </div>
     </div>
 
     <!--h1 class="grid_12" role="heading">{$page:h1}</h1-->
-    <nav id="main-menu" class="d-visible grid_9 mt15px" role="navigation">{$menu:main:_main menu}</nav>
+
 
     <!-- Content box -->
-    <article class="grid_9 box-white-bg opacity-bg" role="main">
+    <article class="grid_8 alpha omega box-white-bg opacity-bg mt126" role="main">
+        <nav id="main-menu" class="d-visible" role="navigation">{$menu:main:_main menu}</nav>
         <div class="flight-brief block mt15px mb15px">
             <!-- <h3>{_$mobissimosearchinfo:air:origin_name} ({_$mobissimosearchinfo:air:origin}) <i class="icon-arrow-right2"></i> {_$mobissimosearchinfo:air:destination_name} ({_$mobissimosearchinfo:air:destination})</h3>
             <span>{_$mobissimosearchinfo:air:depart_date:m/d/y} - {_$mobissimosearchinfo:air:return_date:m/d/y}</span>-->
@@ -44,9 +47,11 @@
     </article>
 
     <!-- Right box -->
-    <aside class="grid_2 right-aside" role="complementary">
+    <aside class="grid_2 alpha omega right-ad mt126" role="complementary">
         <section class="aside-box">
-            <iframe src="http://oascentral.travelzoo.com/RealMedia/ads/adstream_sx.ads/Mobissimo_Brand/home160/@Right?O=&amp;D=&amp;G=" width="160px" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" align="top left"></iframe>
+            <iframe src="http://oascentral.travelzoo.com/RealMedia/ads/adstream_sx.ads/Mobissimo_Brand/home160/@Right?O=&amp;D=&amp;G="
+                    width="160px" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+                    align="top left"></iframe>
         </section>
     </aside>
     <!--<div class="hFooter"></div>-->

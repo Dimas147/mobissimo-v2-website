@@ -83,7 +83,8 @@ header .slogan {
   }
 }
 .box-white-bg {
-  border-radius: 2em;
+  background-color: #ffffff;
+  border-radius: 20px;
   padding: 1.5em 1em;
   margin-bottom: 1.8em;
 }
@@ -185,10 +186,11 @@ header .slogan {
   margin: 0;
   float: right;
   border-radius: 0.5em;
+  display: block;
 }
 .ng-table-pager .pagination li {
-  display: block;
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
   margin: 0;
 }
 .ng-table-pager .pagination li.disabled a {
@@ -304,17 +306,27 @@ header .slogan {
   margin-bottom: 1em;
   border-radius: 3em;
 }
+.offer-list li > img {
+  width: 100%;
+  margin-bottom: 1em;
+  border-radius: 3em;
+}
 .offer-list span {
-  height: 50px;
   display: block;
   margin-bottom: 0.5em;
   font-size: 1.25em;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .offer-list p {
   text-align: left;
-  font-weight: bold;
+  font-weight: normal;
+}
+.offer-list p:last-child {
+  margin-bottom: 0;
 }
 .offer-list .icon-share:before {
   float: right;
@@ -328,20 +340,24 @@ header .slogan {
   display: block;
   margin-bottom: 0.5em;
   font-size: 1.25em;
-  font-weight: 700;
+  font-weight: normal;
 }
 .box-text {
   text-align: left;
-  font-weight: bold;
+  font-weight: normal;
+  margin-bottom: 0;
 }
 .box-text.icon-share:before {
   float: right;
   font-size: 2em;
   margin-left: 0.5em;
 }
+.box-text p:last-child {
+  margin-bottom: 0;
+}
 .box-text2 {
   position: relative;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
   margin-top: 0.5em;
   padding-top: 0.25em;
   font-size: 1.75em;
@@ -359,8 +375,7 @@ header .slogan {
   padding-top: 6em;
 }
 .social-block {
-  font-size: 2em;
-  margin-top: -2px;
+  font-size: 1.15em;
 }
 .social-block .btn::before {
   font-size: 29px;
@@ -369,8 +384,13 @@ header .slogan {
 .social-block .btn:focus {
   box-shadow: none;
 }
-.social-block .btn:first-child {
-  margin-left: -10px;
+.social-block .btn.facebook {
+  width: 27px;
+  margin-left: -6px;
+  margin-right: -3px;
+}
+.social-block .btn.blogger {
+  margin-left: -2px;
 }
 @media only screen and (max-width: 480px) {
   .social-block {
@@ -521,6 +541,58 @@ footer .flag-list .com {
 .aero-form .mobissimo-search-box,
 .hotel-form .mobissimo-search-box {
   min-height: 156px;
+}
+.affix {
+  position: fixed !important;
+}
+.affix-top {
+  position: absolute !important;
+  top: 0;
+}
+.affix-bottom {
+  position: absolute !important;
+}
+.floating-block {
+  position: relative;
+  height: 1px;
+  padding-right: 75px;
+}
+.right-ad {
+  padding-left: 75px;
+  overflow: hidden;
+}
+.container.width-1200 {
+  width: 1200px;
+}
+.container.width-1200 > .grid_2 {
+  width: 21%;
+}
+.container.width-1200 > .grid_8 {
+  width: 58%;
+}
+.mt126 {
+  margin-top: 126px;
+}
+.contact-title {
+  font-size: 41px;
+  color: #8c4545;
+  margin-top: 10px;
+}
+.contact-title + h2 {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.contact-block {
+  margin-bottom: 50px;
+  font-size: 0.9em;
+}
+.contact-block p {
+  margin-bottom: 0;
+}
+.contact-block .address {
+  margin: 20px 0;
+  display: block;
 }
 form::after {
   content: "";
@@ -711,6 +783,7 @@ label,
 .label {
   display: block;
   margin-bottom: 0.25em;
+  font-weight: normal;
 }
 label[for],
 .label[for] {
@@ -834,6 +907,7 @@ select {
   padding: 0 .5em;
   height: 2.7em;
   line-height: 1.7em;
+  font-weight: normal;
 }
 select {
   /*for WebKit*/
@@ -1248,10 +1322,10 @@ textarea.resize {
   width: 100%;
   z-index: 100;
   background-color: #ffffff;
-  border-width: 0 !important;
   padding: 0 !important;
   overflow: hidden;
-  margin-top: 0;
+  margin-top: -12px;
+  border: 1px solid #ffffff;
 }
 .mobis-autocomplete ul li {
   padding: 8px;
@@ -1260,6 +1334,13 @@ textarea.resize {
 .mobis-autocomplete ul li:hover {
   background-color: #ffffff;
   color: #555555;
+}
+.mobis-autocomplete > ul {
+  border-radius: 0 0 1em 1em;
+  border-top: 0;
+}
+input:focus + .mobis-autocomplete > ul {
+  border-color: #f16f29;
 }
 .box-compare fieldset {
   /*&:first-child{
@@ -1826,7 +1907,7 @@ aside .mobissimo-search-box .title {
   position: absolute;
   top: 0;
   right: 1%;
-  width: 17.5%;
+  width: 17%;
 }
 @media only screen and (max-width: 480px) {
   .m_submit-box {
@@ -1835,7 +1916,7 @@ aside .mobissimo-search-box .title {
   }
 }
 .m_submit-box [type="submit"] {
-  font-weight: bold;
+  font-weight: normal;
   text-transform: lowercase;
   margin-top: 0;
   width: 100%;
@@ -2160,6 +2241,7 @@ aside .compare-providers {
   margin-right: 5px;
 }
 .mobissimo-preloader-progress .completed {
+  margin-bottom: 1em;
   color: #f16f29;
   /*.transition(all, 1s, ease 3s);
         opacity : 0;*/
