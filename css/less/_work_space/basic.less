@@ -133,6 +133,9 @@ section {
     @media only screen and (max-width: @responsive-size-mobile) {
         margin-top: 0;
     }
+    &.mt{
+        margin-top: 9em;
+    }
 }
 
 .box-white-bg {
@@ -301,6 +304,7 @@ section {
 
 .social-block {
     font-size: 1.15em;
+    margin-top: 4px;
     .btn {
         &::before {
             font-size: 29px;
@@ -437,6 +441,7 @@ footer {
         }
         .atairport-box {
             width: 98%;
+            text-align: left;
             & + .grid_6 {
                 margin-bottom: 0;
                 & + .grid_6 {
@@ -478,6 +483,16 @@ footer {
 .right-ad {
     padding-left: 75px;
     overflow: hidden;
+    .aside-box {
+        overflow: hidden;
+        .border-radius(30px);
+        &.mt {
+            margin-top: 60px;
+        }
+        & > img {
+            width: 100%;
+        }
+    }
 }
 
 .container {
@@ -517,5 +532,23 @@ footer {
         margin: 20px 0;
         display: block;
     }
+}
+
+.hotel-currency, .auto-currency {
+    padding-right: 22%;
+    margin-top: -35px;
+    select {
+        padding: 0 .5em;
+        height: 2.7em;
+        line-height: 1.7em;
+        font-weight: normal;
+    }
+    .grid_5 {
+        width: 48.667%;
+    }
+}
+
+.auto-currency{
+    margin-top: 20px;
 }
 

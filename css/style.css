@@ -82,6 +82,9 @@ header .slogan {
     margin-top: 0;
   }
 }
+.main.mt {
+  margin-top: 9em;
+}
 .box-white-bg {
   background-color: #ffffff;
   border-radius: 20px;
@@ -376,6 +379,7 @@ header .slogan {
 }
 .social-block {
   font-size: 1.15em;
+  margin-top: 4px;
 }
 .social-block .btn::before {
   font-size: 29px;
@@ -525,6 +529,7 @@ footer .flag-list .com {
 }
 .auto-form .mobissimo-search-box .atairport-box {
   width: 98%;
+  text-align: left;
 }
 .auto-form .mobissimo-search-box .atairport-box + .grid_6 {
   margin-bottom: 0;
@@ -561,6 +566,16 @@ footer .flag-list .com {
   padding-left: 75px;
   overflow: hidden;
 }
+.right-ad .aside-box {
+  overflow: hidden;
+  border-radius: 30px;
+}
+.right-ad .aside-box.mt {
+  margin-top: 60px;
+}
+.right-ad .aside-box > img {
+  width: 100%;
+}
 .container.width-1200 {
   width: 1200px;
 }
@@ -593,6 +608,25 @@ footer .flag-list .com {
 .contact-block .address {
   margin: 20px 0;
   display: block;
+}
+.hotel-currency,
+.auto-currency {
+  padding-right: 22%;
+  margin-top: -35px;
+}
+.hotel-currency select,
+.auto-currency select {
+  padding: 0 .5em;
+  height: 2.7em;
+  line-height: 1.7em;
+  font-weight: normal;
+}
+.hotel-currency .grid_5,
+.auto-currency .grid_5 {
+  width: 48.667%;
+}
+.auto-currency {
+  margin-top: 20px;
 }
 form::after {
   content: "";
@@ -1863,6 +1897,7 @@ table.best-fares .price {
 .mobissimo-search-box {
   border-width: 0;
   padding: 0;
+  min-height: 156px;
   width: 80%;
   float: left;
   padding-right: 1%;
@@ -1916,12 +1951,14 @@ aside .mobissimo-search-box .title {
   }
 }
 .m_submit-box [type="submit"] {
+  position: relative;
   font-weight: normal;
   text-transform: lowercase;
   margin-top: 0;
   width: 100%;
   height: 156px;
   padding: 0;
+  z-index: 1;
   border-radius: 28px;
   font-size: 32px;
 }

@@ -12,42 +12,53 @@
     <div class="wrap-block grid_2 alpha omega m-grid_2 m-prefix_1 m-suffix_1 d-visible floating-block">
         <div data-spy="affix" data-offset-top="150" data-offset-bottom="200">
             {$template:_header}
-            <aside class="" role="complementary">
+            <aside class="hide" role="complementary">
                 <section class="aside-box box-white-bg opacity-bg">
                     <h3>{$header:left_1:static}</h3>
                     {$mobissimorfilter:currency}
                 </section>
                 <section class="aside-box box-white-bg opacity-bg">
-                    {$mobissimoform:hotel}
+                    <!--{_$mobissimoform:hotel}-->
                 </section>
             </aside>
         </div>
     </div>
 
     <!-- Content box -->
-    <article class="grid_8 alpha omega box-white-bg opacity-bg mt126" role="main">
+    <article class="grid_8 alpha omega mt126" role="main">
+
         <nav id="main-menu" class="d-visible" role="navigation">{$menu:main:_main menu}</nav>
-        <div class="flight-brief block mt15px mb15px">
+        <div class="flight-brief block box-white-bg opacity-bg">
             <!--<h3>{$mobissimosearchinfo:air:origin_name} ({$mobissimosearchinfo:air:origin}) <i class="icon-arrow-right2"></i> {$mobissimosearchinfo:air:destination_name} ({$mobissimosearchinfo:air:destination})</h3>-->
             <!--<span>{$mobissimosearchinfo:air:depart_date:m/d/y} - {$mobissimosearchinfo:air:return_date:m/d/y}</span>-->
-            {$mobissimoform:hotel}
+            <div class="grid_12 alpha omega">
+                {$mobissimoform:hotel}
+            </div>
+            <div class="grid_12 alpha omega hotel-currency">
+                <label class="grid_12 text-left">{$header:left_1:static}</label>
+                <div class="grid_5">
+                    {$mobissimorfilter:currency}
+                </div>
+            </div>
         </div>
         <!--<div class="block">
             <h3 class="mb10px mt0px">{$header:center_1:static}</h3>
             {$ mobissimocprovider:air}
         </div>-->
 
-        <div class="block  box-white-bg opacity-bg">
+
+        <div class="block box-white-bg opacity-bg">
             {$mobissimoresults:hotel}
         </div>
     </article>
 
     <!-- Right box -->
     <aside class="grid_2 alpha omega right-ad mt126" role="complementary">
-        <section class="aside-box">
-            <iframe src="http://oascentral.travelzoo.com/RealMedia/ads/adstream_sx.ads/Mobissimo_Brand/home160/@Right?O=&amp;D=&amp;G="
-                    width="160px" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
-                    align="top left"></iframe>
+        <section class="aside-box mt">
+            <!--<iframe src="http://oascentral.travelzoo.com/RealMedia/ads/adstream_sx.ads/Mobissimo_Brand/home160/@Right?O=&amp;D=&amp;G="-->
+                    <!--width="160px" height="600px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"-->
+                    <!--align="top left"></iframe>-->
+            {$imageonly:right-ad:152}
         </section>
     </aside>
     <!--<div class="hFooter"></div>-->
