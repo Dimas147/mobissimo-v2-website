@@ -18,7 +18,7 @@ extend ' .mobile-menu li' has no matches
 }
 @media only screen and (min-width: 800px) {
   #main-menu {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
   }
   .main_menu {
     position: relative;
@@ -110,7 +110,7 @@ extend ' .mobile-menu li' has no matches
 }
 .static_menu li {
   float: left;
-  padding: 0 1.4em;
+  padding: 0 1.9em;
   margin: 0;
 }
 .static_menu li a {

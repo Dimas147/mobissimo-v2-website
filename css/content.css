@@ -835,7 +835,7 @@ ul.list-select > li.active::after {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 1602px;
+  width: 1200px;
   max-width: 95%;
 }
 .container::after {
@@ -1773,7 +1773,7 @@ ul.list-select > li.active::after {
 [class^="column_"] > *,
 [class*="-column_"] > *,
 [class*="_column_"] > * {
-  font-size: 25px;
+  font-size: 16px;
   float: none !important;
   display: inline-block;
   vertical-align: top;
@@ -1835,7 +1835,7 @@ ul.list-select > li.active::after {
 [class^="column_"] > .larger,
 [class*="-column_"] > .larger,
 [class*="_column_"] > .larger {
-  font-size: 37.5px !important;
+  font-size: 24px !important;
 }
 [class*=" column_"].large > *,
 [class^="column_"].large > *,
@@ -1845,7 +1845,7 @@ ul.list-select > li.active::after {
 [class^="column_"] > .large,
 [class*="-column_"] > .large,
 [class*="_column_"] > .large {
-  font-size: 31.25px !important;
+  font-size: 20px !important;
 }
 [class*=" column_"].small > *,
 [class^="column_"].small > *,
@@ -1855,7 +1855,7 @@ ul.list-select > li.active::after {
 [class^="column_"] > .small,
 [class*="-column_"] > .small,
 [class*="_column_"] > .small {
-  font-size: 21.25px !important;
+  font-size: 13.6px !important;
 }
 ._column_1 > * {
   width: 98% !important;

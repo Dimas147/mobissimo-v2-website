@@ -27,7 +27,7 @@ main {
   min-height: 100%;
 }
 header {
-  margin-top: -4.4rem;
+  margin-top: 1rem;
   margin-bottom: 1em;
   text-align: center;
   font-family: 'Lato', Arial, sans-serif;
@@ -65,7 +65,7 @@ header .slogan {
   color: #f16f29;
 }
 .no-top-text header {
-  margin-top: -8.8rem;
+  margin-top: -10.8rem;
 }
 .wrap-block {
   font-size: 0.85em;
@@ -76,40 +76,53 @@ header .slogan {
   color: #FFFFFF;
   font-weight: 300;
 }
-main {
-  margin-top: 3.36em;
-}
 .main {
   margin-top: 5em;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 @media only screen and (max-width: 480px) {
   .main {
     margin-top: 0;
   }
 }
+@media only screen and (max-width: 800px) {
+  .main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .main.mt {
   margin-top: 9em;
 }
 .left-side {
-  padding-right: 41px;
+  padding-right: 34px;
+}
+@media only screen and (max-width: 800px) {
+  .left-side {
+    padding-right: 0;
+  }
 }
 .right-side {
-  padding-left: 41px;
+  padding-left: 34px;
+}
+@media only screen and (max-width: 800px) {
+  .right-side {
+    padding-left: 0;
+  }
 }
 .box-white-bg {
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 1.1em 0.7em;
+  padding: 1.2em 0.7em;
   margin-bottom: 1.8em;
 }
 .box-white-bg.opacity-bg {
   background: rgba(255, 255, 255, 0.65);
 }
 .box-white-bg.thin {
-  padding-top: 0.7em;
-  padding-bottom: 0.7em;
+  padding-top: 0.9em;
+  padding-bottom: 0.9em;
 }
 .box-white-bg::after {
   content: "";
@@ -320,29 +333,23 @@ main {
 }
 .offer-list li a > img {
   width: 100%;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.7em;
   border-radius: 3em;
 }
 .offer-list li > img {
   width: 100%;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.7em;
   border-radius: 3em;
 }
 .offer-list span {
   display: block;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.7em;
   font-size: 1.08em;
   line-height: 1.2;
   font-weight: normal;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.offer-list p {
-  font-size: 0.88em;
-  text-align: left;
-  font-weight: normal;
-  line-height: 1.1;
 }
 .offer-list p:last-child {
   margin-bottom: 0;
@@ -351,6 +358,12 @@ main {
   float: right;
   font-size: 2em;
   margin-left: 0.5em;
+}
+.offer-list div {
+  font-size: 0.95em;
+  text-align: left;
+  font-weight: normal;
+  line-height: 1.2;
 }
 .border-r img {
   border-radius: 3em;
@@ -361,7 +374,6 @@ main {
   font-size: 1.48em;
   margin-bottom: 0.4em;
   line-height: 1.1;
-  margin-top: -0.4em;
 }
 .box-title.orange {
   color: #ee7316;
@@ -370,7 +382,8 @@ main {
   text-align: left;
   font-weight: normal;
   margin-bottom: 0;
-  font-size: 0.8em;
+  font-size: 0.95em;
+  line-height: 1.2;
 }
 .box-text.icon-share:before {
   float: right;
@@ -430,7 +443,7 @@ main {
   bottom: 0;
   text-align: center;
   font-size: 1.08em;
-  width: 226px;
+  width: 166px;
   color: #FFFFFF;
 }
 .right-aside {
@@ -571,7 +584,7 @@ footer .flag-list .com {
 .auto-form .mobissimo-search-box,
 .aero-form .mobissimo-search-box,
 .hotel-form .mobissimo-search-box {
-  min-height: 212px;
+  min-height: 156px;
 }
 .auto-form .types-box,
 .aero-form .types-box,
@@ -600,7 +613,7 @@ footer .flag-list .com {
   border-radius: 30px;
 }
 .right-ad .aside-box.mt {
-  margin-top: 3.32em;
+  margin-top: 18px;
 }
 .right-ad .aside-box > img {
   width: 100%;
@@ -813,7 +826,7 @@ form#newsletter [type="submit"] {
   position: absolute;
   top: 0;
   right: 0;
-  height: 2.4em;
+  height: 2.55em;
 }
 @media only screen and (max-width: 480px) {
   form#newsletter [type="submit"] {
@@ -961,9 +974,9 @@ input.noedit:focus {
 }
 input,
 select {
-  padding: 0 .25em;
-  height: 2.4em;
-  line-height: 1.4em;
+  padding: 0 .5em;
+  height: 2.55em;
+  line-height: 1.55em;
   font-weight: normal;
 }
 select {
@@ -1004,7 +1017,7 @@ textarea.resize {
 .forgot-password,
 .retrieveFormBlock > form + a {
   float: left;
-  margin-top: -54.5px;
+  margin-top: -32px;
 }
 .filed-upgrade {
   height: auto;
@@ -1029,7 +1042,7 @@ textarea.resize {
   background: transparent;
   border: 2px solid #f16f29;
   color: transparent;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 .filed-upgrade ~ .checkbox_radio::before {
   border-radius: 5px;
@@ -1065,7 +1078,7 @@ textarea.resize {
 }
 .filed-upgrade[type="radio"] ~ .checkbox_radio,
 .filed-upgrade[type="radio"] ~ .checkbox_radio::before {
-  border-radius: 8px;
+  border-radius: 5px;
 }
 .filed-upgrade[type="radio"] ~ .checkbox_radio::before {
   border-radius: 5px;
@@ -1078,7 +1091,7 @@ textarea.resize {
   line-height: 1.25em;
 }
 .filed-upgrade[type="checkbox"].switcher ~ .checkbox_radio::before {
-  font-size: 0.03rem;
+  font-size: 0.047rem;
   line-height: inherit;
   content: 'OFF';
   background: none;
@@ -1453,7 +1466,7 @@ aside .box-compare fieldset .mobiss-type-box {
   padding: 5px;
   color: #f25f5c;
   text-align: left;
-  font-size: 25px;
+  font-size: 16px;
   margin: 0;
 }
 .box-compare .mobissimo-search-box .errors li:before {
@@ -1983,7 +1996,7 @@ aside .mobissimo-search-box .title {
   text-transform: lowercase;
   margin-top: 0;
   width: 100%;
-  height: 212px;
+  height: 156px;
   padding: 0;
   z-index: 1;
   border-radius: 28px;
@@ -2361,7 +2374,7 @@ aside .compare-providers {
   background-color: #eeeeee;
   position: relative;
   overflow: hidden;
-  font-size: 25px;
+  font-size: 16px;
   display: block;
 }
 .rec-list .rec-item:before {
@@ -2438,9 +2451,6 @@ aside .compare-providers {
 .provider-recomm .priceline_air,
 .provider-recomm .priceline_hotel {
   background-color: #00A1DF;
-}
-.pl_m_results {
-  font-size: 14px;
 }
 .m_compare-provider {
   overflow: hidden;
@@ -2583,7 +2593,7 @@ aside .compare-providers {
   text-align: center;
 }
 .results-table .rating .stars-box:before {
-  font-size: 25px;
+  font-size: 16px;
   font-family: 'flexkit-icons';
   color: #ffd48c;
 }
@@ -2754,7 +2764,7 @@ html.tablet.loaded .mobile-loader {
   a::after {
     color: #888888;
     margin: 0 0 0 .5em;
-    font-size: 25px;
+    font-size: 16px;
     font-style: italic;
     text-decoration: underline;
   }

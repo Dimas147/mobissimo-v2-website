@@ -29,8 +29,6 @@ main {
     min-height: 100%;
 }
 
-
-
 #page {
     min-height: 100%;
 }
@@ -38,7 +36,7 @@ main {
 //	HEADER Style
 //==================================================
 header {
-    margin-top: -4.4rem;
+    margin-top: 1rem;
     margin-bottom: 1em;
     text-align: center;
     font-family: @font-family-headings;
@@ -104,8 +102,8 @@ header {
         font-size: 1.5em;
         color: @brand-primary;
     }
-    .no-top-text &{
-        margin-top: -8.8rem;
+    .no-top-text & {
+        margin-top: -10.8rem;
     }
 }
 
@@ -132,40 +130,48 @@ section {
     font-weight: 300;
 }
 
-main{
-    margin-top: 3.36em;
-}
 
 .main {
     margin-top: 5em;
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-left: 50px;
+    padding-right: 50px;
     @media only screen and (max-width: @responsive-size-mobile) {
         margin-top: 0;
     }
-    &.mt{
+    @media only screen and (max-width: @responsive-size-tablet) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &.mt {
         margin-top: 9em;
     }
 }
 
-.left-side{
-    padding-right: 41px;
+.left-side {
+    padding-right: 34px;
+    @media only screen and (max-width: @responsive-size-tablet) {
+        padding-right: 0;
+    }
 }
-.right-side{
-    padding-left: 41px;
+
+.right-side {
+    padding-left: 34px;
+    @media only screen and (max-width: @responsive-size-tablet) {
+        padding-left: 0;
+    }
 }
 
 .box-white-bg {
     background-color: #ffffff;
     .border-radius(20px);
-    padding: 1.1em 0.7em;
+    padding: 1.2em 0.7em;
     margin-bottom: 1.8em;
     &.opacity-bg {
         .rgba(#FFFFFF, 65%);
     }
     &.thin {
-        padding-top: 0.7em;
-        padding-bottom: 0.7em;
+        padding-top: 0.9em;
+        padding-bottom: 0.9em;
     }
     .clearfix-mixin();
 }
@@ -230,19 +236,19 @@ main{
             display: block;
             & > img {
                 width: 100%;
-                margin-bottom: 0.4em;
+                margin-bottom: 0.7em;
                 .border-radius(3em);
             }
         }
         & > img {
             width: 100%;
-            margin-bottom: 0.4em;
+            margin-bottom: 0.7em;
             .border-radius(3em);
         }
     }
     span {
         display: block;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.7em;
         white-space: nowrap;
         font-size: 1.08em;
         line-height: 1.2;
@@ -251,10 +257,6 @@ main{
     }
 
     p {
-        font-size: 0.88em;
-        text-align: left;
-        font-weight: normal;
-        line-height: 1.1;
         &:last-child {
             margin-bottom: 0;
         }
@@ -266,7 +268,12 @@ main{
             margin-left: 0.5em;
         }
     }
-
+    div{
+        font-size: 0.95em;
+        text-align: left;
+        font-weight: normal;
+        line-height: 1.2;
+    }
 }
 
 .border-r {
@@ -282,8 +289,7 @@ main{
     font-size: 1.48em;
     margin-bottom: 0.4em;
     line-height: 1.1;
-    margin-top: -0.4em;
-    &.orange{
+    &.orange {
         color: #ee7316;
     }
 }
@@ -292,7 +298,8 @@ main{
     text-align: left;
     font-weight: normal;
     margin-bottom: 0;
-    font-size: 0.8em;
+    font-size: 0.95em;
+    line-height: 1.2;
     &.icon-share {
         &:before {
             float: right;
@@ -334,7 +341,7 @@ main{
         height: 1.76em;
         width: 1.76em;
         line-height: 1.76em;
-        &.icon-facebook{
+        &.icon-facebook {
             width: 1.4em;
             text-align: center;
             margin-left: -0.3em;
@@ -345,7 +352,7 @@ main{
         &:active, &:focus {
             .box-shadow(none);
         }
-        &:first-child{
+        &:first-child {
             margin-left: -0.1em;
         }
     }
@@ -359,7 +366,7 @@ main{
     bottom: 0;
     text-align: center;
     font-size: 1.08em;
-    width: 226px;
+    width: 166px;
     color: #FFFFFF;
 }
 
@@ -455,10 +462,10 @@ footer {
     display: block;
     overflow: hidden;
     .border-radius(40px);
-    a{
+    a {
         display: block;
     }
-    img, a img{
+    img, a img {
         width: 100%;
     }
 }
@@ -488,9 +495,9 @@ footer {
 
 .auto-form, .aero-form, .hotel-form {
     .mobissimo-search-box {
-        min-height: 212px;
+        min-height: 156px;
     }
-    .types-box{
+    .types-box {
         margin-bottom: 0;
     }
 }
@@ -498,7 +505,7 @@ footer {
 .affix {
     position: fixed !important;
     top: -7.2rem;
-    .no-top-text &{
+    .no-top-text & {
         top: -2.8rem;
     }
 }
@@ -521,7 +528,7 @@ footer {
         overflow: hidden;
         .border-radius(30px);
         &.mt {
-            margin-top: 3.32em;
+            margin-top: 18px;
         }
         & > img {
             width: 100%;
@@ -531,6 +538,7 @@ footer {
 
 .mt126 {
     margin-top: 126px;
+
 }
 
 .contact-title {
@@ -570,7 +578,7 @@ footer {
     }
 }
 
-.auto-currency{
+.auto-currency {
     margin-top: 20px;
 }
 
