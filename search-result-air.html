@@ -4,34 +4,37 @@
     <!-- Include head template -->
     {$template:_head}
 </head>
-<body class="fix-footer-line" {$mobissimosetngapp}>
+<body class="fix-footer-line no-top-text" {$mobissimosetngapp}>
 
 <!-- Container -->
-<main class="container width-1200">
+<main id="page" class="container">
     <!-- Include header template -->
-    <div class="wrap-block grid_2 alpha omega m-grid_2 m-prefix_1 m-suffix_1 d-visible floating-block">
+    <div class="grid_2 alpha omega d-visible floating-block left-side">
         <div data-spy="affix" data-offset-top="125" data-offset-bottom="200">
             {$template:_header}
-            <aside class="" role="complementary">
+            <aside class="hide" role="complementary">
                 <section class="aside-box box-white-bg opacity-bg">
                     <h3>{$header:left_1:static}</h3>
-                    {$mobissimorfilter:currency}
+                    <!--{_$mobissimorfilter:currency}-->
                 </section>
                 <section class="aside-box box-white-bg opacity-bg">
                     <!--{_$mobissimoform:air:roundtrip:roundtrip,oneway}-->
                 </section>
             </aside>
         </div>
+        <div class="some-text">
+            {$content:text:static}
+        </div>
     </div>
 
-    <article class="grid_8 alpha omega mt126" role="main">
+    <article class="grid_8 alpha omega main" role="main">
         <nav id="main-menu" class="d-visible" role="navigation">{$menu:main:_main menu}</nav>
         <div class="flight-brief block box-white-bg opacity-bg">
-            <div class="grid_12 alpha omega">
+            <div class="grid_12 alpha omega aero-form">
                 {$mobissimoform:air:roundtrip:roundtrip,oneway}
             </div>
         </div>
-        <div class="flight-brief block mt15px mb15px box-white-bg opacity-bg">
+        <div class="flight-brief block box-white-bg opacity-bg">
             <div class="grid_6 alpha">
                 {$mobissimosearchinfo:air:origin_name} ({$mobissimosearchinfo:air:origin})
                 <i class="icon-arr-both"></i>
@@ -68,7 +71,7 @@
     </article>
 
     <!-- Right box -->
-    <aside class="grid_2 alpha omega right-ad mt126" role="complementary">
+    <aside class="grid_2 alpha omega right-side right-ad mt126" role="complementary">
         <section class="aside-box mt">
             <!--<iframe-->
                     <!--src="http://oascentral.travelzoo.com/RealMedia/ads/adstream_sx.ads/Mobissimo_Brand/home160/@Right?O=&amp;D=&amp;G="-->

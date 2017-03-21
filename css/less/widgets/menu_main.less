@@ -1,12 +1,12 @@
 @media only screen and (min-width: @responsive-size-tablet) {
     #main-menu {
-        margin-bottom: 1.5em;
+        margin-bottom: 1em;
     }
 
     .main_menu when (@menu-main) {
         position: relative;
         z-index: 11;
-        .inline-block-wrap(@font-size : 20px;);
+        .inline-block-wrap();
         & when not(@nav-bg = transparent) {
             background: @nav-bg;
         }
@@ -22,7 +22,7 @@
             .rgba(#ffffff, 65%);
 
             & > a {
-                font-size: 1.15em;
+                font-size: 1.36em;
             }
 
             &:hover {

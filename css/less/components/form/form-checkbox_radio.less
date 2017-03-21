@@ -18,9 +18,10 @@
             background  : transparent;
             border      : 2px solid @brand-primary;
             color       : transparent;
-            .border-radius(5px);
+            .border-radius(8px);
 
             &::before when not(@checkbox-checkmark-style){
+                .border-radius(5px);
                 content  : "";
                 position : absolute;
                 left     : 0;
@@ -28,8 +29,8 @@
                 top      : 0;
                 bottom   : 0;
                 margin   : auto;
-                width    : 0.625em;
-                height   : 0.625em;
+                width    : 0.7em;
+                height   : 0.7em;
             }
         }
 
@@ -78,9 +79,10 @@
 
         &[type="radio"]{
             & ~ .checkbox_radio{
-                .border-radius(5px);
+                .border-radius(8px);
 
                 &::before{
+                    .border-radius(5px);
                     & when not(@checkbox-checkmark-style){
                         &:extend(.filed-upgrade[type=radio]~.checkbox_radio);
                     }

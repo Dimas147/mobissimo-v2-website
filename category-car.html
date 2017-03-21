@@ -4,7 +4,7 @@
     <!-- Include head template -->
     {$template:_head}
 </head>
-<body class="index">
+<body class="{$page:h1}">
 
 <!-- Container -->
 <main id="page" class="container">
@@ -12,17 +12,11 @@
     <!-- Header -->
     <div class="grid_2 alpha omega d-visible floating-block left-side">
         <div data-spy="affix" data-offset-top="125" data-offset-bottom="200">
-            <header class="relative" role="banner">
-                <h1 class="logo">
-                    <a href="{$website:url}" title="{$page:h1}">
-                        <img src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}" width="226" height="679"/>
-                    </a>
-                </h1>
-            </header>
+            {$template:_header}
         </div>
 
         <div class="some-text">
-            {$content:text:static}
+            {$content:text-car:static}
         </div>
     </div>
 
@@ -42,43 +36,39 @@
             <ul class="offer-list grid_12">
                 <li>
                     <span>{$header:img1}</span>
-                    <a href="http://blog.mobissimo.it/">{$imageonly:img1:152}</a>
-
-                    <div>{$content:img11}</div>
+                    {$imageonly:img1:152}
+                    <div>{$content:img1-1}</div>
                 </li>
                 <li>
                     <span>{$header:img2}</span>
-                    <a href="http://blog.mobissimo.it/">{$imageonly:img2:152}</a>
-
-                    <div>{$content:img21}</div>
+                    {$imageonly:img2:152}
+                    <div>{$content:img2-1}</div>
                 </li>
                 <li>
                     <span>{$header:img3}</span>
-                    <a href="http://blog.mobissimo.it/">{$imageonly:img3:152}</a>
-
-                    <div>{$content:img31}</div>
+                    {$imageonly:img3:152}
+                    <div>{$content:img2-1}</div>
                 </li>
             </ul>
         </div>
         <section class="box-white-bg opacity-bg wrap">
-            <div class="grid_8 border-r">
+            <div class="grid_8">
                 <span class="box-title orange">{$header:img4}</span>
-                <div class="image-bordered">
-                    {$imageonly:img4:435}
-                </div>
-                <div class="box-text">{$content:img41}</div>
+
+                <div class="image-bordered">{$imageonly:img4:435}</div>
+                <p class="box-text">{$header:img41}</p>
             </div>
             <div class="grid_4 text-center pt6em">
                 {$imageonly:logo:80:static}
                 <p class="box-text2">{$header:content5}</p>
             </div>
         </section>
-
         <!-- Footer -->
         <!-- Include Footer template -->
         {$template:_footer}
     </div>
 </main>
+
 
 <!-- Include mobile elements template -->
 {$template:_mobile elements}

@@ -10,15 +10,9 @@
 <main id="page" class="container">
 
     <!-- Header -->
-    <div class="wrap-block grid_3 alpha omega m-grid_2 m-prefix_1 m-suffix_1 d-visible floating-block">
+    <div class="grid_2 alpha omega d-visible floating-block left-side">
         <div data-spy="affix" data-offset-top="125" data-offset-bottom="200">
-            <header class="relative" role="banner">
-                <h1 class="logo">
-                    <a href="{$website:url}" title="{$page:h1}">
-                        <img src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}" width="220"/>
-                    </a>
-                </h1>
-            </header>
+            {$template:_header}
         </div>
 
         <div class="some-text">
@@ -26,7 +20,7 @@
         </div>
     </div>
 
-    <div class="grid_9 main">
+    <div class="grid_8 alpha omega main">
         <p class="top-text">{$header:toptext:static}</p>
         <!-- Main Menu -->
         <nav id="main-menu" class="d-visible" role="navigation">{$menu:main:_main menu}</nav>
@@ -59,9 +53,8 @@
         </div>
         <section class="box-white-bg opacity-bg wrap">
             <div class="grid_8">
-                <span class="box-title">{$header:img4}</span>
-                <a class="image-bordered" href="http://blog.mobissimo.it/">{$imageonly:img4:435}</a>
-
+                <span class="box-title orange">{$header:img4}</span>
+                <div class="image-bordered">{$imageonly:img4:435}</div>
                 <p class="box-text">{$header:img41}</p>
             </div>
             <div class="grid_4 text-center pt6em">
@@ -73,7 +66,6 @@
         <!-- Include Footer template -->
         {$template:_footer}
     </div>
-    <div class="hFooter"></div>
 </main>
 
 

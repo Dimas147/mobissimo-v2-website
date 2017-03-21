@@ -27,8 +27,8 @@ main {
   min-height: 100%;
 }
 header {
+  margin-top: -4.4rem;
   margin-bottom: 1em;
-  overflow: hidden;
   text-align: center;
   font-family: 'Lato', Arial, sans-serif;
   border-radius: 0 0 10px 10px;
@@ -51,10 +51,8 @@ header .logo {
   text-align: left;
 }
 header .logo a {
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
   margin-top: -120px;
-  max-width: 166px;
   font-family: inherit;
   font-weight: 400;
   text-decoration: none;
@@ -66,16 +64,25 @@ header .slogan {
   font-size: 1.5em;
   color: #f16f29;
 }
+.no-top-text header {
+  margin-top: -8.8rem;
+}
 .wrap-block {
   font-size: 0.85em;
 }
 .top-text {
   text-align: right;
-  font-size: 2.5em;
+  font-size: 2.32em;
   color: #FFFFFF;
+  font-weight: 300;
+}
+main {
+  margin-top: 3.36em;
 }
 .main {
   margin-top: 5em;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 @media only screen and (max-width: 480px) {
   .main {
@@ -85,17 +92,24 @@ header .slogan {
 .main.mt {
   margin-top: 9em;
 }
+.left-side {
+  padding-right: 41px;
+}
+.right-side {
+  padding-left: 41px;
+}
 .box-white-bg {
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 1.5em 1em;
+  padding: 1.1em 0.7em;
   margin-bottom: 1.8em;
 }
 .box-white-bg.opacity-bg {
   background: rgba(255, 255, 255, 0.65);
 }
 .box-white-bg.thin {
-  padding: 1em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
 }
 .box-white-bg::after {
   content: "";
@@ -123,7 +137,7 @@ header .slogan {
   color: #555555;
   border-color: #bbbbbb;
   background-color: #eeeeee;
-  border-radius: 0.75em;
+  border-radius: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -161,7 +175,7 @@ header .slogan {
   color: #555555;
   border-color: #888888;
   background-color: #bbbbbb;
-  border-radius: 0.75em;
+  border-radius: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -209,7 +223,7 @@ header .slogan {
   color: #555555;
   border-color: #888888;
   background-color: #bbbbbb;
-  border-radius: 0.75em;
+  border-radius: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -243,7 +257,7 @@ header .slogan {
   color: #555555;
   border-color: #bbbbbb;
   background-color: #eeeeee;
-  border-radius: 0.75em;
+  border-radius: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -269,9 +283,9 @@ header .slogan {
   list-style: none;
 }
 .offer-list >* {
-  font-size: 14px;
+  font-size: 1rem;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .offer-list li {
   margin-left: 10%;
@@ -306,18 +320,18 @@ header .slogan {
 }
 .offer-list li a > img {
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 0.4em;
   border-radius: 3em;
 }
 .offer-list li > img {
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 0.4em;
   border-radius: 3em;
 }
 .offer-list span {
   display: block;
   margin-bottom: 0.5em;
-  font-size: 1.25em;
+  font-size: 1.08em;
   line-height: 1.2;
   font-weight: normal;
   white-space: nowrap;
@@ -325,8 +339,10 @@ header .slogan {
   text-overflow: ellipsis;
 }
 .offer-list p {
+  font-size: 0.88em;
   text-align: left;
   font-weight: normal;
+  line-height: 1.1;
 }
 .offer-list p:last-child {
   margin-bottom: 0;
@@ -341,14 +357,20 @@ header .slogan {
 }
 .box-title {
   display: block;
-  margin-bottom: 0.5em;
-  font-size: 1.25em;
   font-weight: normal;
+  font-size: 1.48em;
+  margin-bottom: 0.4em;
+  line-height: 1.1;
+  margin-top: -0.4em;
+}
+.box-title.orange {
+  color: #ee7316;
 }
 .box-text {
   text-align: left;
   font-weight: normal;
   margin-bottom: 0;
+  font-size: 0.8em;
 }
 .box-text.icon-share:before {
   float: right;
@@ -378,23 +400,25 @@ header .slogan {
   padding-top: 6em;
 }
 .social-block {
-  font-size: 1.15em;
-  margin-top: 4px;
+  font-size: 1.2em;
 }
-.social-block .btn::before {
-  font-size: 29px;
+.social-block .btn {
+  height: 1.76em;
+  width: 1.76em;
+  line-height: 1.76em;
+}
+.social-block .btn.icon-facebook {
+  width: 1.4em;
+  text-align: center;
+  margin-left: -0.3em;
+  margin-right: -0.16em;
 }
 .social-block .btn:active,
 .social-block .btn:focus {
   box-shadow: none;
 }
-.social-block .btn.facebook {
-  width: 27px;
-  margin-left: -6px;
-  margin-right: -3px;
-}
-.social-block .btn.blogger {
-  margin-left: -2px;
+.social-block .btn:first-child {
+  margin-left: -0.1em;
 }
 @media only screen and (max-width: 480px) {
   .social-block {
@@ -404,9 +428,9 @@ header .slogan {
 .some-text {
   position: fixed;
   bottom: 0;
-  width: 166px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.08em;
+  width: 226px;
   color: #FFFFFF;
 }
 .right-aside {
@@ -521,6 +545,13 @@ footer .flag-list .com {
   overflow: hidden;
   border-radius: 40px;
 }
+.image-bordered a {
+  display: block;
+}
+.image-bordered img,
+.image-bordered a img {
+  width: 100%;
+}
 .auto-form #pl_mobissimosearch_form_car {
   min-height: 0;
 }
@@ -537,22 +568,25 @@ footer .flag-list .com {
 .auto-form .mobissimo-search-box .atairport-box + .grid_6 + .grid_6 {
   margin-bottom: 0;
 }
-.auto-form .m_submit-box [type="submit"],
-.aero-form .m_submit-box [type="submit"],
-.hotel-form .m_submit-box [type="submit"] {
-  height: 156px;
-}
 .auto-form .mobissimo-search-box,
 .aero-form .mobissimo-search-box,
 .hotel-form .mobissimo-search-box {
-  min-height: 156px;
+  min-height: 212px;
+}
+.auto-form .types-box,
+.aero-form .types-box,
+.hotel-form .types-box {
+  margin-bottom: 0;
 }
 .affix {
   position: fixed !important;
+  top: -7.2rem;
+}
+.no-top-text .affix {
+  top: -2.8rem;
 }
 .affix-top {
   position: absolute !important;
-  top: 0;
 }
 .affix-bottom {
   position: absolute !important;
@@ -560,30 +594,16 @@ footer .flag-list .com {
 .floating-block {
   position: relative;
   height: 1px;
-  padding-right: 75px;
-}
-.right-ad {
-  padding-left: 75px;
-  overflow: hidden;
 }
 .right-ad .aside-box {
   overflow: hidden;
   border-radius: 30px;
 }
 .right-ad .aside-box.mt {
-  margin-top: 60px;
+  margin-top: 3.32em;
 }
 .right-ad .aside-box > img {
   width: 100%;
-}
-.container.width-1200 {
-  width: 1200px;
-}
-.container.width-1200 > .grid_2 {
-  width: 21%;
-}
-.container.width-1200 > .grid_8 {
-  width: 58%;
 }
 .mt126 {
   margin-top: 126px;
@@ -612,13 +632,13 @@ footer .flag-list .com {
 .hotel-currency,
 .auto-currency {
   padding-right: 22%;
-  margin-top: -35px;
+  margin-top: -0.5rem;
 }
 .hotel-currency select,
 .auto-currency select {
-  padding: 0 .5em;
-  height: 2.7em;
-  line-height: 1.7em;
+  padding: 0 .25em;
+  height: 2.4em;
+  line-height: 1.4em;
   font-weight: normal;
 }
 .hotel-currency .grid_5,
@@ -627,6 +647,9 @@ footer .flag-list .com {
 }
 .auto-currency {
   margin-top: 20px;
+}
+form {
+  font-size: 0.88em;
 }
 form::after {
   content: "";
@@ -661,7 +684,7 @@ form .captcha .captcha_image a {
   color: #ffffff;
   border-color: #e43007;
   background-color: #f16f29;
-  border-radius: 0.75em;
+  border-radius: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -790,7 +813,7 @@ form#newsletter [type="submit"] {
   position: absolute;
   top: 0;
   right: 0;
-  height: 2.7em;
+  height: 2.4em;
 }
 @media only screen and (max-width: 480px) {
   form#newsletter [type="submit"] {
@@ -847,7 +870,7 @@ input {
   border: 1px solid transparent;
   background-color: #ffffff;
   color: #575656;
-  border-radius: 1em;
+  border-radius: 12px;
   transition: border 0.3s;
 }
 select:focus,
@@ -938,9 +961,9 @@ input.noedit:focus {
 }
 input,
 select {
-  padding: 0 .5em;
-  height: 2.7em;
-  line-height: 1.7em;
+  padding: 0 .25em;
+  height: 2.4em;
+  line-height: 1.4em;
   font-weight: normal;
 }
 select {
@@ -981,7 +1004,7 @@ textarea.resize {
 .forgot-password,
 .retrieveFormBlock > form + a {
   float: left;
-  margin-top: -27px;
+  margin-top: -54.5px;
 }
 .filed-upgrade {
   height: auto;
@@ -998,7 +1021,7 @@ textarea.resize {
   -ms-user-select: none;
   user-select: none;
   position: relative;
-  font-size: 16px;
+  font-size: 1rem;
   height: calc(1em + 1px * 2);
   width: calc(1em + 1px * 2);
   line-height: 0;
@@ -1006,9 +1029,10 @@ textarea.resize {
   background: transparent;
   border: 2px solid #f16f29;
   color: transparent;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .filed-upgrade ~ .checkbox_radio::before {
+  border-radius: 5px;
   content: "";
   position: absolute;
   left: 0;
@@ -1016,8 +1040,8 @@ textarea.resize {
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 0.625em;
-  height: 0.625em;
+  width: 0.7em;
+  height: 0.7em;
 }
 .filed-upgrade.error ~ .checkbox_radio {
   border-color: #f25f5c;
@@ -1041,6 +1065,9 @@ textarea.resize {
 }
 .filed-upgrade[type="radio"] ~ .checkbox_radio,
 .filed-upgrade[type="radio"] ~ .checkbox_radio::before {
+  border-radius: 8px;
+}
+.filed-upgrade[type="radio"] ~ .checkbox_radio::before {
   border-radius: 5px;
 }
 .filed-upgrade[type="checkbox"].switcher ~ .checkbox_radio {
@@ -1051,7 +1078,7 @@ textarea.resize {
   line-height: 1.25em;
 }
 .filed-upgrade[type="checkbox"].switcher ~ .checkbox_radio::before {
-  font-size: 0.857rem;
+  font-size: 0.03rem;
   line-height: inherit;
   content: 'OFF';
   background: none;
@@ -1134,7 +1161,7 @@ textarea.resize {
   bottom: 0;
   z-index: 2;
   height: 1.35em;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 .labeled.icon [class*="icon-"]::before {
   vertical-align: top;
@@ -1426,7 +1453,7 @@ aside .box-compare fieldset .mobiss-type-box {
   padding: 5px;
   color: #f25f5c;
   text-align: left;
-  font-size: 14px;
+  font-size: 25px;
   margin: 0;
 }
 .box-compare .mobissimo-search-box .errors li:before {
@@ -1697,7 +1724,7 @@ body.tablet .ui-datepicker {
   color: #ffffff;
   border-color: #e43007;
   background-color: #f16f29;
-  border-radius: 0.75em;
+  border-radius: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1830,7 +1857,7 @@ body.tablet .ui-datepicker {
   font-size: 0;
 }
 .go-to-city >* {
-  font-size: 14px;
+  font-size: 1rem;
   display: inline-block;
   vertical-align: middle;
 }
@@ -1912,7 +1939,7 @@ table.best-fares .price {
   }
 }
 .mobissimo-search-box > div {
-  margin-bottom: 1.8em;
+  margin-bottom: 1.4em;
 }
 .mobissimo-search-box .title {
   display: none;
@@ -1956,11 +1983,11 @@ aside .mobissimo-search-box .title {
   text-transform: lowercase;
   margin-top: 0;
   width: 100%;
-  height: 156px;
+  height: 212px;
   padding: 0;
   z-index: 1;
   border-radius: 28px;
-  font-size: 32px;
+  font-size: 1.76em;
 }
 @media only screen and (max-width: 480px) {
   .m_submit-box [type="submit"] {
@@ -2193,6 +2220,7 @@ aside .compare-providers {
   color: #ffffff;
   border-color: #e43007;
   background-color: #f16f29;
+  border-radius: 12px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2333,7 +2361,7 @@ aside .compare-providers {
   background-color: #eeeeee;
   position: relative;
   overflow: hidden;
-  font-size: 14px;
+  font-size: 25px;
   display: block;
 }
 .rec-list .rec-item:before {
@@ -2410,6 +2438,9 @@ aside .compare-providers {
 .provider-recomm .priceline_air,
 .provider-recomm .priceline_hotel {
   background-color: #00A1DF;
+}
+.pl_m_results {
+  font-size: 14px;
 }
 .m_compare-provider {
   overflow: hidden;
@@ -2521,7 +2552,7 @@ aside .compare-providers {
   padding: 3%;
   margin: 3%;
   overflow: hidden;
-  font-size: 1.25em;
+  font-size: 1rem;
   border-radius: 0.5em;
 }
 .transferring-now-box {
@@ -2552,7 +2583,7 @@ aside .compare-providers {
   text-align: center;
 }
 .results-table .rating .stars-box:before {
-  font-size: 14px;
+  font-size: 25px;
   font-family: 'flexkit-icons';
   color: #ffd48c;
 }
@@ -2723,7 +2754,7 @@ html.tablet.loaded .mobile-loader {
   a::after {
     color: #888888;
     margin: 0 0 0 .5em;
-    font-size: 14px;
+    font-size: 25px;
     font-style: italic;
     text-decoration: underline;
   }

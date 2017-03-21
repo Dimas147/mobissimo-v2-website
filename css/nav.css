@@ -12,13 +12,13 @@ extend ' .mobile-menu li' has no matches
 .featureditem li,
 .relatedpages li,
 .related-products li {
-  font-size: 14px;
+  font-size: 1rem;
   display: inline-block;
   vertical-align: top;
 }
 @media only screen and (min-width: 800px) {
   #main-menu {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
   }
   .main_menu {
     position: relative;
@@ -27,7 +27,7 @@ extend ' .mobile-menu li' has no matches
     color: #575656;
   }
   .main_menu >* {
-    font-size: 20px;
+    font-size: 1rem;
     display: inline-block;
     vertical-align: middle;
   }
@@ -43,7 +43,7 @@ extend ' .mobile-menu li' has no matches
     margin-left: 0;
   }
   .main_menu > li > a {
-    font-size: 1.15em;
+    font-size: 1.36em;
   }
   .main_menu > li:hover {
     background: #f16f29;
@@ -110,7 +110,7 @@ extend ' .mobile-menu li' has no matches
 }
 .static_menu li {
   float: left;
-  padding: 0 2em;
+  padding: 0 1.4em;
   margin: 0;
 }
 .static_menu li a {

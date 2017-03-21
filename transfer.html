@@ -4,25 +4,19 @@
         <!-- Include head template -->
         {$template:_head}
     </head>
-    <body class="fix-footer-line">
+    <body class="no-top-text fix-footer-line">
 
         <!-- Container -->
         <main class="container">
 
             <!-- Header -->
-            <div class="wrap-block grid_3 alpha omega m-grid_2 m-prefix_1 m-suffix_1 d-visible floating-block">
+            <div class="grid_2 alpha omega d-visible floating-block left-side">
                 <div data-spy="affix" data-offset-top="125" data-offset-bottom="200">
-                    <header class="relative" role="banner">
-                        <h1 class="logo">
-                            <a href="{$website:url}" title="{$page:h1}">
-                                <img src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}" width="165" height="590"/>
-                            </a>
-                        </h1>
-                    </header>
+                    {$template:_header}
                 </div>
             </div>
                     <!-- Content box -->
-            <article class="grid_9 alpha omega main mt">
+            <article class="grid_8 alpha omega main" role="main">
                 <!-- Main Menu -->
                 <div class="block box-white-bg opacity-bg">
                     <div class="transferring-block">
@@ -33,7 +27,6 @@
                     </div>
                 </div>
             </article>
-
         </main>
 
         <!-- Include mobile elements template -->
@@ -43,9 +36,9 @@
         {$template:_scripts}
 
         <script>
-        $(function () {
-
-        });
+            $(function(){
+                $("p:contains('There is no result, for your request.')").text("Non abbiamo trovato risultati che soddisfino la tua richiesta.");
+            });
     </script>
 
     </body>

@@ -29,6 +29,8 @@ main {
     min-height: 100%;
 }
 
+
+
 #page {
     min-height: 100%;
 }
@@ -36,9 +38,8 @@ main {
 //	HEADER Style
 //==================================================
 header {
-    //padding-top     : 16.5em;
+    margin-top: -4.4rem;
     margin-bottom: 1em;
-    overflow: hidden;
     text-align: center;
     font-family: @font-family-headings;
     .border-radius(0 0 10px 10px);
@@ -84,9 +85,8 @@ header {
         margin-top: 0;
         text-align: left;
         a {
-            .inline-block();
+            display: block;
             margin-top: -120px;
-            max-width: 166px;
             //margin-top      : 0.5em;
             //margin-bottom   : 0.5em;
             font-family: inherit;
@@ -103,6 +103,9 @@ header {
         margin-bottom: 1em;
         font-size: 1.5em;
         color: @brand-primary;
+    }
+    .no-top-text &{
+        margin-top: -8.8rem;
     }
 }
 
@@ -124,12 +127,19 @@ section {
 
 .top-text {
     text-align: right;
-    font-size: 2.5em;
+    font-size: 2.32em;
     color: #FFFFFF;
+    font-weight: 300;
+}
+
+main{
+    margin-top: 3.36em;
 }
 
 .main {
     margin-top: 5em;
+    padding-left: 48px;
+    padding-right: 48px;
     @media only screen and (max-width: @responsive-size-mobile) {
         margin-top: 0;
     }
@@ -138,16 +148,24 @@ section {
     }
 }
 
+.left-side{
+    padding-right: 41px;
+}
+.right-side{
+    padding-left: 41px;
+}
+
 .box-white-bg {
     background-color: #ffffff;
     .border-radius(20px);
-    padding: 1.5em 1em;
+    padding: 1.1em 0.7em;
     margin-bottom: 1.8em;
     &.opacity-bg {
         .rgba(#FFFFFF, 65%);
     }
     &.thin {
-        padding: 1em;
+        padding-top: 0.7em;
+        padding-bottom: 0.7em;
     }
     .clearfix-mixin();
 }
@@ -203,7 +221,7 @@ section {
 }
 
 .offer-list {
-    .inline-block-wrap();
+    .inline-block-wrap(top);
     list-style: none;
     li {
         .grid-elements(3; 10%; true; 3; 1);
@@ -212,13 +230,13 @@ section {
             display: block;
             & > img {
                 width: 100%;
-                margin-bottom: 1em;
+                margin-bottom: 0.4em;
                 .border-radius(3em);
             }
         }
         & > img {
             width: 100%;
-            margin-bottom: 1em;
+            margin-bottom: 0.4em;
             .border-radius(3em);
         }
     }
@@ -226,15 +244,17 @@ section {
         display: block;
         margin-bottom: 0.5em;
         white-space: nowrap;
-        font-size: 1.25em;
+        font-size: 1.08em;
         line-height: 1.2;
         font-weight: normal;
         .text-overflow();
     }
 
     p {
+        font-size: 0.88em;
         text-align: left;
         font-weight: normal;
+        line-height: 1.1;
         &:last-child {
             margin-bottom: 0;
         }
@@ -258,15 +278,21 @@ section {
 
 .box-title {
     display: block;
-    margin-bottom: 0.5em;
-    font-size: 1.25em;
     font-weight: normal;
+    font-size: 1.48em;
+    margin-bottom: 0.4em;
+    line-height: 1.1;
+    margin-top: -0.4em;
+    &.orange{
+        color: #ee7316;
+    }
 }
 
 .box-text {
     text-align: left;
     font-weight: normal;
     margin-bottom: 0;
+    font-size: 0.8em;
     &.icon-share {
         &:before {
             float: right;
@@ -303,22 +329,24 @@ section {
 }
 
 .social-block {
-    font-size: 1.15em;
-    margin-top: 4px;
+    font-size: 1.2em;
     .btn {
+        height: 1.76em;
+        width: 1.76em;
+        line-height: 1.76em;
+        &.icon-facebook{
+            width: 1.4em;
+            text-align: center;
+            margin-left: -0.3em;
+            margin-right: -0.16em;
+        }
         &::before {
-            font-size: 29px;
         }
         &:active, &:focus {
             .box-shadow(none);
         }
-        &.facebook {
-            width: 27px;
-            margin-left: -6px;
-            margin-right: -3px;
-        }
-        &.blogger {
-            margin-left: -2px;
+        &:first-child{
+            margin-left: -0.1em;
         }
     }
     @media only screen and (max-width: @responsive-size-mobile) {
@@ -329,9 +357,9 @@ section {
 .some-text {
     position: fixed;
     bottom: 0;
-    width: 166px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.08em;
+    width: 226px;
     color: #FFFFFF;
 }
 
@@ -427,6 +455,12 @@ footer {
     display: block;
     overflow: hidden;
     .border-radius(40px);
+    a{
+        display: block;
+    }
+    img, a img{
+        width: 100%;
+    }
 }
 
 .auto-form {
@@ -453,21 +487,24 @@ footer {
 }
 
 .auto-form, .aero-form, .hotel-form {
-    .m_submit-box [type="submit"] {
-        height: 156px;
-    }
     .mobissimo-search-box {
-        min-height: 156px;
+        min-height: 212px;
+    }
+    .types-box{
+        margin-bottom: 0;
     }
 }
 
 .affix {
     position: fixed !important;
+    top: -7.2rem;
+    .no-top-text &{
+        top: -2.8rem;
+    }
 }
 
 .affix-top {
     position: absolute !important;
-    top: 0;
 }
 
 .affix-bottom {
@@ -477,32 +514,17 @@ footer {
 .floating-block {
     position: relative;
     height: 1px;
-    padding-right: 75px;
 }
 
 .right-ad {
-    padding-left: 75px;
-    overflow: hidden;
     .aside-box {
         overflow: hidden;
         .border-radius(30px);
         &.mt {
-            margin-top: 60px;
+            margin-top: 3.32em;
         }
         & > img {
             width: 100%;
-        }
-    }
-}
-
-.container {
-    &.width-1200 {
-        width: 1200px;
-        & > .grid_2 {
-            width: 21%;
-        }
-        & > .grid_8 {
-            width: 58%;
         }
     }
 }
@@ -536,11 +558,11 @@ footer {
 
 .hotel-currency, .auto-currency {
     padding-right: 22%;
-    margin-top: -35px;
+    margin-top: -0.5rem;
     select {
-        padding: 0 .5em;
-        height: 2.7em;
-        line-height: 1.7em;
+        padding: 0 .25em;
+        height: 2.4em;
+        line-height: 1.4em;
         font-weight: normal;
     }
     .grid_5 {
