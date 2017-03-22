@@ -643,23 +643,30 @@ footer .flag-list .com {
   display: block;
 }
 .hotel-currency,
-.auto-currency {
+.auto-currency,
+.aero-currency {
   padding-right: 22%;
   margin-top: -0.5rem;
 }
 .hotel-currency select,
-.auto-currency select {
-  padding: 0 .25em;
-  height: 2.4em;
-  line-height: 1.4em;
+.auto-currency select,
+.aero-currency select {
+  font-size: 0.88em;
+  padding: 0 .5em;
+  height: 2.55em;
+  line-height: 1.55em;
   font-weight: normal;
 }
 .hotel-currency .grid_5,
-.auto-currency .grid_5 {
+.auto-currency .grid_5,
+.aero-currency .grid_5 {
   width: 48.667%;
 }
 .auto-currency {
   margin-top: 20px;
+}
+.aero-currency {
+  margin-top: 0;
 }
 form {
   font-size: 0.88em;
