@@ -76,6 +76,12 @@ header .slogan {
   color: #FFFFFF;
   font-weight: 300;
 }
+.top-text.red {
+  color: #7e1710;
+}
+.top-text.text-center {
+  text-align: center;
+}
 .main {
   margin-top: 5em;
   padding-left: 50px;
@@ -646,12 +652,11 @@ footer .flag-list .com {
 .auto-currency,
 .aero-currency {
   padding-right: 22%;
-  margin-top: -0.5rem;
+  font-size: 0.88em;
 }
 .hotel-currency select,
 .auto-currency select,
 .aero-currency select {
-  font-size: 0.88em;
   padding: 0 .5em;
   height: 2.55em;
   line-height: 1.55em;
@@ -662,11 +667,64 @@ footer .flag-list .com {
 .aero-currency .grid_5 {
   width: 48.667%;
 }
+.hotel-currency {
+  margin-top: -50px;
+}
 .auto-currency {
-  margin-top: 20px;
+  margin-top: 0;
 }
 .aero-currency {
   margin-top: 0;
+}
+.list-team li {
+  margin-top: 47px;
+}
+.list-team li:first-child {
+  margin-top: 0;
+}
+.list-team .team-left-side,
+.list-team a,
+.list-team .title {
+  color: #f16f29;
+}
+.list-team .title {
+  font-size: 20px;
+  margin-bottom: 13px;
+}
+.list-team .team-left-side {
+  font-size: 13px;
+  padding-top: 3px;
+}
+.list-team .team-right-side {
+  line-height: 1.35;
+}
+.list-team .grid_2 {
+  width: 10%;
+}
+.list-team .prefix_2 {
+  margin-left: 13% !important;
+}
+.list-team .grid_10 {
+  width: 86%;
+}
+.list-team .link-container {
+  margin-top: -23px;
+}
+.list-team .link-container a {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.list-team .read-more {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.list-team .read-more.hide {
+  pointer-events: none;
+  opacity: 0;
+}
+.padding-top {
+  padding-top: 60px;
 }
 form {
   font-size: 0.88em;

@@ -128,8 +128,13 @@ section {
     font-size: 2.32em;
     color: #FFFFFF;
     font-weight: 300;
+    &.red {
+        color: #7e1710;
+    }
+    &.text-center {
+        text-align: center;
+    }
 }
-
 
 .main {
     margin-top: 5em;
@@ -268,7 +273,7 @@ section {
             margin-left: 0.5em;
         }
     }
-    div{
+    div {
         font-size: 0.95em;
         text-align: left;
         font-weight: normal;
@@ -566,9 +571,8 @@ footer {
 
 .hotel-currency, .auto-currency, .aero-currency {
     padding-right: 22%;
-    margin-top: -0.5rem;
+    font-size: 0.88em;
     select {
-        font-size: 0.88em;
         padding: 0 .5em;
         height: 2.55em;
         line-height: 1.55em;
@@ -579,10 +583,66 @@ footer {
     }
 }
 
-.auto-currency {
-    margin-top: 20px;
+.hotel-currency {
+    margin-top: -50px;
 }
+
+.auto-currency {
+    margin-top: 0;
+}
+
 .aero-currency {
     margin-top: 0;
 }
 
+.list-team {
+    li {
+        margin-top: 47px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    .team-left-side, a, .title {
+        color: @brand-primary;
+    }
+    .title {
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+    .team-left-side {
+        font-size: 13px;
+        padding-top: 3px;
+    }
+    .team-right-side {
+        line-height: 1.35;
+    }
+    .grid_2 {
+        width: 10%;
+    }
+    .prefix_2 {
+        margin-left: 13% !important;
+    }
+    .grid_10 {
+        width: 86%;
+    }
+    .link-container {
+        margin-top: -23px;
+        a {
+            .inline-block();
+            text-decoration: none;
+        }
+    }
+
+    .read-more{
+        .opacity(1);
+        .transition();
+        &.hide{
+            pointer-events: none;
+            .opacity(0);
+        }
+    }
+}
+
+.padding-top {
+    padding-top: 60px;
+}
