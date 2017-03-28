@@ -16,15 +16,12 @@
     </div>
 
     <div class="grid_8 alpha omega main" role="main">
-        <div class="box-white-bg opacity-bg wrap text-center">
+        <div class="box-white-bg opacity-bg wrap">
             <div class="grid_12">
-                <p class="contact-title">{$header:title}</p>
-                <h2>{$page:h1}</h2>
-                <div class="contact-block">
-                    <div class="address">
-                        {$content:address}
-                    </div>
-                    {$content:content}
+                <p class="terms-title text-center">{$header:title}</p>
+                <div class="terms-and-conditions-block">
+                    <h2>{$page:h1}</h2>
+                    <div>{$content:content}</div>
                 </div>
             </div>
         </div>
@@ -41,5 +38,12 @@
 
 <!-- Include scripts template -->
 {$template:_scripts}
+<script>
+    $(".teaser-section").on("click", function (event) {
+        event.preventDefault();
+        $(this).toggleClass("active");
+        $(this).parents("li").find(" .content-section").slideToggle();
+    });
+</script>
 </body>
 </html>

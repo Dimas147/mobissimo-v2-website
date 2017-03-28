@@ -2900,7 +2900,8 @@ code {
   color: #f25f5c;
 }
 a {
-  color: #07a0c3;
+  color: #f16f29;
+  text-decoration: none;
 }
 a:hover {
   color: #034f61;
@@ -3193,6 +3194,21 @@ dl.horizontal dd {
 ul.list-unstyled {
   zoom: 1;
 }
+ul.list-checkmark {
+  zoom: 1;
+}
+ul.list-checkmark > li {
+  padding-left: 1.5em;
+}
+ul.list-checkmark > li::before {
+  float: left;
+  color: #f16f29;
+  margin-left: -1.9em;
+  margin-top: .35em;
+  font-family: flexkit-icons;
+  font-size: .75em;
+  content: '\e09c';
+}
 ul.list-select {
   border: 1px solid transparent;
   min-height: calc(24px + 1em);
@@ -3216,6 +3232,118 @@ ul.list-select > li.active::after {
 }
 ul.list-select > li:hover {
   background: #eeeeee;
+}
+#dynamic-banners,
+#static-banners,
+#search-box {
+  list-style-type: none;
+  padding-left: 0;
+}
+#dynamic-banners li,
+#static-banners li,
+#search-box li {
+  margin-bottom: 1em;
+}
+#dynamic-banners li:last-child,
+#static-banners li:last-child,
+#search-box li:last-child {
+  margin-bottom: 0;
+}
+#dynamic-banners .teaser-section,
+#static-banners .teaser-section,
+#search-box .teaser-section {
+  padding: 0.5em;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#dynamic-banners .teaser-section:hover,
+#static-banners .teaser-section:hover,
+#search-box .teaser-section:hover,
+#dynamic-banners .teaser-section.active,
+#static-banners .teaser-section.active,
+#search-box .teaser-section.active {
+  background: #f16f29;
+  border-color: #f16f29;
+}
+#dynamic-banners .teaser-section:hover h6,
+#static-banners .teaser-section:hover h6,
+#search-box .teaser-section:hover h6,
+#dynamic-banners .teaser-section.active h6,
+#static-banners .teaser-section.active h6,
+#search-box .teaser-section.active h6,
+#dynamic-banners .teaser-section:hover p,
+#static-banners .teaser-section:hover p,
+#search-box .teaser-section:hover p,
+#dynamic-banners .teaser-section.active p,
+#static-banners .teaser-section.active p,
+#search-box .teaser-section.active p {
+  color: #ffffff;
+}
+#dynamic-banners .teaser-section:hover h6::before,
+#static-banners .teaser-section:hover h6::before,
+#search-box .teaser-section:hover h6::before,
+#dynamic-banners .teaser-section.active h6::before,
+#static-banners .teaser-section.active h6::before,
+#search-box .teaser-section.active h6::before {
+  border-color: transparent transparent transparent #ffffff;
+}
+#dynamic-banners .teaser-section h6,
+#static-banners .teaser-section h6,
+#search-box .teaser-section h6,
+#dynamic-banners .teaser-section p,
+#static-banners .teaser-section p,
+#search-box .teaser-section p {
+  margin-bottom: 0;
+  font-style: italic;
+}
+#dynamic-banners .teaser-section h6,
+#static-banners .teaser-section h6,
+#search-box .teaser-section h6 {
+  position: relative;
+  padding-left: 20px;
+}
+#dynamic-banners .teaser-section h6::before,
+#static-banners .teaser-section h6::before,
+#search-box .teaser-section h6::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #f16f29;
+}
+#dynamic-banners .content-section,
+#static-banners .content-section,
+#search-box .content-section {
+  display: none;
+  border: 1px solid #f16f29;
+  padding: 0.8em;
+  margin-top: 0.8em;
+}
+#dynamic-banners .content-section textarea,
+#static-banners .content-section textarea,
+#search-box .content-section textarea {
+  border-radius: 0 0 0 0;
+  border: 1px solid #f16f29;
+  min-height: 10em;
+}
+#dynamic-banners .content-section object,
+#static-banners .content-section object,
+#search-box .content-section object,
+#dynamic-banners .content-section iframe,
+#static-banners .content-section iframe,
+#search-box .content-section iframe {
+  max-width: 100%;
+  background: #f16f29;
+}
+#dynamic-banners .content-section p,
+#static-banners .content-section p,
+#search-box .content-section p {
+  margin-bottom: 0.5em;
 }
 table {
   width: 100%;

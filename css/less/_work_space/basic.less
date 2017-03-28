@@ -547,18 +547,25 @@ footer {
 }
 
 .contact-title {
-    font-size: 41px;
+    font-size: 2.56em;
     color: #8c4545;
-    margin-top: 10px;
+    margin-top: 0.24em;
     & + h2 {
         font-size: 20px;
         font-weight: bold;
         text-transform: capitalize;
     }
 }
+.terms-title{
+    font-size: 2.56em;
+    color: #8c4545;
+    margin-top: 0.24em;
+    margin-bottom: 1em;
+    text-align: center;
+}
 
 .contact-block {
-    margin-bottom: 50px;
+    margin-bottom: 3.57em;
     font-size: 0.9em;
     p {
         margin-bottom: 0;
@@ -645,4 +652,41 @@ footer {
 
 .padding-top {
     padding-top: 60px;
+}
+
+.terms-and-conditions-block {
+    h2 {
+        font-size: 1.285em;
+        padding-bottom: .5em;
+        margin-bottom: .5em;
+        border-bottom: 1px solid #edd1c4;
+    }
+    h3 {
+        font-size: 1.07em;
+        color: @brand-primary;
+        margin-top: 3.5em;
+        padding-bottom: .5em;
+        margin-bottom: .5em;
+        border-bottom: 1px solid #edd1c4;
+    }
+    h5{
+        background: @brand-primary;
+        font-variant: small-caps;
+        font-size: 1em;
+        color: @primary-color;
+        letter-spacing: .1em;
+        margin: 1.5em 0 1em;
+        width: 6em;
+        padding: .5em;
+        font-weight: normal;
+    }
+    h6{
+        font-size: 1.07em;
+        font-weight: bold;
+    }
+    strong{
+        &.notification{
+            color: @brand-primary;
+        }
+    }
 }
