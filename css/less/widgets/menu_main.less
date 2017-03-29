@@ -1,6 +1,42 @@
 @media only screen and (min-width: @responsive-size-tablet) {
     #main-menu {
         margin-bottom: 1.5em;
+        &.air-active {
+            .main_menu {
+                & > li {
+                    &:first-child {
+                        a {
+                            background: @brand-primary;
+                            color: @primary-color;
+                        }
+                    }
+                }
+            }
+        }
+        &.hotel-active {
+            .main_menu {
+                & > li {
+                    &:nth-child(2) {
+                        a {
+                            background: @brand-primary;
+                            color: @primary-color;
+                        }
+                    }
+                }
+            }
+        }
+        &.car-active {
+            .main_menu {
+                & > li {
+                    &:nth-child(3) {
+                        a {
+                            background: @brand-primary;
+                            color: @primary-color;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .main_menu when (@menu-main) {

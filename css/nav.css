@@ -20,6 +20,18 @@ extend ' .mobile-menu li' has no matches
   #main-menu {
     margin-bottom: 1.5em;
   }
+  #main-menu.air-active .main_menu > li:first-child a {
+    background: #f16f29;
+    color: #ffffff;
+  }
+  #main-menu.hotel-active .main_menu > li:nth-child(2) a {
+    background: #f16f29;
+    color: #ffffff;
+  }
+  #main-menu.car-active .main_menu > li:nth-child(3) a {
+    background: #f16f29;
+    color: #ffffff;
+  }
   .main_menu {
     position: relative;
     z-index: 11;

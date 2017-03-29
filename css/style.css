@@ -683,6 +683,91 @@ footer .flag-list .com {
 .aero-currency {
   margin-top: 0;
 }
+.aero-form-container {
+  padding-top: 26px;
+}
+.aero-form-small {
+  position: relative;
+}
+.aero-form-small .return-box + div {
+  display: none;
+}
+.aero-form-small .return-box + div + div {
+  display: none;
+}
+.aero-form-small input,
+.aero-form-small select {
+  background: transparent;
+}
+.aero-form-small input:focus,
+.aero-form-small select:focus {
+  background: #ffffff;
+}
+.aero-form-small .depCity-box {
+  width: 16%;
+}
+.aero-form-small .retCity-box {
+  position: relative;
+  width: 22%;
+  padding-left: 6%;
+}
+.aero-form-small .retCity-box::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: flexkit-icons;
+  content: "\e900";
+  font-size: 24px;
+  color: #f16f29;
+}
+.aero-form-small .depart-box,
+.aero-form-small .return-box {
+  width: 20%;
+}
+.aero-form-small .depart-box {
+  margin-left: 0;
+}
+.aero-form-small .pl_results-filter-currency {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: 10%;
+  font-size: 0.88em;
+  padding: 0 .5em;
+  height: 2.55em;
+  line-height: 1.55em;
+  font-weight: normal;
+}
+.aero-form-small .mobissimo-search-box {
+  border-width: 0;
+  padding: 0;
+  min-height: 0;
+  width: 86%;
+  float: left;
+  border-right: none;
+}
+.aero-form-small .m_submit-box {
+  right: 0;
+  width: 13%;
+}
+.aero-form-small .m_submit-box [type="submit"] {
+  height: 36px;
+  border-radius: 12px;
+  font-size: .88rem;
+  background: #929292;
+}
+.aero-form-small #pl_mobissimosearch_form_air {
+  position: relative;
+}
+.aero-form-small #pl_mobissimosearch_form_air::before {
+  position: absolute;
+  content: "";
+  bottom: 2px;
+  left: 30px;
+  right: 30px;
+  height: 1px;
+  background: #d3d1d1;
+}
 .list-team li {
   margin-top: 47px;
 }
@@ -754,7 +839,8 @@ footer .flag-list .com {
   color: #ffffff;
   letter-spacing: .1em;
   margin: 1.5em 0 1em;
-  width: 6em;
+  width: 8em;
+  text-align: center;
   padding: .5em;
   font-weight: normal;
 }
@@ -1184,7 +1270,7 @@ textarea.resize {
   border-radius: 5px;
 }
 .filed-upgrade ~ .checkbox_radio::before {
-  border-radius: 5px;
+  border-radius: 3px;
   content: "";
   position: absolute;
   left: 0;
@@ -1220,7 +1306,7 @@ textarea.resize {
   border-radius: 5px;
 }
 .filed-upgrade[type="radio"] ~ .checkbox_radio::before {
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .filed-upgrade[type="checkbox"].switcher ~ .checkbox_radio {
   overflow: hidden;
@@ -2485,6 +2571,9 @@ aside .compare-providers {
   width: 100%;
   z-index: 100;
   text-align: center;
+}
+.mobissimo-preloader-progress .progress {
+  margin-bottom: 1em;
 }
 .mobissimo-preloader-progress .progress:before {
   background: url("http://www.mobissimo.com/airline-tickets/media/theme/original/mobis-preloader-small.gif") no-repeat scroll 0 0 transparent;
