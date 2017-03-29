@@ -765,6 +765,41 @@ footer .flag-list .com {
 .terms-and-conditions-block strong.notification {
   color: #f16f29;
 }
+.paginator-container {
+  text-align: center;
+  margin-bottom: 1.375em;
+}
+.paginator-container ul {
+  margin: 0;
+  padding-left: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.paginator-container li {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  vertical-align: middle;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 0.25em 0.8125em;
+  line-height: 1.8;
+  border-radius: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.paginator-container li:hover,
+.paginator-container li.cycle-pager-active {
+  background: #f16f29;
+  color: #ffffff;
+}
+.paginator-container li a {
+  color: inherit;
+}
+#press-pager > .tpopup {
+  display: none;
+}
 form {
   font-size: 0.88em;
 }
@@ -1401,12 +1436,50 @@ textarea.resize {
   bottom: 0;
   left: 0;
 }
-.cycle-slideshow .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
+.cycle-slideshow {
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  height: 100%;
+}
+.cycle-slideshow > .tpopup {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  height: auto;
+  line-height: 2.3em;
+  padding: 0 1em;
+  font-family: 'Lato', Arial, sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  color: #ffffff;
+  border-color: #e43007;
+  background-color: #f16f29;
+  border-radius: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: none;
+  border: none;
+  transition: background 0.3s;
+  z-index: 11;
+}
+.cycle-slideshow > .tpopup:hover,
+.cycle-slideshow > .tpopup:active,
+.cycle-slideshow > .tpopup.active {
+  color: #ffffff;
+  border-color: #b22605;
+  background-color: #d9550e;
+}
+.cycle-slideshow > .tpopup:active,
+.cycle-slideshow > .tpopup.active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
+}
+.cycle-slideshow .slide {
+  width: 100%;
   list-style: none;
 }
 .cycle-slideshow .slide > a.generator-links:not(:first-child),

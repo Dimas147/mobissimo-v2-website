@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body class="no-top-text">
+
+<!-- Container -->
+<main id="page" class="container">
+
+    <div class="grid_2 alpha omega d-visible floating-block left-side">
+        <div data-spy="affix" data-offset-top="125" data-offset-bottom="200">
+            {$template:_header}
+        </div>
+    </div>
+
+    <div class="grid_8 alpha omega main" role="main">
+        <div class="box-white-bg opacity-bg wrap">
+            <div class="grid_12">
+                <p class="terms-title text-center">{$header:title}</p>
+                <div class="terms-and-conditions-block">
+                    <h2>{$page:h1}</h2>
+                    <div>{$content:content}</div>
+                    <div class="cycle-slideshow press-slider"
+                         data-cycle-slides=".slide"
+                         data-cycle-fx="scrollHorz"
+                         data-cycle-speed="200"
+                         data-cycle-max-z="10"
+                         data-cycle-timeout="false"
+                         data-cycle-prev="#press-slider-prev"
+                         data-cycle-next="#press-slider-next"
+                         data-cycle-pager="#press-pager"
+                         data-cycle-pager-template=""
+                         data-cycle-auto-height="calc">
+                        {repeat:press-slider:key:0}
+                        <div class="slide press-slide_key">
+                            {$content:press-slider-content_key}
+                        </div>
+                        {/repeat}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="paginator-container">
+            <ul class="text-center">
+                <li><a class="paginations" href="/">Home page</a></li>
+                <li id="press-slider-prev">< Pagina precedente</li>
+            </ul>
+            <ul class="text-center" id="press-pager">
+                {repeat:press-slider:key:0}
+                <li>key</li>
+                {/repeat}
+            </ul>
+            <ul class="text-center">
+                <li id="press-slider-next">Pagina successiva ></li>
+            </ul>
+        </nav>
+        {$template:_footer}
+    </div>
+</main>
+
+{$template:_mobile elements}
+{$template:_scripts}
+<script src="js/plugin/jquery.cycle2.min.js"></script>
+</body>
+</html>
