@@ -94,7 +94,9 @@ table {
         zoom : 1;
 
         & > tr:nth-child(odd), tbody tr:nth-child(even) {
-            background-color : @table-row-bg;
+            td, th{
+                background-color : @table-row-bg;
+            }
         }
     }
 

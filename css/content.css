@@ -2578,6 +2578,9 @@ a.inherit-color:hover {
 .white {
   color: #fff;
 }
+.orange {
+  color: #f16f29;
+}
 .table {
   float: none;
   display: table;
@@ -3405,34 +3408,11 @@ table.table-bordered td {
 table.table-striped {
   zoom: 1;
 }
-table.table-striped > tr:nth-child(odd),
-table.table-striped tbody tr:nth-child(even) {
+table.table-striped > tr:nth-child(odd) td,
+table.table-striped tbody tr:nth-child(even) td,
+table.table-striped > tr:nth-child(odd) th,
+table.table-striped tbody tr:nth-child(even) th {
   background-color: #f6f6f6;
-}
-table.table-hover {
-  zoom: 1;
-}
-table.table-hover thead tr:hover,
-table.table-hover tfoot tr:hover {
-  background: inherit !important;
-}
-table.table-hover tr:hover {
-  background-color: #e9e9e9 !important;
-}
-table.table-hover tr.primary:hover {
-  background-color: #fac9ae !important;
-}
-table.table-hover tr.success:hover {
-  background-color: #bdeabe !important;
-}
-table.table-hover tr.error:hover {
-  background-color: #fabdbc !important;
-}
-table.table-hover tr.warning:hover {
-  background-color: #ffe5ba !important;
-}
-table.table-hover tr.info:hover {
-  background-color: #aee1f8 !important;
 }
 table.responsive {
   zoom: 1;

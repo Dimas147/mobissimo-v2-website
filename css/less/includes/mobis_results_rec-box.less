@@ -1,142 +1,222 @@
 .on-one-line(@el: ~'>*') {
-    border-collapse : separate;
-    display         : table;
-    table-layout    : fixed;
-    width           : 100%;
-    margin          : 0;
+    border-collapse: separate;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 0;
 
-    @{el}{
-        float            : none;
-        display          : table-cell;
-        border           : 0.4em solid @body-bg;
-        border-top-width : 0;
+    @{el} {
+        float: none;
+        display: table-cell;
+        border: 0.4em solid @body-bg;
+        border-top-width: 0;
     }
 }
+
 /**
  *
  *
  */
-.results-table .recommendation-body{
-    background-color : inherit;
-    color            : @gray-dark;
-    padding          : @padding-base-horizontal 0;
-    border-top       : 3px solid @brand-primary;
-    border-bottom    : 3px solid @brand-primary;
+.results-table .recommendation-body {
+    //background-color : inherit;
+    //color            : @gray-dark;
+    //padding          : @padding-base-horizontal 0;
+    //border-top       : 3px solid @brand-primary;
+    //border-bottom    : 3px solid @brand-primary;
+    //
+    //&:hover{
+    //    background-color : transparent;
+    //}
+    .rgba(#fff, 65%);
+    .border-radius(20px);
+    padding: 1.2em 0.7em;
+    margin-bottom: 1.8em;
 
-    &:hover{
-        background-color : transparent;
-    }
-
-    .title{
-        font-size   : @font-size-larger;
-        font-weight : bold;
-        font-family : @font-family-headings;
-        margin      : 0 0.4em 0.4em;
+    .title {
+        font-size: @font-size-larger;
+        font-weight: bold;
+        font-family: @font-family-headings;
+        margin: 0 0.4em 0.4em;
     }
 }
-.recommendation-box{
-    margin : 0 -0.4em;
+
+.recommendation-box {
+    //margin : 0 -0.4em;
 }
-.rec-list{
-    list-style-type : none;
-    padding         : 0;
-    overflow        : hidden;
+
+.rec-list {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
     .on-one-line();
 
-    .rec-item{
-        padding          : @padding-small-horizontal;
-        min-height       : 55px;
-        background-color : @gray-lighter;
-        position         : relative;
-        overflow         : hidden;
-        font-size        : @font-size-base;
-        display          : block;
-        &:before{
-            font-family : 'flexkit-icons';
-            content     : "";
-            font-size   : 1.9em;
-            margin      : 4px 10px 0;
-            line-height : 1em;
-            float       : left;
-            color       : darken(@brand-primary, 20%);
+    .rec-item {
+        padding: @padding-small-horizontal;
+        min-height: 55px;
+        background-color: @gray-lighter;
+        position: relative;
+        overflow: hidden;
+        font-size: @font-size-base;
+        display: block;
+        &:before {
+            font-family: 'flexkit-icons';
+            content: "";
+            font-size: 1.9em;
+            margin: 4px 10px 0;
+            line-height: 1em;
+            float: left;
+            color: darken(@brand-primary, 20%);
         }
     }
 }
-.mobissimo-recomm{
-    .alternate:before{
-        content : "\e049";
+
+.mobissimo-recomm {
+    .alternate:before {
+        content: "\e049";
     }
-    .nonstop:before{
-        content : "\e900";
+    .nonstop:before {
+        content: "\e900";
     }
-    [class*="star"]:before{
-        font-size : 1.25em;
-        margin    : 0 10px 0 0;
+    [class*="star"]:before {
+        font-size: 1.25em;
+        margin: 0 10px 0 0;
     }
-    .star2:before{
-        content : "\e08b \e08b";
+    .star2:before {
+        content: "\e08b \e08b";
     }
-    .star3:before{
-        content : "\e08b \e08b \e08b";
+    .star3:before {
+        content: "\e08b \e08b \e08b";
     }
-    .star4:before{
-        content : "\e08b \e08b \e08b \e08b";
+    .star4:before {
+        content: "\e08b \e08b \e08b \e08b";
     }
-    .star5:before{
-        content : "\e08b \e08b \e08b \e08b \e08b";
+    .star5:before {
+        content: "\e08b \e08b \e08b \e08b \e08b";
     }
 
-    p{
-        margin : 0;
+    p {
+        margin: 0;
     }
 
-    .price{
-        color       : @brand-primary;
-        font-weight : bold;
+    .price {
+        color: @brand-primary;
+        font-weight: bold;
     }
 
-    .recommendation-text, .recommendation-detail-text{
-        line-height : 1.4em;
+    .recommendation-text, .recommendation-detail-text {
+        line-height: 1.4em;
     }
 
-    .recommendation-text{
+    .recommendation-text {
         //margin-bottom : 0.3em;
     }
-    .recommendation-detail-text{
-        font-size : @font-size-small;
-        position  : absolute;
-        left      : 0;
-        top       : 0;
-        right     : 0;
-        bottom    : 0;
-        display   : none;
+    .recommendation-detail-text {
+        font-size: @font-size-small;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
         .rgba(@gray-dark, 90%);
         .transition(all, 0.5s, ease);
-        color     : @primary-color;
-        padding   : @padding-small-horizontal;
+        color: @primary-color;
+        padding: @padding-small-horizontal;
     }
 
-    li:hover .recommendation-detail-text{
-        display : block;
+    li:hover .recommendation-detail-text {
+        display: block;
     }
 }
-.jointSearch-recomm{
-    .car:before{
-        content : "\e0b8";
+
+.jointSearch-recomm {
+    .car:before {
+        content: "\e0b8";
     }
-    .hotel:before{
-        content : "\e000";
+    .hotel:before {
+        content: "\e000";
     }
 }
-.provider-recomm{
-    .rec-item{
-        text-align : center;
+
+.provider-recomm {
+    .rec-item {
+        text-align: center;
     }
 
-    .hotwire_air, .hotwire_hotel{
-        background-color : #E50000;
+    .hotwire_air, .hotwire_hotel {
+        background-color: #E50000;
     }
-    .priceline_air, .priceline_hotel{
-        background-color : #00A1DF;
+    .priceline_air, .priceline_hotel {
+        background-color: #00A1DF;
+    }
+}
+
+.result-air {
+    .recommendation-box {
+
+    }
+    .recommendation-body {
+        background: rgba(255, 255, 255, 0.65) !important;
+        padding: 1em 0.7em;
+        &.ng-scope {
+            .border-radius(0 0 20px 20px);
+        }
+    }
+    .rec-list {
+        .inline-block-wrap(top; ~'>*'; 12px);
+        .flexbox(row; wrap; stretch);
+        .rec-item {
+            .grid-elements(3; 0; true; 2; 1);
+            .clearfix-mixin();
+            min-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            background: none;
+            border-right: 1px solid #000;
+            &::before {
+                display: none;
+            }
+            &.alternate {
+                .recommendation-text {
+                    width: 28%;
+                }
+                .price-and-link {
+                    width: 36%;
+                }
+                .date-range {
+                    width: 36%;
+                }
+            }
+            &.nonstop {
+                .recommendation-text {
+                    width: 60%;
+                }
+                .price-and-link {
+                    width: 40%;
+                }
+            }
+        }
+        .recommendation-text, .price-and-link, .date-range {
+            float: left;
+        }
+        .recommendation-text {
+
+        }
+        .price-and-link {
+
+        }
+        .date-range {
+
+        }
+        button {
+            line-height: 1.4;
+            display: block;
+            background: #929292;
+            width: 100%;
+            .border-radius(5px);
+            &:hover {
+                background: @brand-primary;
+            }
+        }
     }
 }

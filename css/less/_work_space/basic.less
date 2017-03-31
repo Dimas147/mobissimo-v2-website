@@ -504,6 +504,7 @@ footer {
     }
     .types-box {
         margin-bottom: 0;
+        text-align: left;
     }
 }
 
@@ -603,23 +604,26 @@ footer {
     margin-top: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.aero-form-container{
+.aero-form-container {
     padding-top: 26px;
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    .border-radius(20px 20px 0 0);
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        right: 30px;
+        height: 1px;
+        background: #000;
+    }
+    &.flight-brief{
+        overflow: visible;
+    }
 }
+
 .aero-form-small {
     position: relative;
     .return-box {
@@ -658,7 +662,7 @@ footer {
     .depart-box, .return-box {
         width: 20%;
     }
-    .depart-box{
+    .depart-box {
         margin-left: 0;
     }
     .pl_results-filter-currency {
@@ -680,44 +684,27 @@ footer {
         float: left;
         border-right: none;
         //background: red;
+        & > div {
+            margin-bottom: 0.5em;
+        }
     }
     .m_submit-box {
         right: 0;
         width: 13%;
-        [type="submit"]{
+        [type="submit"] {
             height: 36px;
             .border-radius(12px);
             font-size: .88rem;
             background: #929292;
         }
     }
-    #pl_mobissimosearch_form_air{
-        position: relative;
-        &::before{
-            position: absolute;
-            content: "";
-            bottom: 2px;
-            left: 30px;
-            right: 30px;
-            height: 1px;
-            background: #d3d1d1;
-        }
+    .types-box {
+        text-align: left;
+    }
+    .ui-helper-hidden-accessible, .compare-providers{
+        display: none !important;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .list-team {
     li {
