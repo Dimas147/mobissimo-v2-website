@@ -178,10 +178,14 @@ section {
         padding-top: 0.9em;
         padding-bottom: 0.9em;
     }
+    &.top-adv{
+        margin-bottom: 1.3em;
+    }
     .clearfix-mixin();
 }
 
 .ng-table-pager {
+    .clearfix-mixin();
     .btn-group {
         display: none;
         .border-radius(@border-radius-base);
@@ -204,17 +208,17 @@ section {
     }
 
     .pagination {
+        text-align: center;
         list-style: none;
         overflow: hidden;
         padding: 0;
         margin: 0;
-        float: right;
         .border-radius(@border-radius-base);
         display: block;
 
         li {
             .inline-block();
-            margin: 0;
+            margin: 0 0.25em;
 
             &.disabled {
                 a {
@@ -619,7 +623,7 @@ footer {
         height: 1px;
         background: #000;
     }
-    &.flight-brief{
+    &.flight-brief {
         overflow: visible;
     }
 }
@@ -641,13 +645,13 @@ footer {
         }
     }
     .depCity-box {
-        width: 16%;
+        width: 24%;
         //background: red;
     }
     .retCity-box {
         position: relative;
-        width: 22%;
-        padding-left: 6%;
+        width: 30%;
+        padding-left: 5.5%;
         //background: red;
         &::before {
             position: absolute;
@@ -667,9 +671,9 @@ footer {
     }
     .pl_results-filter-currency {
         position: absolute;
-        top: 0;
-        right: 100px;
-        width: 10%;
+        top: 40px;
+        left: 9px;
+        width: 16%;
         font-size: 0.88em;
         padding: 0 .5em;
         height: 2.55em;
@@ -686,6 +690,7 @@ footer {
         //background: red;
         & > div {
             margin-bottom: 0.5em;
+            margin-right: 0 !important;
         }
     }
     .m_submit-box {
@@ -700,8 +705,9 @@ footer {
     }
     .types-box {
         text-align: left;
+        padding-left: 21%;
     }
-    .ui-helper-hidden-accessible, .compare-providers{
+    .ui-helper-hidden-accessible, .compare-providers {
         display: none !important;
     }
 }
@@ -827,4 +833,45 @@ footer {
     & > .tpopup {
         display: none;
     }
+}
+
+
+.top-adv{
+    .top-adv-img{
+
+    }
+    .top-adv-text{
+        padding: 0.25em 2em 0;
+    }
+}
+
+.box-grey-bg {
+    .border-radius(2em);
+    padding: 1.5em 1em;
+    margin-bottom: 1em;
+    h4, &{
+        color: @primary-color;
+    }
+    h4{
+        line-height: 0.9;
+        margin-bottom: 0;
+        padding-top: 0.2em;
+    }
+    &.opacity-bg {
+        .rgba(#a7a6a6, 65%);
+    }
+    &.thin {
+        padding: 0.25em;
+    }
+    &.social-accounts, &.br10{
+        .border-radius(10px);
+    }
+}
+
+[ng-table-pagination="params"]{
+    //display: none;
+}
+
+.footer-margin-top{
+    margin-top: 1.3em;
 }

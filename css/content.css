@@ -835,7 +835,7 @@ ul.list-select > li.active::after {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  width: 1250px;
   max-width: 95%;
 }
 .container::after {
@@ -3355,11 +3355,11 @@ table {
 table th,
 table td {
   padding: .5em .75em;
-  border-bottom: 1px solid #dddddd;
   vertical-align: middle;
 }
-table tr:first-child > * {
-  border-top: 1px solid #dddddd;
+table th.sponsored-sites,
+table td.sponsored-sites {
+  padding: 1.925em 0;
 }
 table th {
   border-top: 0;
@@ -3369,7 +3369,7 @@ table thead {
   background: #e7e7e7;
 }
 table tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #f4f2f0;
 }
 table tfoot {
   background: #d5d5d5;
@@ -3378,11 +3378,11 @@ table table {
   background-color: #fff;
 }
 table.table-outline {
-  border: 1px solid #dddddd;
+  border: 1px solid #f4f2f0;
 }
 table.table-outline th:last-child,
 table.table-outline td:last-child {
-  border-right: 1px solid #dddddd;
+  border-right: 1px solid #f4f2f0;
 }
 table.condensed th,
 table.condensed td {
@@ -3403,16 +3403,54 @@ table.table-bordered {
 }
 table.table-bordered th,
 table.table-bordered td {
-  border: 1px solid #dddddd;
+  border: 1px solid #f4f2f0;
 }
 table.table-striped {
   zoom: 1;
+}
+table.table-striped td,
+table.table-striped th {
+  background: rgba(255, 255, 255, 0.65);
 }
 table.table-striped > tr:nth-child(odd) td,
 table.table-striped tbody tr:nth-child(even) td,
 table.table-striped > tr:nth-child(odd) th,
 table.table-striped tbody tr:nth-child(even) th {
   background-color: #f6f6f6;
+  border-bottom: 1px solid #f4f2f0;
+}
+table.table-striped > tr:nth-child(odd) td.sponsored-sites,
+table.table-striped tbody tr:nth-child(even) td.sponsored-sites,
+table.table-striped > tr:nth-child(odd) th.sponsored-sites,
+table.table-striped tbody tr:nth-child(even) th.sponsored-sites,
+table.table-striped > tr:nth-child(odd) td.recommendation-body,
+table.table-striped tbody tr:nth-child(even) td.recommendation-body,
+table.table-striped > tr:nth-child(odd) th.recommendation-body,
+table.table-striped tbody tr:nth-child(even) th.recommendation-body {
+  background: none;
+  border: none;
+}
+table.table-striped > tr:nth-child(odd) td,
+table.table-striped tbody tr:nth-child(even) td {
+  border-top: 1px solid #f4f2f0;
+}
+table.table-striped > tr:nth-child(odd) td.sponsored-sites,
+table.table-striped tbody tr:nth-child(even) td.sponsored-sites,
+table.table-striped > tr:nth-child(odd) td.recommendation-body,
+table.table-striped tbody tr:nth-child(even) td.recommendation-body {
+  border: none;
+}
+table.table-striped > tr:nth-child(odd):last-child td,
+table.table-striped tbody tr:nth-child(even):last-child td {
+  border-bottom: 0;
+}
+table.table-striped > tr:nth-child(odd):last-child td:first-child,
+table.table-striped tbody tr:nth-child(even):last-child td:first-child {
+  border-radius: 0 0 0 10px;
+}
+table.table-striped > tr:nth-child(odd):last-child td:last-child,
+table.table-striped tbody tr:nth-child(even):last-child td:last-child {
+  border-radius: 0 0 10px 0;
 }
 table.responsive {
   zoom: 1;
@@ -3430,7 +3468,7 @@ table.responsive .table-head {
   }
   table.responsive tr {
     display: block;
-    border: 1px solid #dddddd;
+    border: 1px solid #f4f2f0;
   }
   table.responsive tr + tr {
     margin-top: 1.5em;

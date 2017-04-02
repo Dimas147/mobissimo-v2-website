@@ -130,7 +130,15 @@ header .slogan {
   padding-top: 0.9em;
   padding-bottom: 0.9em;
 }
+.box-white-bg.top-adv {
+  margin-bottom: 1.3em;
+}
 .box-white-bg::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.ng-table-pager::after {
   content: "";
   display: table;
   clear: both;
@@ -216,18 +224,18 @@ header .slogan {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
 }
 .ng-table-pager .pagination {
+  text-align: center;
   list-style: none;
   overflow: hidden;
   padding: 0;
   margin: 0;
-  float: right;
   border-radius: 0.5em;
   display: block;
 }
 .ng-table-pager .pagination li {
   display: inline-block;
   vertical-align: middle;
-  margin: 0;
+  margin: 0 0.25em;
 }
 .ng-table-pager .pagination li.disabled a {
   text-align: center;
@@ -721,12 +729,12 @@ footer .flag-list .com {
   background: #ffffff;
 }
 .aero-form-small .depCity-box {
-  width: 16%;
+  width: 24%;
 }
 .aero-form-small .retCity-box {
   position: relative;
-  width: 22%;
-  padding-left: 6%;
+  width: 30%;
+  padding-left: 5.5%;
 }
 .aero-form-small .retCity-box::before {
   position: absolute;
@@ -746,9 +754,9 @@ footer .flag-list .com {
 }
 .aero-form-small .pl_results-filter-currency {
   position: absolute;
-  top: 0;
-  right: 100px;
-  width: 10%;
+  top: 40px;
+  left: 9px;
+  width: 16%;
   font-size: 0.88em;
   padding: 0 .5em;
   height: 2.55em;
@@ -765,6 +773,7 @@ footer .flag-list .com {
 }
 .aero-form-small .mobissimo-search-box > div {
   margin-bottom: 0.5em;
+  margin-right: 0 !important;
 }
 .aero-form-small .m_submit-box {
   right: 0;
@@ -778,6 +787,7 @@ footer .flag-list .com {
 }
 .aero-form-small .types-box {
   text-align: left;
+  padding-left: 21%;
 }
 .aero-form-small .ui-helper-hidden-accessible,
 .aero-form-small .compare-providers {
@@ -900,6 +910,36 @@ footer .flag-list .com {
 }
 #press-pager > .tpopup {
   display: none;
+}
+.top-adv .top-adv-text {
+  padding: 0.25em 2em 0;
+}
+.box-grey-bg {
+  border-radius: 2em;
+  padding: 1.5em 1em;
+  margin-bottom: 1em;
+}
+.box-grey-bg h4,
+.box-grey-bg {
+  color: #ffffff;
+}
+.box-grey-bg h4 {
+  line-height: 0.9;
+  margin-bottom: 0;
+  padding-top: 0.2em;
+}
+.box-grey-bg.opacity-bg {
+  background: rgba(167, 166, 166, 0.65);
+}
+.box-grey-bg.thin {
+  padding: 0.25em;
+}
+.box-grey-bg.social-accounts,
+.box-grey-bg.br10 {
+  border-radius: 10px;
+}
+.footer-margin-top {
+  margin-top: 1.3em;
 }
 form {
   font-size: 0.88em;
@@ -1669,6 +1709,9 @@ textarea.resize {
 #mobissimosearch {
   clear: both;
 }
+.mobis-autocomplete {
+  position: relative;
+}
 .mobis-autocomplete ul {
   position: absolute;
   width: 100%;
@@ -1678,6 +1721,7 @@ textarea.resize {
   overflow: hidden;
   margin-top: -12px;
   border: 1px solid #ffffff;
+  text-align: left;
 }
 .mobis-autocomplete ul li {
   padding: 8px;
@@ -1878,7 +1922,7 @@ aside .box-compare fieldset .mobiss-type-box {
  *
  */
 .results-table {
-  margin-bottom: 15px;
+  margin-bottom: 1.3em;
   cursor: pointer;
 }
 .results-table th {
@@ -2498,6 +2542,9 @@ aside .compare-providers {
  *
  *
  */
+.results-table {
+  position: relative;
+}
 .results-table .price span {
   text-align: center;
   cursor: pointer;
@@ -2600,7 +2647,10 @@ aside .compare-providers {
   margin-right: 5px;
 }
 .mobissimo-preloader-progress .completed {
-  margin-bottom: 1em;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 10px 10px 0 0;
   color: #f16f29;
   /*.transition(all, 1s, ease 3s);
         opacity : 0;*/
@@ -2734,6 +2784,7 @@ aside .compare-providers {
   border-radius: 0 0 20px 20px;
 }
 .result-air .rec-list {
+  cursor: default;
   font-size: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2758,12 +2809,12 @@ aside .compare-providers {
   vertical-align: top;
 }
 .result-air .rec-list .rec-item {
+  padding-top: 2px;
+  padding-bottom: 2px;
   margin-left: 0%;
   margin-right: 0;
   width: 33.33333333%;
   min-height: 0;
-  padding-top: 0;
-  padding-bottom: 0;
   background: none;
   border-right: 1px solid #000;
 }
@@ -2827,6 +2878,9 @@ aside .compare-providers {
 .result-air .rec-list button:hover {
   background: #f16f29;
 }
+.result-air .rec-list .price {
+  text-align: center;
+}
 .m_compare-provider {
   overflow: hidden;
   clear: both;
@@ -2881,6 +2935,95 @@ aside .compare-providers {
 }
 .m_compare-provider a img {
   max-height: 21px;
+}
+.sponsored-sites {
+  position: relative;
+}
+.sponsored-sites::before,
+.sponsored-sites::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.625em;
+  background: rgba(255, 255, 255, 0.65);
+}
+.sponsored-sites::before {
+  top: 0;
+  border-radius: 0 0 10px 10px;
+}
+.sponsored-sites::after {
+  bottom: 0;
+  border-radius: 10px 10px 0 0;
+}
+.sponsored-sites .middle-adv {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.sponsored-sites .social-block {
+  font-size: 1em;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.sponsored-sites h3.thin {
+  padding-left: 3%;
+}
+.sponsored-sites .box-grey-bg h4 {
+  padding-left: 1%;
+}
+.sponsored-sites .m_compare-provider {
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 10px;
+  margin-bottom: 1.3em;
+}
+.sponsored-sites .m_compare-provider a {
+  position: relative;
+  float: none;
+  text-align: left;
+  margin-left: 0%;
+  margin-right: 0;
+  width: 100%;
+  border: none;
+  background: none;
+  color: #000;
+}
+.sponsored-sites .m_compare-provider a:nth-of-type(1n + 1) {
+  margin-left: 0;
+}
+@media only screen and (max-width: 800px) and (min-width: 481px) {
+  .sponsored-sites .m_compare-provider a {
+    width: 100%;
+  }
+  .sponsored-sites .m_compare-provider a:nth-of-type(1n + 1) {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sponsored-sites .m_compare-provider a {
+    width: 100%;
+  }
+  .sponsored-sites .m_compare-provider a:nth-of-type(1n + 1) {
+    margin-left: 0;
+  }
+}
+.sponsored-sites .m_compare-provider a::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 18px;
+  height: 18px;
+  width: 18px;
+  border: 2px solid #f16f29;
+  border-radius: 5px;
+}
+.sponsored-sites .m_compare-provider a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  left: 40px;
+  right: 40px;
+  background: #000;
 }
 .api-page {
   background-color: #f16f29;

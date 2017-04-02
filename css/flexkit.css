@@ -127,7 +127,7 @@
 .smoke-base .dialog-inner {
   overflow: auto;
   margin-top: 15%;
-  max-width: 900px;
+  max-width: 937.5px;
   max-height: 70%;
   font-size: 1.25em;
   padding: 1em 2em;
@@ -392,7 +392,7 @@ a.tooltip {
   cursor: pointer;
   position: relative;
   padding-right: 16px;
-  border-left: 1px solid #dddddd;
+  border-left: 1px solid #f4f2f0;
 }
 .dataTables_wrapper .sorting::after,
 .dataTables_wrapper .sorting_asc::after,

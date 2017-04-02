@@ -6,15 +6,9 @@ table {
 
     th, td {
         padding        : .5em .75em;
-        border-bottom  : 1px solid @table-border-color;
         vertical-align : middle;
-    }
-
-    tr {
-        &:first-child {
-            & > * {
-                border-top : 1px solid @table-border-color;
-            }
+        &.sponsored-sites{
+            padding: 1.925em 0;
         }
     }
 
@@ -93,9 +87,36 @@ table {
     &.table-striped when (@table-striped) and (@table-styles) {
         zoom : 1;
 
+        td, th{
+            .rgba(#FFFFFF, 65%);
+        }
+
         & > tr:nth-child(odd), tbody tr:nth-child(even) {
             td, th{
                 background-color : @table-row-bg;
+                border-bottom  : 1px solid @table-border-color;
+                &.sponsored-sites, &.recommendation-body{
+                    background: none;
+                    border: none;
+                }
+            }
+            td{
+                border-top  : 1px solid @table-border-color;
+                &.sponsored-sites, &.recommendation-body{
+                    border: none;
+                }
+            }
+            &:last-child{
+                td{
+                    border-bottom: 0;
+                    &:first-child{
+                        .border-radius(0 0 0 10px);
+                    }
+                    &:last-child{
+                        .border-radius(0 0 10px 0);
+                    }
+
+                }
             }
         }
     }
