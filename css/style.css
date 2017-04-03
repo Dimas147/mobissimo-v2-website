@@ -2409,7 +2409,7 @@ aside .mobissimo-search-box .title {
 .mobile .compare-providers .compare .checkbox_radio {
   background-color: #eeeeee;
   border: 1px solid #e2e2e2;
-  margin: 0;
+  margin: 0 10px 0 0;
   border-radius: 0.5em;
   display: block;
   position: absolute;
@@ -2633,9 +2633,10 @@ aside .compare-providers {
   width: 100%;
   z-index: 100;
   text-align: center;
-}
-.mobissimo-preloader-progress .progress {
-  margin-bottom: 1em;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 10px 10px 0 0;
 }
 .mobissimo-preloader-progress .progress:before {
   background: url("http://www.mobissimo.com/airline-tickets/media/theme/original/mobis-preloader-small.gif") no-repeat scroll 0 0 transparent;
@@ -2647,10 +2648,6 @@ aside .compare-providers {
   margin-right: 5px;
 }
 .mobissimo-preloader-progress .completed {
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  background: rgba(255, 255, 255, 0.65);
-  border-radius: 10px 10px 0 0;
   color: #f16f29;
   /*.transition(all, 1s, ease 3s);
         opacity : 0;*/
@@ -2776,6 +2773,9 @@ aside .compare-providers {
 .provider-recomm .priceline_hotel {
   background-color: #00A1DF;
 }
+.result-air .recommendation-box .advertisment {
+  padding-top: 4px;
+}
 .result-air .recommendation-body {
   background: rgba(255, 255, 255, 0.65) !important;
   padding: 1em 0.7em;
@@ -2811,39 +2811,18 @@ aside .compare-providers {
 .result-air .rec-list .rec-item {
   padding-top: 2px;
   padding-bottom: 2px;
-  margin-left: 0%;
-  margin-right: 0;
-  width: 33.33333333%;
   min-height: 0;
   background: none;
   border-right: 1px solid #000;
-}
-.result-air .rec-list .rec-item:nth-of-type(3n + 1) {
-  margin-left: 0;
-}
-@media only screen and (max-width: 800px) and (min-width: 481px) {
-  .result-air .rec-list .rec-item {
-    width: 50%;
-  }
-  .result-air .rec-list .rec-item:nth-of-type(n) {
-    margin-left: 0%;
-  }
-  .result-air .rec-list .rec-item:nth-of-type(2n + 1) {
-    margin-left: 0;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .result-air .rec-list .rec-item {
-    width: 100%;
-  }
-  .result-air .rec-list .rec-item:nth-of-type(1n + 1) {
-    margin-left: 0;
-  }
 }
 .result-air .rec-list .rec-item::after {
   content: "";
   display: table;
   clear: both;
+}
+.result-air .rec-list .rec-item .text,
+.result-air .rec-list .rec-item .price {
+  line-height: 18px;
 }
 .result-air .rec-list .rec-item::before {
   display: none;
@@ -2863,12 +2842,25 @@ aside .compare-providers {
 .result-air .rec-list .rec-item.nonstop .price-and-link {
   width: 40%;
 }
+.result-air .rec-list .rec-item:nth-child(1) {
+  width: 29%;
+}
+.result-air .rec-list .rec-item:nth-child(2) {
+  width: 42%;
+}
+.result-air .rec-list .rec-item:nth-child(3) {
+  width: 29%;
+}
 .result-air .rec-list .recommendation-text,
 .result-air .rec-list .price-and-link,
 .result-air .rec-list .date-range {
   float: left;
 }
+.result-air .rec-list .date-range {
+  text-align: center;
+}
 .result-air .rec-list button {
+  margin-top: 2px;
   line-height: 1.4;
   display: block;
   background: #929292;
@@ -2957,6 +2949,7 @@ aside .compare-providers {
   border-radius: 10px 10px 0 0;
 }
 .sponsored-sites .middle-adv {
+  max-height: 261px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -2975,6 +2968,7 @@ aside .compare-providers {
   background: rgba(255, 255, 255, 0.65);
   border-radius: 10px;
   margin-bottom: 1.3em;
+  padding-bottom: 0;
 }
 .sponsored-sites .m_compare-provider a {
   position: relative;
@@ -3024,6 +3018,9 @@ aside .compare-providers {
   left: 40px;
   right: 40px;
   background: #000;
+}
+.sponsored-sites .m_compare-provider a:last-child::after {
+  display: none;
 }
 .api-page {
   background-color: #f16f29;

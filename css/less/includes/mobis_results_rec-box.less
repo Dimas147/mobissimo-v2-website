@@ -153,7 +153,9 @@
 
 .result-air {
     .recommendation-box {
-
+        .advertisment {
+            padding-top: 4px;
+        }
     }
     .recommendation-body {
         background: rgba(255, 255, 255, 0.65) !important;
@@ -169,11 +171,13 @@
         .rec-item {
             padding-top: 2px;
             padding-bottom: 2px;
-            .grid-elements(3; 0; true; 2; 1);
             .clearfix-mixin();
             min-height: 0;
             background: none;
             border-right: 1px solid #000;
+            .text, .price {
+                line-height: 18px;
+            }
             &::before {
                 display: none;
             }
@@ -196,6 +200,15 @@
                     width: 40%;
                 }
             }
+            &:nth-child(1) {
+                width: 29%
+            }
+            &:nth-child(2) {
+                width: 42%;
+            }
+            &:nth-child(3) {
+                width: 29%;
+            }
         }
         .recommendation-text, .price-and-link, .date-range {
             float: left;
@@ -207,9 +220,10 @@
 
         }
         .date-range {
-
+            text-align: center;
         }
         button {
+            margin-top: 2px;
             line-height: 1.4;
             display: block;
             background: #929292;
@@ -219,7 +233,7 @@
                 background: @brand-primary;
             }
         }
-        .price{
+        .price {
             text-align: center;
         }
     }

@@ -55,6 +55,7 @@
     }
 
     .middle-adv {
+        max-height: 261px;
         overflow: hidden;
         .border-radius(10px);
     }
@@ -73,6 +74,7 @@
         .rgba(@primary-color, 65%);
         .border-radius(10px);
         margin-bottom: 1.3em;
+        padding-bottom: 0;
         a {
             position: relative;
             float: none;
@@ -99,6 +101,11 @@
                 left: 40px;
                 right: 40px;
                 background: #000;
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
             }
         }
     }
