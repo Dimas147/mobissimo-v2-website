@@ -153,7 +153,7 @@
 
 .result-air {
     .recommendation-box {
-        .advertisment {
+        .advertisement {
             padding-top: 4px;
         }
     }
@@ -169,6 +169,7 @@
         .inline-block-wrap(top; ~'>*'; 12px);
         .flexbox(row; wrap; stretch);
         .rec-item {
+            width: 29%;
             padding-top: 2px;
             padding-bottom: 2px;
             .clearfix-mixin();
@@ -182,6 +183,7 @@
                 display: none;
             }
             &.alternate {
+                width: 42%;
                 .recommendation-text {
                     width: 28%;
                 }
@@ -193,6 +195,7 @@
                 }
             }
             &.nonstop {
+                width: 29%;
                 .recommendation-text {
                     width: 60%;
                 }
@@ -200,14 +203,8 @@
                     width: 40%;
                 }
             }
-            &:nth-child(1) {
-                width: 29%
-            }
-            &:nth-child(2) {
-                width: 42%;
-            }
             &:nth-child(3) {
-                width: 29%;
+                border-right: 0;
             }
         }
         .recommendation-text, .price-and-link, .date-range {
@@ -235,6 +232,99 @@
         }
         .price {
             text-align: center;
+        }
+    }
+}
+
+.result-hotel {
+    .recommendation-body {
+        background: rgba(255, 255, 255, 0.65) !important;
+        padding: 1em 0.7em;
+        &.ng-scope {
+            .border-radius(0 0 20px 20px);
+        }
+    }
+    .rec-list {
+        cursor: default;
+        .inline-block-wrap(top; ~'>*'; 14px);
+        .flexbox(row; wrap; stretch);
+        .rec-item {
+            position: relative;
+            .clearfix-mixin();
+            .grid-elements(3; 0; true; 1; 1);
+            padding-top: 2px;
+            padding-bottom: 2px;
+            min-height: 0;
+            background: none;
+            border-right: 1px solid #000;
+            cursor: pointer;
+            .text, .price {
+                line-height: 1.5;
+            }
+            .price {
+                text-align: right;
+                em {
+                    font-style: normal;
+                    display: block;
+                }
+            }
+            &:nth-child(3) {
+                border-right: 0;
+            }
+            .text {
+                font-size: 1em;
+            }
+            &::before {
+                position: absolute;
+                top: 4px;
+                left: 10px;
+                width: 100px;
+            }
+            .hotel-name {
+                padding-top: 22px;
+            }
+        }
+    }
+}
+
+.hotel-provider {
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 10px;
+    margin-bottom: 1.3em;
+    padding-bottom: 0;
+    min-height: 134px;
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        position: relative;
+        margin-bottom: 2px;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            left: 40px;
+            right: 40px;
+            background: #000;
+        }
+    }
+    a {
+        padding: 10px 15px;
+        color: #000000;
+
+        position: relative;
+        display: block;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            right: 18px;
+            height: 18px;
+            width: 18px;
+            border: 2px solid #f16f29;
+            border-radius: 5px;
         }
     }
 }

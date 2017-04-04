@@ -15,7 +15,7 @@
             <aside class="hide" role="complementary">
                 <section class="aside-box box-white-bg opacity-bg">
                     <h3>{$header:left_1:static}</h3>
-                    {$mobissimorfilter:currency}
+                    <!--{ $mobissimorfilter:currency}-->
                 </section>
                 <section class="aside-box box-white-bg opacity-bg">
                     <!--{_$mobissimoform:hotel}-->
@@ -29,29 +29,26 @@
 
     <!-- Content box -->
     <article class="grid_8 alpha omega main" role="main">
-
         <nav id="main-menu" class="d-visible hotel-active" role="navigation">{$menu:main:_main menu}</nav>
-        <div class="flight-brief block box-white-bg opacity-bg">
+        <div class="flight-brief block box-white-bg opacity-bg hotel-form-container">
             <!--<h3>{$mobissimosearchinfo:air:origin_name} ({$mobissimosearchinfo:air:origin}) <i class="icon-arrow-right2"></i> {$mobissimosearchinfo:air:destination_name} ({$mobissimosearchinfo:air:destination})</h3>-->
             <!--<span>{$mobissimosearchinfo:air:depart_date:m/d/y} - {$mobissimosearchinfo:air:return_date:m/d/y}</span>-->
-            <div class="grid_12 alpha omega">
+            <div class="grid_12 alpha omega hotel-form-small">
                 {$mobissimoform:hotel}
-            </div>
-            <div class="grid_12 alpha omega hotel-currency">
-                <label class="grid_12 text-left">{$header:left_1:static}</label>
-                <div class="grid_5">
-                    {$mobissimorfilter:currency}
-                </div>
+                {$mobissimorfilter:currency}
             </div>
         </div>
+
         <!--<div class="block">
             <h3 class="mb10px mt0px">{$header:center_1:static}</h3>
             {$ mobissimocprovider:air}
         </div>-->
 
-
-        <div class="block box-white-bg opacity-bg">
+        <div class="block result-hotel">
             {$mobissimoresults:hotel}
+        </div>
+        <div class="cl-both footer-margin-top">
+            {$template:_footer}
         </div>
     </article>
 
@@ -64,19 +61,9 @@
             {$imageonly:right-ad:152}
         </section>
     </aside>
-    <!--<div class="hFooter"></div>-->
 
 </main>
-
-<!-- Footer -->
-<!-- Include Footer template -->
-<!--{$ template:_footer}-->
-
-<!-- Include mobile elements template -->
 {$template:_mobile elements}
-
-<!-- Include scripts template -->
-
 {$template:_scripts}
 </body>
 </html>
