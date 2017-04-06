@@ -2808,6 +2808,9 @@ a:hover.facebook {
 .labeled.youtube *:focus ~ .label {
   background: #e52d27;
 }
+.social-accounts h4 {
+  font-size: 0.9375em;
+}
 .primary {
   color: #f16f29;
 }

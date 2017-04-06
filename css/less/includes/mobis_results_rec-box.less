@@ -41,7 +41,10 @@
 }
 
 .recommendation-box {
-    //margin : 0 -0.4em;
+    padding-left: 7px;
+    .advertisement{
+        padding-top: 6px;
+    }
 }
 
 .rec-list {
@@ -121,7 +124,7 @@
         .rgba(@gray-dark, 90%);
         .transition(all, 0.5s, ease);
         color: @primary-color;
-        padding: @padding-small-horizontal;
+        padding: (@padding-small-horizontal / 2) @padding-small-horizontal;
     }
 
     li:hover .recommendation-detail-text {
@@ -234,6 +237,13 @@
             text-align: center;
         }
     }
+    table{
+        th{
+            &:last-child{
+                padding-left: 33px;
+            }
+        }
+    }
 }
 
 .result-hotel {
@@ -263,9 +273,9 @@
             }
             .price {
                 text-align: right;
-                em {
-                    font-style: normal;
+                .cur_code {
                     display: block;
+                    font-style: normal;
                 }
             }
             &:nth-child(3) {
@@ -284,11 +294,55 @@
                 padding-top: 22px;
             }
         }
+        .recommendation-text{
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
     }
 }
 
-.hotel-provider {
-    background: rgba(255, 255, 255, 0.65);
+.result-auto {
+    .recommendation-body {
+        background: rgba(255, 255, 255, 0.65) !important;
+        padding: 1em 0.7em;
+        &.ng-scope {
+            .border-radius(0 0 20px 20px);
+        }
+    }
+    .rec-list {
+        cursor: default;
+        .inline-block-wrap(top; ~'>*'; 12px);
+        .flexbox(row; wrap; stretch);
+        .rec-item {
+            position: relative;
+            .clearfix-mixin();
+            .grid-elements(3; 0; true; 1; 1);
+            padding-top: 2px;
+            padding-bottom: 2px;
+            min-height: 0;
+            background: none;
+            border-right: 1px solid #000;
+            cursor: pointer;
+            &::before{
+                display: none;
+            }
+        }
+    }
+    .price {
+        text-align: right;
+        .cur_code {
+            font-style: normal;
+            display: block;
+        }
+    }
+    .recommendation-text{
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+}
+
+.hotel-provider-list, .auto-provider-list {
+    .rgba(@primary-color; 65%);
     border-radius: 10px;
     margin-bottom: 1.3em;
     padding-bottom: 0;
