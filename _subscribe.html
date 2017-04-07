@@ -1,0 +1,32 @@
+<form action="//Mobissimo.us15.list-manage.com/subscribe/post?u=13d78eb1bf635902f88649f58&amp;id=4157d7f759" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="scrivi la tua email e ricevi la nostra newsletter">
+    <input style="display: none;" type="text" name="b_13d78eb1bf635902f88649f58_4157d7f759" tabindex="-1" value="">
+    <input type="submit" value="Ok" name="subscribe" id="mc-embedded-subscribe" class="btn">
+    <div id="warning"></div>
+</form>
+<script>
+    $(document).ready(function() {
+        var email = $('#mce-EMAIL');
+        $( "#mc-embedded-subscribe" ).on( "click", function() {
+            if(email.val() != '') {
+                var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+                if(pattern.test(email.val())){
+                    email.css({'border' : '1px solid transparent'});
+                    $('#warning').text('');
+                } else {
+                    email.css({'border' : '1px solid #ff0000'});
+                    $('#warning').text('Your email is invalid');
+                    event.preventDefault();
+                }
+            } else {
+                email.css({'border' : '1px solid #ff0000'});
+                $('#warning').text('Email field should not be empty');
+                event.preventDefault();
+            }
+        });
+        email.focus(function() {
+            $('#warning').text('');
+            $(this).css({'border' : '1px solid transparent'});
+        });
+    });
+</script>

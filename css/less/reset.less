@@ -108,6 +108,9 @@ input, select, textarea, button{
     max-width : 100%;
     width     : 100%;
     .placeholder();
+    &:focus, &:active{
+        .placeholder(transparent);
+    }
 }
 // Reset width of input images, buttons, radios, checkboxes
 button,

@@ -323,6 +323,46 @@ textarea:placeholder,
 button:placeholder {
   color: #313030;
 }
+input:focus::-webkit-input-placeholder,
+select:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+button:focus::-webkit-input-placeholder,
+input:active::-webkit-input-placeholder,
+select:active::-webkit-input-placeholder,
+textarea:active::-webkit-input-placeholder,
+button:active::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder,
+select:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder,
+button:focus::-moz-placeholder,
+input:active::-moz-placeholder,
+select:active::-moz-placeholder,
+textarea:active::-moz-placeholder,
+button:active::-moz-placeholder {
+  color: transparent;
+}
+input:focus:-ms-input-placeholder,
+select:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder,
+button:focus:-ms-input-placeholder,
+input:active:-ms-input-placeholder,
+select:active:-ms-input-placeholder,
+textarea:active:-ms-input-placeholder,
+button:active:-ms-input-placeholder {
+  color: transparent;
+}
+input:focus:placeholder,
+select:focus:placeholder,
+textarea:focus:placeholder,
+button:focus:placeholder,
+input:active:placeholder,
+select:active:placeholder,
+textarea:active:placeholder,
+button:active:placeholder {
+  color: transparent;
+}
 button,
 [type="file"],
 [type="image"],

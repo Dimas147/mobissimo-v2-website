@@ -237,3 +237,28 @@
     //==================================================
     @import "form/form-input-label";
 }
+
+#mc-embedded-subscribe-form {
+    position: relative;
+    input {
+        &[type="email"] {
+            padding-right: 4em;
+        }
+        &[type="submit"] {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 2.55em;
+            line-height: 1.55em;
+            font-weight: normal;
+        }
+    }
+    #warning{
+        position: absolute;
+        top: 0;
+        right: 50px;
+        color: @brand-error;
+        font-size: 0.78em;
+
+    }
+}
